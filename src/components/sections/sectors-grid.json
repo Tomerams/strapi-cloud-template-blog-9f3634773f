@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_sectors_grids",
+  "info": {
+    "displayName": "SectorsGrid",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

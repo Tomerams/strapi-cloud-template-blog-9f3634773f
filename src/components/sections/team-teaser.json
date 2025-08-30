@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_team_teasers",
+  "info": {
+    "displayName": "TeamTeaser",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

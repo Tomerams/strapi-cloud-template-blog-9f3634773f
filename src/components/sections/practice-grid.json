@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_practice_grids",
+  "info": {
+    "displayName": "PracticeGrid",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
