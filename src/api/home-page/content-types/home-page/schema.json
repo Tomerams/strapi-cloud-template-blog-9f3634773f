@@ -17,15 +17,22 @@
     "buttonText": {
       "type": "string"
     },
-    "heroImage": {
-      "type": "string"
-    },
     "sections": {
       "type": "dynamiczone",
       "components": [
         "sections.practice-grid",
         "sections.sectors-grid",
         "sections.team-teaser"
+      ]
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
       ]
     }
   }
