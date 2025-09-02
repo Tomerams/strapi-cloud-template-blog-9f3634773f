@@ -33,12 +33,24 @@ export interface SectionsTeamTeaser extends Struct.ComponentSchema {
   };
 }
 
+export interface UtilitiesServices extends Struct.ComponentSchema {
+  collectionName: 'components_utilities_services';
+  info: {
+    displayName: 'services';
+    icon: 'database';
+  };
+  attributes: {
+    serviceText: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'sections.practice-grid': SectionsPracticeGrid;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.team-teaser': SectionsTeamTeaser;
+      'utilities.services': UtilitiesServices;
     }
   }
 }

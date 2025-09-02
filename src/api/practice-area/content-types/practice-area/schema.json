@@ -23,14 +23,6 @@
         }
       }
     },
-    "excerpt": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "icon": {
       "type": "media",
       "pluginOptions": {
@@ -45,6 +37,15 @@
         "videos",
         "audios"
       ]
+    },
+    "friendlyUrl": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
     }
   }
 }
