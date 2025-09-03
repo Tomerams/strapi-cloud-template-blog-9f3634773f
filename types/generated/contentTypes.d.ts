@@ -581,6 +581,12 @@ export interface ApiSectorSector extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::sector.sector'>;
     publishedAt: Schema.Attribute.DateTime;
+    richContent: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     services: Schema.Attribute.Component<'utilities.services', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -732,6 +738,12 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    richContent: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     role: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
