@@ -528,6 +528,12 @@ export interface ApiPracticeAreaPracticeArea
       'api::practice-area.practice-area'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    richContent: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
