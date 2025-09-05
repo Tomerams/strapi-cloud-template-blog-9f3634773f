@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dynamic_zone_rich_contents",
+  "info": {
+    "displayName": "richContent",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "richContent": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

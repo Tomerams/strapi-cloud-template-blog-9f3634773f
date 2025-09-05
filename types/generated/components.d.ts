@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface DynamicZoneRichContent extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_rich_contents';
+  info: {
+    displayName: 'richContent';
+    icon: 'apps';
+  };
+  attributes: {
+    richContent: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SectionsPracticeGrid extends Struct.ComponentSchema {
   collectionName: 'components_sections_practice_grids';
   info: {
@@ -33,6 +44,15 @@ export interface SectionsTeamTeaser extends Struct.ComponentSchema {
   };
 }
 
+export interface UtilitiesHeaderLinks extends Struct.ComponentSchema {
+  collectionName: 'components_utilities_header_links';
+  info: {
+    displayName: 'headerLinks';
+    icon: 'attachment';
+  };
+  attributes: {};
+}
+
 export interface UtilitiesServices extends Struct.ComponentSchema {
   collectionName: 'components_utilities_services';
   info: {
@@ -47,9 +67,11 @@ export interface UtilitiesServices extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'dynamic-zone.rich-content': DynamicZoneRichContent;
       'sections.practice-grid': SectionsPracticeGrid;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.team-teaser': SectionsTeamTeaser;
+      'utilities.header-links': UtilitiesHeaderLinks;
       'utilities.services': UtilitiesServices;
     }
   }

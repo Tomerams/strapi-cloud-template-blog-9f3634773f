@@ -23,6 +23,32 @@
     },
     "whatsapp": {
       "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "utilities.header-links",
+      "repeatable": true
+    },
+    "linkText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "linkUrl": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

@@ -476,6 +476,12 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -686,6 +692,24 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    link: Schema.Attribute.Component<'utilities.header-links', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    linkText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    linkUrl: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

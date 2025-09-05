@@ -56,6 +56,17 @@
         "videos",
         "audios"
       ]
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "dynamic-zone.rich-content"
+      ]
     }
   }
 }
