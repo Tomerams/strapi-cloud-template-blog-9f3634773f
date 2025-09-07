@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "lead"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "massage": {
+      "type": "text"
+    },
+    "source": {
+      "type": "string"
+    },
+    "utm": {
+      "type": "json"
+    },
+    "metaJson": {
+      "type": "json"
+    },
+    "leadStatus": {
+      "type": "enumeration",
+      "enum": [
+        "NEW",
+        "IN_PROGRESS",
+        "WON",
+        "LOST"
+      ]
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "leads"
+    }
+  }
+}

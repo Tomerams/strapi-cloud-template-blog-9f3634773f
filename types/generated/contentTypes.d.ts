@@ -373,6 +373,78 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClientDocumentClientDocument
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'client_documents';
+  info: {
+    displayName: 'clientDocument';
+    pluralName: 'client-documents';
+    singularName: 'client-document';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    documentType: Schema.Attribute.Enumeration<['certificateOfResidency']>;
+    file: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    filename: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-document.client-document'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiClientClient extends Struct.CollectionTypeSchema {
+  collectionName: 'clients';
+  info: {
+    displayName: 'client';
+    pluralName: 'clients';
+    singularName: 'client';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    client_documents: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-document.client-document'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    firstName: Schema.Attribute.String;
+    leads: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client.client'
+    > &
+      Schema.Attribute.Private;
+    morningId: Schema.Attribute.String;
+    notes: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -417,6 +489,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'sections.practice-grid',
         'sections.sectors-grid',
         'sections.team-teaser',
+        'sections.blog',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -433,6 +506,41 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLeadLead extends Struct.CollectionTypeSchema {
+  collectionName: 'leads';
+  info: {
+    displayName: 'lead';
+    pluralName: 'leads';
+    singularName: 'lead';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    fullName: Schema.Attribute.String;
+    leadStatus: Schema.Attribute.Enumeration<
+      ['NEW', 'IN_PROGRESS', 'WON', 'LOST']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &
+      Schema.Attribute.Private;
+    massage: Schema.Attribute.Text;
+    metaJson: Schema.Attribute.JSON;
+    phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    source: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    utm: Schema.Attribute.JSON;
   };
 }
 
@@ -1295,7 +1403,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::client-document.client-document': ApiClientDocumentClientDocument;
+      'api::client.client': ApiClientClient;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::lead.lead': ApiLeadLead;
       'api::post.post': ApiPostPost;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
       'api::sector.sector': ApiSectorSector;

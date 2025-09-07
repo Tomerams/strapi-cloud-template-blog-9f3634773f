@@ -41,7 +41,8 @@
       "components": [
         "sections.practice-grid",
         "sections.sectors-grid",
-        "sections.team-teaser"
+        "sections.team-teaser",
+        "sections.blog"
       ]
     },
     "heroImage": {

@@ -11,6 +11,17 @@ export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsBlog extends Struct.ComponentSchema {
+  collectionName: 'components_sections_blogs';
+  info: {
+    displayName: 'blog';
+    icon: 'apps';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsPracticeGrid extends Struct.ComponentSchema {
   collectionName: 'components_sections_practice_grids';
   info: {
@@ -68,6 +79,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'dynamic-zone.rich-content': DynamicZoneRichContent;
+      'sections.blog': SectionsBlog;
       'sections.practice-grid': SectionsPracticeGrid;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.team-teaser': SectionsTeamTeaser;

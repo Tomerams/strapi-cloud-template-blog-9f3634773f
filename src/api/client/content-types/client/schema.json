@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "client"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "morningId": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "leads": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lead.lead",
+      "mappedBy": "client"
+    },
+    "client_documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client-document.client-document",
+      "mappedBy": "client"
+    }
+  }
+}

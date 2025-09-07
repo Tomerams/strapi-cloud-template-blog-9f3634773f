@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_blogs",
+  "info": {
+    "displayName": "blog",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
