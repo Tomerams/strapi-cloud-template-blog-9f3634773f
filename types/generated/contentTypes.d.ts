@@ -528,7 +528,8 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     fullName: Schema.Attribute.String;
     leadStatus: Schema.Attribute.Enumeration<
       ['NEW', 'IN_PROGRESS', 'WON', 'LOST']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'NEW'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &
       Schema.Attribute.Private;

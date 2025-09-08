@@ -34,6 +34,7 @@
     },
     "leadStatus": {
       "type": "enumeration",
+      "default": "NEW",
       "enum": [
         "NEW",
         "IN_PROGRESS",
