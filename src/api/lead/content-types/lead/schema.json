@@ -20,7 +20,7 @@
     "phone": {
       "type": "string"
     },
-    "massage": {
+    "message": {
       "type": "text"
     },
     "source": {
