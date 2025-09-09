@@ -533,7 +533,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'> &
       Schema.Attribute.Private;
-    massage: Schema.Attribute.Text;
+    message: Schema.Attribute.Text;
     metaJson: Schema.Attribute.JSON;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
