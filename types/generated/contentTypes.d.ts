@@ -490,7 +490,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'sections.sectors-grid',
         'sections.team-teaser',
         'sections.blog',
-        'dynamic-zone.banner',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

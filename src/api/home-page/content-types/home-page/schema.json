@@ -42,8 +42,7 @@
         "sections.practice-grid",
         "sections.sectors-grid",
         "sections.team-teaser",
-        "sections.blog",
-        "dynamic-zone.banner"
+        "sections.blog"
       ]
     },
     "heroImage": {
