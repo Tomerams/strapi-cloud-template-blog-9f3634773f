@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dynamic_zone_banners",
+  "info": {
+    "displayName": "banner",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

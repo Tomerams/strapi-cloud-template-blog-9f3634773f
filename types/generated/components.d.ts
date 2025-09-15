@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface DynamicZoneBanner extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_banners';
+  info: {
+    displayName: 'banner';
+    icon: 'bulletList';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_rich_contents';
   info: {
@@ -78,6 +90,7 @@ export interface UtilitiesServices extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'dynamic-zone.banner': DynamicZoneBanner;
       'dynamic-zone.rich-content': DynamicZoneRichContent;
       'sections.blog': SectionsBlog;
       'sections.practice-grid': SectionsPracticeGrid;
