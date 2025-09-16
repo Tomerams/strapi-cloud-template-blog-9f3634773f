@@ -48,7 +48,7 @@
       "target": "api::client.client",
       "inversedBy": "leads"
     },
-    "user": {
+    "assignTo": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
