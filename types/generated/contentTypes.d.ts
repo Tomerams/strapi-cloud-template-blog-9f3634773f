@@ -521,7 +521,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    assignTo: Schema.Attribute.Relation<
+    assignedTo: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.user'
     >;
