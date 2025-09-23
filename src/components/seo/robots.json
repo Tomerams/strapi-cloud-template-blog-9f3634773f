@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_seo_robots",
+  "info": {
+    "displayName": "robots",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "index": {
+      "type": "boolean"
+    },
+    "follow": {
+      "type": "boolean"
+    },
+    "advancedDirectives": {
+      "type": "enumeration",
+      "enum": [
+        "noimageindex",
+        "nosnippet",
+        "nocache"
+      ]
+    },
+    "maxSnippet": {
+      "type": "integer"
+    },
+    "maxImagePreview": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "standard",
+        "large"
+      ]
+    },
+    "maxVideoPreview": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

@@ -498,6 +498,12 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -596,6 +602,12 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -649,6 +661,12 @@ export interface ApiPracticeAreaPracticeArea
     >;
     publishedAt: Schema.Attribute.DateTime;
     richContent: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -708,6 +726,12 @@ export interface ApiSectorSector extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::sector.sector'>;
     publishedAt: Schema.Attribute.DateTime;
     richContent: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -889,6 +913,12 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
         };
       }>;
     role: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

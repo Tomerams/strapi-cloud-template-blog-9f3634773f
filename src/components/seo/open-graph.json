@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_seo_open_graphs",
+  "info": {
+    "displayName": "openGraph",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "string"
+    },
+    "ogType": {
+      "type": "enumeration",
+      "enum": [
+        "website",
+        "article",
+        "product",
+        "event"
+      ]
+    },
+    "ogImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ogSiteName": {
+      "type": "string"
+    },
+    "ogLocale": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

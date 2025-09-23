@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_seo_canonical_and_alternates",
+  "info": {
+    "displayName": "canonicalAndAlternates",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "alternates": {
+      "type": "string"
+    },
+    "localeCode": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

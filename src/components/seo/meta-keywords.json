@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_seo_meta_keywords",
+  "info": {
+    "displayName": "metaKeywords",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "keyword": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

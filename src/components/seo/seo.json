@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "metaBasics": {
+      "type": "component",
+      "component": "seo.meta-basics",
+      "repeatable": false
+    },
+    "canonicalAndAlternates": {
+      "type": "component",
+      "component": "seo.canonical-and-alternates",
+      "repeatable": false
+    },
+    "openGraph": {
+      "type": "component",
+      "component": "seo.open-graph",
+      "repeatable": false
+    },
+    "robots": {
+      "type": "component",
+      "component": "seo.robots",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

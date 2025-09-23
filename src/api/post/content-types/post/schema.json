@@ -67,6 +67,16 @@
       "components": [
         "dynamic-zone.rich-content"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }
