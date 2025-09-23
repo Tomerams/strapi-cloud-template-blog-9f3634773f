@@ -75,7 +75,21 @@ export interface SeoCanonicalAndAlternates extends Struct.ComponentSchema {
   };
   attributes: {
     alternates: Schema.Attribute.String;
+    canonicalAndAlternutes: Schema.Attribute.Component<
+      'seo.hreflang-alternate',
+      true
+    >;
     canonicalUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SeoHreflangAlternate extends Struct.ComponentSchema {
+  collectionName: 'components_seo_hreflang_alternates';
+  info: {
+    displayName: 'hreflangAlternate';
+    icon: 'arrowUp';
+  };
+  attributes: {
     localeCode: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
@@ -202,6 +216,7 @@ declare module '@strapi/strapi' {
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.team-teaser': SectionsTeamTeaser;
       'seo.canonical-and-alternates': SeoCanonicalAndAlternates;
+      'seo.hreflang-alternate': SeoHreflangAlternate;
       'seo.meta-basics': SeoMetaBasics;
       'seo.meta-keywords': SeoMetaKeywords;
       'seo.open-graph': SeoOpenGraph;

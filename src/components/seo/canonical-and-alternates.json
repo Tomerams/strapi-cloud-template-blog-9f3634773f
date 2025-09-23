@@ -12,11 +12,10 @@
     "alternates": {
       "type": "string"
     },
-    "localeCode": {
-      "type": "string"
-    },
-    "url": {
-      "type": "string"
+    "canonicalAndAlternutes": {
+      "type": "component",
+      "component": "seo.hreflang-alternate",
+      "repeatable": true
     }
   },
   "config": {}

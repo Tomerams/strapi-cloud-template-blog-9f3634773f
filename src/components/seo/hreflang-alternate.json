@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_seo_hreflang_alternates",
+  "info": {
+    "displayName": "hreflangAlternate",
+    "icon": "arrowUp"
+  },
+  "options": {},
+  "attributes": {
+    "localeCode": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
