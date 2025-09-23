@@ -72,6 +72,14 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "order": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
