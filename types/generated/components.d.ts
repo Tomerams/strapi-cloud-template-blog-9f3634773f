@@ -74,11 +74,7 @@ export interface SeoCanonicalAndAlternates extends Struct.ComponentSchema {
     icon: 'bell';
   };
   attributes: {
-    alternates: Schema.Attribute.String;
-    canonicalAndAlternates: Schema.Attribute.Component<
-      'seo.hreflang-alternate',
-      true
-    >;
+    alternates: Schema.Attribute.Component<'seo.hreflang-alternate', true>;
     canonicalUrl: Schema.Attribute.String;
   };
 }

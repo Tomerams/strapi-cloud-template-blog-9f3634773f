@@ -10,9 +10,6 @@
       "type": "string"
     },
     "alternates": {
-      "type": "string"
-    },
-    "canonicalAndAlternates": {
       "type": "component",
       "component": "seo.hreflang-alternate",
       "repeatable": true
