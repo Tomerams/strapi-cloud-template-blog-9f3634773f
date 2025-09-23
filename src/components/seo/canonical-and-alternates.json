@@ -12,7 +12,7 @@
     "alternates": {
       "type": "string"
     },
-    "canonicalAndAlternutes": {
+    "canonicalAndAlternates": {
       "type": "component",
       "component": "seo.hreflang-alternate",
       "repeatable": true

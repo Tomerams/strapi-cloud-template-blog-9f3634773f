@@ -75,7 +75,7 @@ export interface SeoCanonicalAndAlternates extends Struct.ComponentSchema {
   };
   attributes: {
     alternates: Schema.Attribute.String;
-    canonicalAndAlternutes: Schema.Attribute.Component<
+    canonicalAndAlternates: Schema.Attribute.Component<
       'seo.hreflang-alternate',
       true
     >;
