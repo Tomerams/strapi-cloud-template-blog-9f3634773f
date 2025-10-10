@@ -31,11 +31,7 @@
         }
       },
       "components": [
-        "sections.team-teaser",
-        "sections.sectors-grid",
-        "sections.practice-grid",
-        "sections.blog",
-        "sections.banner"
+        "dynamic-zone.rich-content"
       ]
     },
     "seo": {

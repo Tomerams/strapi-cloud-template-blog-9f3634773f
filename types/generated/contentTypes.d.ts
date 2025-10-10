@@ -714,15 +714,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    content: Schema.Attribute.DynamicZone<
-      [
-        'sections.team-teaser',
-        'sections.sectors-grid',
-        'sections.practice-grid',
-        'sections.blog',
-        'sections.banner',
-      ]
-    > &
+    content: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
