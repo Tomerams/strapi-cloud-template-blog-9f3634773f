@@ -23,29 +23,38 @@
         }
       }
     },
-    "priceType": {
-      "type": "string",
+    "richContent": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "priceValue": {
-      "type": "string",
+    "seo": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "seo.seo",
+      "repeatable": false
     },
-    "unit": {
-      "type": "string",
+    "image": {
+      "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
