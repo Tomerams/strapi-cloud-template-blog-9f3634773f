@@ -56,6 +56,17 @@ export interface SectionsSectorsGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsServicesTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_services_teasers';
+  info: {
+    displayName: 'ServicesTeaser';
+    icon: 'attachment';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsTeamTeaser extends Struct.ComponentSchema {
   collectionName: 'components_sections_team_teasers';
   info: {
@@ -210,6 +221,7 @@ declare module '@strapi/strapi' {
       'sections.blog': SectionsBlog;
       'sections.practice-grid': SectionsPracticeGrid;
       'sections.sectors-grid': SectionsSectorsGrid;
+      'sections.services-teaser': SectionsServicesTeaser;
       'sections.team-teaser': SectionsTeamTeaser;
       'seo.canonical-and-alternates': SeoCanonicalAndAlternates;
       'seo.hreflang-alternate': SeoHreflangAlternate;

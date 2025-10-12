@@ -499,6 +499,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'sections.team-teaser',
         'sections.blog',
         'sections.banner',
+        'sections.services-teaser',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -844,6 +845,12 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    lawService: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

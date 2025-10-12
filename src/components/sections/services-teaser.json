@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_services_teasers",
+  "info": {
+    "displayName": "ServicesTeaser",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

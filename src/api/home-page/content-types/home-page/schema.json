@@ -43,7 +43,8 @@
         "sections.sectors-grid",
         "sections.team-teaser",
         "sections.blog",
-        "sections.banner"
+        "sections.banner",
+        "sections.services-teaser"
       ]
     },
     "heroImage": {
