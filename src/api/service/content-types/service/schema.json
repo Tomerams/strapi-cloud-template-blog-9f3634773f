@@ -23,6 +23,14 @@
         }
       }
     },
+    "friendlyUrl": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "richContent": {
       "type": "blocks",
       "pluginOptions": {
@@ -30,16 +38,6 @@
           "localized": true
         }
       }
-    },
-    "seo": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "seo.seo",
-      "repeatable": false
     },
     "image": {
       "type": "media",
@@ -64,13 +62,15 @@
         }
       }
     },
-    "friendlyUrl": {
-      "type": "string",
+    "seo": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }
