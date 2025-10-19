@@ -724,12 +724,6 @@ export interface ApiPracticeAreaPracticeArea
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    richContent: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -850,12 +844,6 @@ export interface ApiSectorSector extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    richContent: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -929,12 +917,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'api::service.service'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    richContent: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1085,12 +1067,6 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    richContent: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     role: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

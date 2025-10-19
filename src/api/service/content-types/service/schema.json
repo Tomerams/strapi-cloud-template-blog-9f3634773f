@@ -31,14 +31,6 @@
         }
       }
     },
-    "richContent": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "image": {
       "type": "media",
       "pluginOptions": {

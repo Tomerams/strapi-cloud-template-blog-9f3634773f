@@ -47,14 +47,6 @@
       },
       "required": true
     },
-    "richContent": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "seo": {
       "type": "component",
       "pluginOptions": {
