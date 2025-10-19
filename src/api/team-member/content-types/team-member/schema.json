@@ -31,6 +31,17 @@
         }
       }
     },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "dynamic-zone.rich-content"
+      ]
+    },
     "image": {
       "type": "media",
       "pluginOptions": {
@@ -104,17 +115,6 @@
           "localized": true
         }
       }
-    },
-    "sections": {
-      "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "components": [
-        "dynamic-zone.rich-content"
-      ]
     }
   }
 }

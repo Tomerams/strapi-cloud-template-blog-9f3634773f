@@ -26,6 +26,17 @@
     "slug": {
       "type": "uid"
     },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "dynamic-zone.rich-content"
+      ]
+    },
     "excerpt": {
       "type": "string",
       "pluginOptions": {
@@ -55,17 +66,6 @@
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "sections": {
-      "type": "dynamiczone",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "components": [
-        "dynamic-zone.rich-content"
       ]
     },
     "seo": {
