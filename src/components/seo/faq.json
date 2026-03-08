@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_seo_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -90,6 +90,18 @@ export interface SeoCanonicalAndAlternates extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoFaq extends Struct.ComponentSchema {
+  collectionName: 'components_seo_faqs';
+  info: {
+    displayName: 'faq';
+    icon: 'clock';
+  };
+  attributes: {
+    answer: Schema.Attribute.String;
+    question: Schema.Attribute.String;
+  };
+}
+
 export interface SeoHreflangAlternate extends Struct.ComponentSchema {
   collectionName: 'components_seo_hreflang_alternates';
   info: {
@@ -187,6 +199,7 @@ export interface SeoSeo extends Struct.ComponentSchema {
       'seo.canonical-and-alternates',
       false
     >;
+    faq: Schema.Attribute.Component<'seo.faq', true>;
     metaBasics: Schema.Attribute.Component<'seo.meta-basics', false>;
     openGraph: Schema.Attribute.Component<'seo.open-graph', false>;
     robots: Schema.Attribute.Component<'seo.robots', false>;
@@ -224,6 +237,7 @@ declare module '@strapi/strapi' {
       'sections.services-teaser': SectionsServicesTeaser;
       'sections.team-teaser': SectionsTeamTeaser;
       'seo.canonical-and-alternates': SeoCanonicalAndAlternates;
+      'seo.faq': SeoFaq;
       'seo.hreflang-alternate': SeoHreflangAlternate;
       'seo.meta-basics': SeoMetaBasics;
       'seo.meta-keywords': SeoMetaKeywords;

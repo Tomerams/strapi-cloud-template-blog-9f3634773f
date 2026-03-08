@@ -25,6 +25,11 @@
       "type": "component",
       "component": "seo.robots",
       "repeatable": false
+    },
+    "faq": {
+      "type": "component",
+      "component": "seo.faq",
+      "repeatable": true
     }
   },
   "config": {}
