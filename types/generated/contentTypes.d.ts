@@ -898,6 +898,7 @@ export interface ApiPracticeAreaPracticeArea
           localized: true;
         };
       }>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1077,6 +1078,10 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::service.service'
+    >;
+    practice_areas: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
     >;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &

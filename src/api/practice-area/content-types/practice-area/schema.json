@@ -75,6 +75,12 @@
           "localized": true
         }
       }
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "practice_areas"
     }
   }
 }

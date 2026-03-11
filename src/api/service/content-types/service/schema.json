@@ -74,6 +74,12 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "practice_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice-area.practice-area",
+      "mappedBy": "services"
     }
   }
 }
