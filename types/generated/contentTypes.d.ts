@@ -809,6 +809,10 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    practice_areas: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     readingTime: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
@@ -885,6 +889,7 @@ export interface ApiPracticeAreaPracticeArea
           localized: true;
         };
       }>;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
       Schema.Attribute.SetPluginOptions<{
