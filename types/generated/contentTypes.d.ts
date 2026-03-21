@@ -1106,10 +1106,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    success_cases: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::success-case.success-case'
-    >;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1206,7 +1202,6 @@ export interface ApiSuccessCaseSuccessCase extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     result: Schema.Attribute.String;
     seo: Schema.Attribute.Component<'seo.seo', false>;
-    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
