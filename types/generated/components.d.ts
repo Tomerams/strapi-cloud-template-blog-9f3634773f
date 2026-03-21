@@ -67,6 +67,23 @@ export interface SectionsServicesTeaser extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsSuccessCasesTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_success_cases_teasers';
+  info: {
+    displayName: 'successCasesTeaser';
+    icon: 'apps';
+  };
+  attributes: {
+    archiveLinkLabel: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    intro: Schema.Attribute.String;
+    limit: Schema.Attribute.String;
+    onlyFeatured: Schema.Attribute.String;
+    showArchiveLink: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsTeamTeaser extends Struct.ComponentSchema {
   collectionName: 'components_sections_team_teasers';
   info: {
@@ -235,6 +252,7 @@ declare module '@strapi/strapi' {
       'sections.practice-grid': SectionsPracticeGrid;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.services-teaser': SectionsServicesTeaser;
+      'sections.success-cases-teaser': SectionsSuccessCasesTeaser;
       'sections.team-teaser': SectionsTeamTeaser;
       'seo.canonical-and-alternates': SeoCanonicalAndAlternates;
       'seo.faq': SeoFaq;

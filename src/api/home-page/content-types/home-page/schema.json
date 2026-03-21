@@ -44,7 +44,8 @@
         "sections.team-teaser",
         "sections.blog",
         "sections.banner",
-        "sections.services-teaser"
+        "sections.services-teaser",
+        "sections.success-cases-teaser"
       ]
     },
     "heroImage": {

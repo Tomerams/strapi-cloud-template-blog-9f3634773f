@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_success_cases_teasers",
+  "info": {
+    "displayName": "successCasesTeaser",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "archiveLinkLabel": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "string"
+    },
+    "showArchiveLink": {
+      "type": "string"
+    },
+    "onlyFeatured": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

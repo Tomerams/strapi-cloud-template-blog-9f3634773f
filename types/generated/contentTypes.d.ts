@@ -661,6 +661,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'sections.blog',
         'sections.banner',
         'sections.services-teaser',
+        'sections.success-cases-teaser',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -904,6 +905,10 @@ export interface ApiPracticeAreaPracticeArea
         };
       }>;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
+    success_cases: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::success-case.success-case'
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1101,6 +1106,10 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    success_cases: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::success-case.success-case'
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1162,6 +1171,80 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     whatsapp: Schema.Attribute.String;
+  };
+}
+
+export interface ApiSuccessCaseSuccessCase extends Struct.CollectionTypeSchema {
+  collectionName: 'success_cases';
+  info: {
+    displayName: 'successCase';
+    pluralName: 'success-cases';
+    singularName: 'success-case';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    challenge: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.String;
+    featured: Schema.Attribute.String;
+    legalMove: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::success-case.success-case'
+    > &
+      Schema.Attribute.Private;
+    locationLabel: Schema.Attribute.String;
+    practice_areas: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    result: Schema.Attribute.String;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
+    slug: Schema.Attribute.UID;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whyItMatters: Schema.Attribute.String;
+  };
+}
+
+export interface ApiSuccessCasesPageSuccessCasesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'success_cases_pages';
+  info: {
+    displayName: 'successCasesPage';
+    pluralName: 'success-cases-pages';
+    singularName: 'success-cases-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    disclaimer: Schema.Attribute.String;
+    intro: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::success-cases-page.success-cases-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1837,6 +1920,8 @@ declare module '@strapi/strapi' {
       'api::sector.sector': ApiSectorSector;
       'api::service.service': ApiServiceService;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
+      'api::success-case.success-case': ApiSuccessCaseSuccessCase;
+      'api::success-cases-page.success-cases-page': ApiSuccessCasesPageSuccessCasesPage;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'plugin::content-releases.release': PluginContentReleasesRelease;

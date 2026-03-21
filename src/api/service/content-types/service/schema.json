@@ -80,6 +80,12 @@
       "relation": "manyToMany",
       "target": "api::practice-area.practice-area",
       "mappedBy": "services"
+    },
+    "success_cases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::success-case.success-case",
+      "mappedBy": "services"
     }
   }
 }

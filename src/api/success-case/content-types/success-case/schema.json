@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "success_cases",
+  "info": {
+    "singularName": "success-case",
+    "pluralName": "success-cases",
+    "displayName": "successCase"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "challenge": {
+      "type": "string"
+    },
+    "legalMove": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "whyItMatters": {
+      "type": "string"
+    },
+    "locationLabel": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "practice_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice-area.practice-area",
+      "inversedBy": "success_cases"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "success_cases"
+    }
+  }
+}

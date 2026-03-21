@@ -87,6 +87,12 @@
       "relation": "manyToMany",
       "target": "api::post.post",
       "mappedBy": "practice_areas"
+    },
+    "success_cases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::success-case.success-case",
+      "mappedBy": "practice_areas"
     }
   }
 }
