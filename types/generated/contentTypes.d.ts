@@ -1190,7 +1190,6 @@ export interface ApiSuccessCaseSuccessCase extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     excerpt: Schema.Attribute.String;
-    featured: Schema.Attribute.String;
     legalMove: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1199,6 +1198,7 @@ export interface ApiSuccessCaseSuccessCase extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     locationLabel: Schema.Attribute.String;
+    order: Schema.Attribute.Integer;
     practice_areas: Schema.Attribute.Relation<
       'manyToMany',
       'api::practice-area.practice-area'

@@ -35,9 +35,6 @@
     "locationLabel": {
       "type": "string"
     },
-    "featured": {
-      "type": "string"
-    },
     "seo": {
       "type": "component",
       "component": "seo.seo",
@@ -60,6 +57,9 @@
       "components": [
         "dynamic-zone.rich-content"
       ]
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
