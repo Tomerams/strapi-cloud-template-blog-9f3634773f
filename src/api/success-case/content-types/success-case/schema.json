@@ -54,6 +54,12 @@
       "relation": "manyToMany",
       "target": "api::service.service",
       "mappedBy": "success_cases"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "dynamic-zone.rich-content"
+      ]
     }
   }
 }
