@@ -79,8 +79,6 @@ export interface SectionsSuccessCasesTeaser extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     intro: Schema.Attribute.String;
     limit: Schema.Attribute.String;
-    onlyFeatured: Schema.Attribute.String;
-    showArchiveLink: Schema.Attribute.String;
   };
 }
 

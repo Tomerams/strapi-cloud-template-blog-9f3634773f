@@ -20,12 +20,6 @@
     },
     "limit": {
       "type": "string"
-    },
-    "showArchiveLink": {
-      "type": "string"
-    },
-    "onlyFeatured": {
-      "type": "string"
     }
   },
   "config": {}
