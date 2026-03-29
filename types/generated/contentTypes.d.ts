@@ -833,6 +833,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -1089,6 +1090,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::service.service'
     >;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     practice_areas: Schema.Attribute.Relation<
       'manyToMany',
       'api::practice-area.practice-area'

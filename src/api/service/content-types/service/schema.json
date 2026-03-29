@@ -86,6 +86,12 @@
       "relation": "manyToMany",
       "target": "api::success-case.success-case",
       "inversedBy": "services"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "mappedBy": "services"
     }
   }
 }

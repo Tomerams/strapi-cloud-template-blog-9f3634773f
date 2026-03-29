@@ -83,6 +83,12 @@
       "relation": "manyToMany",
       "target": "api::practice-area.practice-area",
       "inversedBy": "posts"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "posts"
     }
   }
 }
