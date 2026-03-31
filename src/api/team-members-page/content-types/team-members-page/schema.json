@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "team_members_pages",
+  "info": {
+    "singularName": "team-members-page",
+    "pluralName": "team-members-pages",
+    "displayName": "teamMembersPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    }
+  }
+}
