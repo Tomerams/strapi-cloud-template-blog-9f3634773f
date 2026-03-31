@@ -988,7 +988,7 @@ export interface ApiPracticeAreasPagePracticeAreasPage
 export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
   collectionName: 'privacy_policies';
   info: {
-    displayName: 'privacyPolicy';
+    displayName: 'privacyPolicyPage';
     pluralName: 'privacy-policies';
     singularName: 'privacy-policy';
   };
@@ -1510,7 +1510,7 @@ export interface ApiTermsAndConditionTermsAndCondition
   extends Struct.SingleTypeSchema {
   collectionName: 'terms_and_conditions';
   info: {
-    displayName: 'termsAndCondition';
+    displayName: 'termsAndConditionPage';
     pluralName: 'terms-and-conditions';
     singularName: 'terms-and-condition';
   };

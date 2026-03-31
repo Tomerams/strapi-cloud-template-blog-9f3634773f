@@ -4,7 +4,7 @@
   "info": {
     "singularName": "terms-and-condition",
     "pluralName": "terms-and-conditions",
-    "displayName": "termsAndCondition"
+    "displayName": "termsAndConditionPage"
   },
   "options": {
     "draftAndPublish": true
