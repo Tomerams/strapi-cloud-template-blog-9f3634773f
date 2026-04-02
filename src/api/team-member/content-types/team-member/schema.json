@@ -115,6 +115,12 @@
           "localized": true
         }
       }
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "team_member"
     }
   }
 }

@@ -89,6 +89,12 @@
       "relation": "manyToMany",
       "target": "api::service.service",
       "inversedBy": "posts"
+    },
+    "team_member": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-member.team-member",
+      "inversedBy": "posts"
     }
   }
 }
