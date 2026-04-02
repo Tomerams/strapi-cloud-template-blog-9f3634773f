@@ -892,6 +892,10 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       }>;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     slug: Schema.Attribute.UID;
+    team_member: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::team-member.team-member'
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1553,6 +1557,7 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
