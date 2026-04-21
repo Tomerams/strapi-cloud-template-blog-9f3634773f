@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_landing_pages_card_items",
+  "info": {
+    "displayName": "Card Item",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

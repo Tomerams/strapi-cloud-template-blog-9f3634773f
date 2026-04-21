@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_landing_pages_step_items",
+  "info": {
+    "displayName": "Step Item",
+    "icon": "walk"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

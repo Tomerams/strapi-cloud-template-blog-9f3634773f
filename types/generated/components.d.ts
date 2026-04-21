@@ -11,6 +11,41 @@ export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   };
 }
 
+export interface LandingPagesCardItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_pages_card_items';
+  info: {
+    displayName: 'Card Item';
+    icon: 'apps';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LandingPagesStepItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_pages_step_items';
+  info: {
+    displayName: 'Step Item';
+    icon: 'walk';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LandingPagesTextItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_pages_text_items';
+  info: {
+    displayName: 'Text Item';
+    icon: 'bulletList';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_banners';
   info: {
@@ -245,6 +280,9 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'dynamic-zone.rich-content': DynamicZoneRichContent;
+      'landing-pages.card-item': LandingPagesCardItem;
+      'landing-pages.step-item': LandingPagesStepItem;
+      'landing-pages.text-item': LandingPagesTextItem;
       'sections.banner': SectionsBanner;
       'sections.blog': SectionsBlog;
       'sections.practice-grid': SectionsPracticeGrid;

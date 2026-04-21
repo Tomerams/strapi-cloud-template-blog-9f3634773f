@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_landing_pages_text_items",
+  "info": {
+    "displayName": "Text Item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
