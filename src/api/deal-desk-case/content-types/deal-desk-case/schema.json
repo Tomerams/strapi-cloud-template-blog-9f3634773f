@@ -89,6 +89,12 @@
     "deadline": {
       "type": "date"
     },
+    "property": {
+      "type": "json"
+    },
+    "transaction": {
+      "type": "json"
+    },
     "real_estate_tasks": {
       "type": "relation",
       "relation": "oneToMany",

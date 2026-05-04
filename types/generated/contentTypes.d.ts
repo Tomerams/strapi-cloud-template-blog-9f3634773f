@@ -669,6 +669,7 @@ export interface ApiDealDeskCaseDealDeskCase
     > &
       Schema.Attribute.Private;
     openedAt: Schema.Attribute.Date;
+    property: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     real_estate_audit_logs: Schema.Attribute.Relation<
       'oneToMany',
@@ -713,6 +714,7 @@ export interface ApiDealDeskCaseDealDeskCase
     > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'new'>;
+    transaction: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
