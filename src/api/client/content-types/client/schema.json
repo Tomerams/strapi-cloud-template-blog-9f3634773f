@@ -37,6 +37,12 @@
       "relation": "oneToMany",
       "target": "api::client-document.client-document",
       "mappedBy": "client"
+    },
+    "deal_desk_cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::deal-desk-case.deal-desk-case",
+      "mappedBy": "client"
     }
   }
 }

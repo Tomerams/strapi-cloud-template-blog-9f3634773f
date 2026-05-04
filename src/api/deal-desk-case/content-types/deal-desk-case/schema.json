@@ -1,0 +1,117 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deal_desk_cases",
+  "info": {
+    "singularName": "deal-desk-case",
+    "pluralName": "deal-desk-cases",
+    "displayName": "Real Estate Tax Case"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "caseNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "deal_desk_cases"
+    },
+    "caseType": {
+      "type": "enumeration",
+      "enum": [
+        "sale_apartment",
+        "purchase_apartment",
+        "sale_moshav_estate",
+        "purchase_moshav_estate",
+        "land",
+        "commercial",
+        "inheritance",
+        "gift",
+        "combination",
+        "dissolution",
+        "rmi_tender"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "waiting_for_documents",
+        "data_review",
+        "tax_simulation",
+        "legal_review",
+        "client_report_sent",
+        "tax_authority",
+        "completed"
+      ],
+      "default": "new",
+      "required": true
+    },
+    "approvalStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "needs_data",
+        "ready_for_legal_review",
+        "approved_internally",
+        "published_to_client",
+        "archived"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "riskLevel": {
+      "type": "enumeration",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "exceptional"
+      ],
+      "default": "medium",
+      "required": true
+    },
+    "assignedLawyer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "openedAt": {
+      "type": "date"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "property": {
+      "type": "json"
+    },
+    "transaction": {
+      "type": "json"
+    },
+    "documents": {
+      "type": "json"
+    },
+    "tasks": {
+      "type": "json"
+    },
+    "scenarios": {
+      "type": "json"
+    },
+    "notes": {
+      "type": "json"
+    },
+    "reports": {
+      "type": "json"
+    },
+    "auditLog": {
+      "type": "json"
+    }
+  }
+}

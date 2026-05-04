@@ -587,6 +587,10 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    deal_desk_cases: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::deal-desk-case.deal-desk-case'
+    >;
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
     leads: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'>;
@@ -600,6 +604,99 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     notes: Schema.Attribute.Text;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDealDeskCaseDealDeskCase
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'deal_desk_cases';
+  info: {
+    displayName: 'Real Estate Tax Case';
+    pluralName: 'deal-desk-cases';
+    singularName: 'deal-desk-case';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    approvalStatus: Schema.Attribute.Enumeration<
+      [
+        'draft',
+        'needs_data',
+        'ready_for_legal_review',
+        'approved_internally',
+        'published_to_client',
+        'archived',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'draft'>;
+    assignedLawyer: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    auditLog: Schema.Attribute.JSON;
+    caseNumber: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    caseType: Schema.Attribute.Enumeration<
+      [
+        'sale_apartment',
+        'purchase_apartment',
+        'sale_moshav_estate',
+        'purchase_moshav_estate',
+        'land',
+        'commercial',
+        'inheritance',
+        'gift',
+        'combination',
+        'dissolution',
+        'rmi_tender',
+      ]
+    > &
+      Schema.Attribute.Required;
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deadline: Schema.Attribute.Date;
+    documents: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::deal-desk-case.deal-desk-case'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.JSON;
+    openedAt: Schema.Attribute.Date;
+    property: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    reports: Schema.Attribute.JSON;
+    riskLevel: Schema.Attribute.Enumeration<
+      ['low', 'medium', 'high', 'exceptional']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'medium'>;
+    scenarios: Schema.Attribute.JSON;
+    status: Schema.Attribute.Enumeration<
+      [
+        'new',
+        'waiting_for_documents',
+        'data_review',
+        'tax_simulation',
+        'legal_review',
+        'client_report_sent',
+        'tax_authority',
+        'completed',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'new'>;
+    tasks: Schema.Attribute.JSON;
+    transaction: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2482,6 +2579,7 @@ declare module '@strapi/strapi' {
       'api::articles-page.articles-page': ApiArticlesPageArticlesPage;
       'api::client-document.client-document': ApiClientDocumentClientDocument;
       'api::client.client': ApiClientClient;
+      'api::deal-desk-case.deal-desk-case': ApiDealDeskCaseDealDeskCase;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::lead.lead': ApiLeadLead;
