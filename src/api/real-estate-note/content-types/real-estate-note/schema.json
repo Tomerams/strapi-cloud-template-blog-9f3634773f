@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "real_estate_notes",
+  "info": {
+    "singularName": "real-estate-note",
+    "pluralName": "real-estate-notes",
+    "displayName": "Real Estate Note"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "authorName": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "visibility": {
+      "type": "enumeration",
+      "default": "internal",
+      "enum": [
+        "internal",
+        "client"
+      ]
+    },
+    "case": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::deal-desk-case.deal-desk-case",
+      "inversedBy": "real_estate_notes"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

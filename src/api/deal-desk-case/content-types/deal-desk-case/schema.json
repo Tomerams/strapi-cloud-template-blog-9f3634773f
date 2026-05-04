@@ -24,6 +24,7 @@
     },
     "caseType": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "sale_apartment",
         "purchase_apartment",
@@ -36,11 +37,12 @@
         "combination",
         "dissolution",
         "rmi_tender"
-      ],
-      "required": true
+      ]
     },
     "status": {
       "type": "enumeration",
+      "required": true,
+      "default": "new",
       "enum": [
         "new",
         "waiting_for_documents",
@@ -50,12 +52,12 @@
         "client_report_sent",
         "tax_authority",
         "completed"
-      ],
-      "default": "new",
-      "required": true
+      ]
     },
     "approvalStatus": {
       "type": "enumeration",
+      "required": true,
+      "default": "draft",
       "enum": [
         "draft",
         "needs_data",
@@ -63,20 +65,18 @@
         "approved_internally",
         "published_to_client",
         "archived"
-      ],
-      "default": "draft",
-      "required": true
+      ]
     },
     "riskLevel": {
       "type": "enumeration",
+      "required": true,
+      "default": "medium",
       "enum": [
         "low",
         "medium",
         "high",
         "exceptional"
-      ],
-      "default": "medium",
-      "required": true
+      ]
     },
     "assignedLawyer": {
       "type": "relation",
@@ -89,29 +89,41 @@
     "deadline": {
       "type": "date"
     },
-    "property": {
-      "type": "json"
+    "real_estate_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-task.real-estate-task",
+      "mappedBy": "case"
     },
-    "transaction": {
-      "type": "json"
+    "real_estate_documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-document.real-estate-document",
+      "mappedBy": "case"
     },
-    "documents": {
-      "type": "json"
+    "real_estate_tax_scenarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-tax-scenario.real-estate-tax-scenario",
+      "mappedBy": "case"
     },
-    "tasks": {
-      "type": "json"
+    "real_estate_notes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-note.real-estate-note",
+      "mappedBy": "case"
     },
-    "scenarios": {
-      "type": "json"
+    "real_estate_reports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-report.real-estate-report",
+      "mappedBy": "case"
     },
-    "notes": {
-      "type": "json"
-    },
-    "reports": {
-      "type": "json"
-    },
-    "auditLog": {
-      "type": "json"
+    "real_estate_audit_logs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::real-estate-audit-log.real-estate-audit-log",
+      "mappedBy": "case"
     }
   }
 }

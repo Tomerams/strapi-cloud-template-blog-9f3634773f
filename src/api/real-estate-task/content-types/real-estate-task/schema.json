@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "real_estate_tasks",
+  "info": {
+    "singularName": "real-estate-task",
+    "pluralName": "real-estate-tasks",
+    "displayName": "Real Estate Task"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "owner": {
+      "type": "enumeration",
+      "default": "lawyer",
+      "enum": [
+        "client",
+        "lawyer",
+        "system"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "default": "open",
+      "enum": [
+        "open",
+        "in_progress",
+        "done",
+        "cancelled"
+      ]
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "completedAt": {
+      "type": "datetime"
+    },
+    "clientVisible": {
+      "type": "boolean",
+      "default": false
+    },
+    "case": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::deal-desk-case.deal-desk-case",
+      "inversedBy": "real_estate_tasks"
+    }
+  }
+}
