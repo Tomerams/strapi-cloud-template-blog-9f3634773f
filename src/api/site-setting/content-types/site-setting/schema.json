@@ -24,31 +24,23 @@
     "whatsapp": {
       "type": "string"
     },
-    "link": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "utilities.header-links",
-      "repeatable": true
+    "facebookUrl": {
+      "type": "string"
     },
-    "linkText": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "instagramUrl": {
+      "type": "string"
     },
-    "linkUrl": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "youtubeUrl": {
+      "type": "string"
+    },
+    "googleBusinessUrl": {
+      "type": "string"
+    },
+    "googleReviewUrl": {
+      "type": "string"
     }
   }
 }

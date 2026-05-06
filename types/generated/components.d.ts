@@ -256,15 +256,6 @@ export interface SeoSeo extends Struct.ComponentSchema {
   };
 }
 
-export interface UtilitiesHeaderLinks extends Struct.ComponentSchema {
-  collectionName: 'components_utilities_header_links';
-  info: {
-    displayName: 'headerLinks';
-    icon: 'attachment';
-  };
-  attributes: {};
-}
-
 export interface UtilitiesServices extends Struct.ComponentSchema {
   collectionName: 'components_utilities_services';
   info: {
@@ -298,7 +289,6 @@ declare module '@strapi/strapi' {
       'seo.open-graph': SeoOpenGraph;
       'seo.robots': SeoRobots;
       'seo.seo': SeoSeo;
-      'utilities.header-links': UtilitiesHeaderLinks;
       'utilities.services': UtilitiesServices;
     }
   }

@@ -2043,24 +2043,11 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    link: Schema.Attribute.Component<'utilities.header-links', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    linkText: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    linkUrl: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    facebookUrl: Schema.Attribute.String;
+    googleBusinessUrl: Schema.Attribute.String;
+    googleReviewUrl: Schema.Attribute.String;
+    instagramUrl: Schema.Attribute.String;
+    linkedinUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2072,6 +2059,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     whatsapp: Schema.Attribute.String;
+    youtubeUrl: Schema.Attribute.String;
   };
 }
 
