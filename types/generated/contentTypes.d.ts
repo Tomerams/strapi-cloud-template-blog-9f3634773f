@@ -2826,6 +2826,10 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    pbxDirectNumber: Schema.Attribute.String;
+    pbxEnabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    pbxExtension: Schema.Attribute.UID & Schema.Attribute.Unique;
+    phone: Schema.Attribute.String;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;

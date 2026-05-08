@@ -59,6 +59,20 @@
       "default": false,
       "configurable": false
     },
+    "phone": {
+      "type": "string"
+    },
+    "pbxExtension": {
+      "type": "uid",
+      "unique": true
+    },
+    "pbxEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "pbxDirectNumber": {
+      "type": "string"
+    },
     "role": {
       "type": "relation",
       "relation": "manyToOne",
