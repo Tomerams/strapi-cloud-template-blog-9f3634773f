@@ -2043,6 +2043,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
     facebookUrl: Schema.Attribute.String;
     googleBusinessUrl: Schema.Attribute.String;
     googleReviewUrl: Schema.Attribute.String;
@@ -2053,6 +2054,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::site-setting.site-setting'
     >;
+    officeAddress: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

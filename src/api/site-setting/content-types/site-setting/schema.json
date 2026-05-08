@@ -21,6 +21,12 @@
     "phone": {
       "type": "string"
     },
+    "email": {
+      "type": "email"
+    },
+    "officeAddress": {
+      "type": "string"
+    },
     "whatsapp": {
       "type": "string"
     },
