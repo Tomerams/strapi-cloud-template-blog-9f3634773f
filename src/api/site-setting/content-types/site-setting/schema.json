@@ -18,6 +18,9 @@
     "brandName": {
       "type": "string"
     },
+    "officialName": {
+      "type": "string"
+    },
     "phone": {
       "type": "string"
     },
