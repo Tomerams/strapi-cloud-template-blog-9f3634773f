@@ -1071,6 +1071,12 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    visualGallery: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     visualImage: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

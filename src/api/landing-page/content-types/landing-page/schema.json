@@ -312,6 +312,16 @@
         }
       }
     },
+    "visualGallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "videoMedia": {
       "type": "media",
       "multiple": false,
