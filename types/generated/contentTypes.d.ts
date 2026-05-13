@@ -610,6 +610,61 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiConsultPageConsultPage extends Struct.SingleTypeSchema {
+  collectionName: 'consult_pages';
+  info: {
+    displayName: 'consultPage';
+    pluralName: 'consult-pages';
+    singularName: 'consult-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    intro: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::consult-page.consult-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDealDeskCaseDealDeskCase
   extends Struct.CollectionTypeSchema {
   collectionName: 'deal_desk_cases';
@@ -2897,6 +2952,7 @@ declare module '@strapi/strapi' {
       'api::articles-page.articles-page': ApiArticlesPageArticlesPage;
       'api::client-document.client-document': ApiClientDocumentClientDocument;
       'api::client.client': ApiClientClient;
+      'api::consult-page.consult-page': ApiConsultPageConsultPage;
       'api::deal-desk-case.deal-desk-case': ApiDealDeskCaseDealDeskCase;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
