@@ -1509,6 +1509,118 @@ export interface ApiPracticeAreasPagePracticeAreasPage
   };
 }
 
+export interface ApiPressMentionPressMention
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'press_mentions';
+  info: {
+    description: 'External press mention, interview, article, or media appearance';
+    displayName: 'pressMention';
+    pluralName: 'press-mentions';
+    singularName: 'press-mention';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    image: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::press-mention.press-mention'
+    >;
+    order: Schema.Attribute.Integer;
+    publicationDate: Schema.Attribute.Date;
+    publishedAt: Schema.Attribute.DateTime;
+    sourceName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
+export interface ApiPressPagePressPage extends Struct.SingleTypeSchema {
+  collectionName: 'press_pages';
+  info: {
+    description: 'Archive page for press mentions and media appearances';
+    displayName: 'pressPage';
+    pluralName: 'press-pages';
+    singularName: 'press-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    intro: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::press-page.press-page'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
   collectionName: 'privacy_policies';
   info: {
@@ -2962,6 +3074,8 @@ declare module '@strapi/strapi' {
       'api::post.post': ApiPostPost;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
       'api::practice-areas-page.practice-areas-page': ApiPracticeAreasPagePracticeAreasPage;
+      'api::press-mention.press-mention': ApiPressMentionPressMention;
+      'api::press-page.press-page': ApiPressPagePressPage;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::real-estate-audit-log.real-estate-audit-log': ApiRealEstateAuditLogRealEstateAuditLog;
       'api::real-estate-document.real-estate-document': ApiRealEstateDocumentRealEstateDocument;
