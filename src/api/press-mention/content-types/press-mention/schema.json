@@ -66,6 +66,64 @@
     },
     "order": {
       "type": "integer"
+    },
+    "sourceDomain": {
+      "type": "string"
+    },
+    "sourceLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mediaType": {
+      "type": "enumeration",
+      "enum": [
+        "article",
+        "interview",
+        "tv",
+        "radio",
+        "podcast",
+        "opinion",
+        "panel"
+      ]
+    },
+    "embedUrl": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ogTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ogDescription": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metadataFetchedAt": {
+      "type": "datetime"
     }
   }
 }

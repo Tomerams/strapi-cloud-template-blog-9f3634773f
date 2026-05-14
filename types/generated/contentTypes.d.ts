@@ -1530,6 +1530,12 @@ export interface ApiPressMentionPressMention
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    embedUrl: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     excerpt: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1543,9 +1549,28 @@ export interface ApiPressMentionPressMention
       'oneToMany',
       'api::press-mention.press-mention'
     >;
+    mediaType: Schema.Attribute.Enumeration<
+      ['article', 'interview', 'tv', 'radio', 'podcast', 'opinion', 'panel']
+    >;
+    metadataFetchedAt: Schema.Attribute.DateTime;
+    ogDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ogImage: Schema.Attribute.Media<'images'>;
+    ogTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     order: Schema.Attribute.Integer;
     publicationDate: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    sourceDomain: Schema.Attribute.String;
+    sourceLogo: Schema.Attribute.Media<'images'>;
     sourceName: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
