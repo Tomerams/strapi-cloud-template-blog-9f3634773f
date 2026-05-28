@@ -1,19 +1,20 @@
 {
-  "collectionName": "components_sections_success_cases_teasers",
+  "collectionName": "components_sections_posts_teasers",
   "info": {
-    "displayName": "successCasesTeaser",
-    "icon": "apps"
+    "displayName": "PostsTeaser",
+    "icon": "bulletList"
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "eyebrow": {
       "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "required": true
     },
     "intro": {
       "type": "text"
-    },
-    "eyebrow": {
-      "type": "string"
     },
     "archiveLinkLabel": {
       "type": "string"
@@ -41,10 +42,10 @@
       ],
       "default": "grid"
     },
-    "successCases": {
+    "posts": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::success-case.success-case"
+      "target": "api::post.post"
     }
   },
   "config": {}

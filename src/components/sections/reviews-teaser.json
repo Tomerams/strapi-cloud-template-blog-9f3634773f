@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_sections_reviews_teasers",
+  "info": {
+    "displayName": "ReviewsTeaser",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "text"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "google",
+        "manual"
+      ],
+      "default": "google"
+    },
+    "limit": {
+      "type": "integer",
+      "default": 3,
+      "min": 1,
+      "max": 12
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "carousel",
+        "grid",
+        "compact"
+      ],
+      "default": "carousel"
+    },
+    "showRatingSummary": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

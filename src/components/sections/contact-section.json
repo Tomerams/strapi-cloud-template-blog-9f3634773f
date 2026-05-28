@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_sections_contact_sections",
+  "info": {
+    "displayName": "ContactSection",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "צור קשר"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "לתיאום שיחת ייעוץ"
+    },
+    "intro": {
+      "type": "text",
+      "default": "השאירו פרטים ונחזור אליכם בהקדם עם הכוונה ראשונית."
+    },
+    "formId": {
+      "type": "string",
+      "default": "contact-us-home-page-dynamic"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "form",
+        "compact",
+        "split"
+      ],
+      "default": "form"
+    },
+    "showPhoneCta": {
+      "type": "boolean",
+      "default": true
+    },
+    "showWhatsappCta": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

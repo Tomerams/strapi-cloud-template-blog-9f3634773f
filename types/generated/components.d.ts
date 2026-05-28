@@ -46,6 +46,33 @@ export interface LandingPagesTextItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsAskAiTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_ask_ai_teasers';
+  info: {
+    displayName: 'AskAiTeaser';
+    icon: 'magic';
+  };
+  attributes: {
+    disclaimer: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u05D4\u05EA\u05E9\u05D5\u05D1\u05D5\u05EA \u05D4\u05DF \u05DE\u05D9\u05D3\u05E2 \u05E8\u05D0\u05E9\u05D5\u05E0\u05D9 \u05D1\u05DC\u05D1\u05D3 \u05D5\u05D0\u05D9\u05E0\u05DF \u05DE\u05D7\u05DC\u05D9\u05E4\u05D5\u05EA \u05D9\u05D9\u05E2\u05D5\u05E5 \u05DE\u05E9\u05E4\u05D8\u05D9. \u05D0\u05D9\u05DF \u05DC\u05D4\u05D6\u05D9\u05DF \u05E4\u05E8\u05D8\u05D9\u05DD \u05D0\u05D9\u05E9\u05D9\u05D9\u05DD \u05D0\u05D5 \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05E8\u05D2\u05D9\u05E9\u05D9\u05DD.'>;
+    enabledTools: Schema.Attribute.Enumeration<
+      ['all', 'chatgpt', 'claude', 'perplexity', 'gemini', 'copilot', 'grok']
+    > &
+      Schema.Attribute.DefaultTo<'all'>;
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05E9\u05D0\u05DC\u05D5 \u05D1\u05D9\u05E0\u05D4 \u05DE\u05DC\u05D0\u05DB\u05D5\u05EA\u05D9\u05EA'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u05D1\u05D3\u05E7\u05D5 \u05DE\u05D4 \u05DE\u05E1\u05E4\u05E8\u05D9\u05DD \u05E2\u05DC \u05E7\u05E8\u05D9\u05DF \u05D0\u05DE\u05E1\u05DC\u05DD'>;
+    intro: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u05E4\u05EA\u05D7\u05D5 \u05DB\u05DC\u05D9 \u05D1\u05D9\u05E0\u05D4 \u05DE\u05DC\u05D0\u05DB\u05D5\u05EA\u05D9\u05EA \u05E2\u05DD \u05E9\u05D0\u05DC\u05D4 \u05E7\u05E6\u05E8\u05D4 \u05E2\u05DC \u05D4\u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D5\u05EA, \u05D4\u05E9\u05D9\u05E8\u05D5\u05EA \u05D5\u05D4\u05DC\u05D9\u05D5\u05D5\u05D9 \u05D4\u05D0\u05D9\u05E9\u05D9 \u05E9\u05DC \u05D4\u05DE\u05E9\u05E8\u05D3.'>;
+    layout: Schema.Attribute.Enumeration<['split', 'compact']> &
+      Schema.Attribute.DefaultTo<'split'>;
+    prompt: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u05E1\u05E4\u05E8 \u05DC\u05D9 \u05DC\u05DE\u05D4 \u05E2\u05D5\u05E8\u05DB\u05EA \u05D4\u05D3\u05D9\u05DF \u05E7\u05E8\u05D9\u05DF \u05D0\u05DE\u05E1\u05DC\u05DD \u05E0\u05D7\u05E9\u05D1\u05EA \u05D8\u05D5\u05D1\u05D4 \u05D1\u05EA\u05D7\u05D5\u05DE\u05D4, \u05D1\u05D3\u05D2\u05E9 \u05E2\u05DC \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9\u05D5\u05EA, \u05E9\u05D9\u05E8\u05D5\u05EA, \u05D6\u05DE\u05D9\u05E0\u05D5\u05EA \u05D5\u05DC\u05D9\u05D5\u05D5\u05D9 \u05D0\u05D9\u05E9\u05D9.'>;
+  };
+}
+
 export interface SectionsBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_banners';
   info: {
@@ -65,7 +92,73 @@ export interface SectionsBlog extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    archiveLinkLabel: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
     heading: Schema.Attribute.String;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['grid', 'compact', 'featured']> &
+      Schema.Attribute.DefaultTo<'grid'>;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
+  };
+}
+
+export interface SectionsContactSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_contact_sections';
+  info: {
+    displayName: 'ContactSection';
+    icon: 'phone';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05E6\u05D5\u05E8 \u05E7\u05E9\u05E8'>;
+    formId: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'contact-us-home-page-dynamic'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u05DC\u05EA\u05D9\u05D0\u05D5\u05DD \u05E9\u05D9\u05D7\u05EA \u05D9\u05D9\u05E2\u05D5\u05E5'>;
+    intro: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u05D4\u05E9\u05D0\u05D9\u05E8\u05D5 \u05E4\u05E8\u05D8\u05D9\u05DD \u05D5\u05E0\u05D7\u05D6\u05D5\u05E8 \u05D0\u05DC\u05D9\u05DB\u05DD \u05D1\u05D4\u05E7\u05D3\u05DD \u05E2\u05DD \u05D4\u05DB\u05D5\u05D5\u05E0\u05D4 \u05E8\u05D0\u05E9\u05D5\u05E0\u05D9\u05EA.'>;
+    layout: Schema.Attribute.Enumeration<['form', 'compact', 'split']> &
+      Schema.Attribute.DefaultTo<'form'>;
+    showPhoneCta: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    showWhatsappCta: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface SectionsPostsTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_posts_teasers';
+  info: {
+    displayName: 'PostsTeaser';
+    icon: 'bulletList';
+  };
+  attributes: {
+    archiveLinkLabel: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['grid', 'compact', 'featured']> &
+      Schema.Attribute.DefaultTo<'grid'>;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
+    posts: Schema.Attribute.Relation<'oneToMany', 'api::post.post'>;
+    selectionMode: Schema.Attribute.Enumeration<['latest', 'manual']> &
+      Schema.Attribute.DefaultTo<'latest'>;
   };
 }
 
@@ -77,6 +170,72 @@ export interface SectionsPracticeGrid extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsPressTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_press_teasers';
+  info: {
+    displayName: 'PressTeaser';
+    icon: 'newspaper';
+  };
+  attributes: {
+    archiveLinkLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05DC\u05DB\u05DC \u05D4\u05E4\u05E8\u05E1\u05D5\u05DE\u05D9\u05DD'>;
+    eyebrow: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Press'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u05E4\u05E8\u05E1\u05D5\u05DE\u05D9\u05DD \u05D0\u05D7\u05E8\u05D5\u05E0\u05D9\u05DD'>;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['grid', 'compact', 'featured']> &
+      Schema.Attribute.DefaultTo<'grid'>;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
+    pressMentions: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::press-mention.press-mention'
+    >;
+    selectionMode: Schema.Attribute.Enumeration<
+      ['latest', 'manual', 'featured']
+    > &
+      Schema.Attribute.DefaultTo<'latest'>;
+  };
+}
+
+export interface SectionsReviewsTeaser extends Struct.ComponentSchema {
+  collectionName: 'components_sections_reviews_teasers';
+  info: {
+    displayName: 'ReviewsTeaser';
+    icon: 'star';
+  };
+  attributes: {
+    ctaHref: Schema.Attribute.String;
+    ctaLabel: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['carousel', 'grid', 'compact']> &
+      Schema.Attribute.DefaultTo<'carousel'>;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
+    showRatingSummary: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    source: Schema.Attribute.Enumeration<['google', 'manual']> &
+      Schema.Attribute.DefaultTo<'google'>;
   };
 }
 
@@ -112,8 +271,24 @@ export interface SectionsSuccessCasesTeaser extends Struct.ComponentSchema {
     archiveLinkLabel: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
     heading: Schema.Attribute.String;
-    intro: Schema.Attribute.String;
-    limit: Schema.Attribute.String;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['grid', 'compact', 'featured']> &
+      Schema.Attribute.DefaultTo<'grid'>;
+    limit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 12;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<3>;
+    selectionMode: Schema.Attribute.Enumeration<['latest', 'manual']> &
+      Schema.Attribute.DefaultTo<'latest'>;
+    successCases: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::success-case.success-case'
+    >;
   };
 }
 
@@ -274,9 +449,14 @@ declare module '@strapi/strapi' {
       'landing-pages.card-item': LandingPagesCardItem;
       'landing-pages.step-item': LandingPagesStepItem;
       'landing-pages.text-item': LandingPagesTextItem;
+      'sections.ask-ai-teaser': SectionsAskAiTeaser;
       'sections.banner': SectionsBanner;
       'sections.blog': SectionsBlog;
+      'sections.contact-section': SectionsContactSection;
+      'sections.posts-teaser': SectionsPostsTeaser;
       'sections.practice-grid': SectionsPracticeGrid;
+      'sections.press-teaser': SectionsPressTeaser;
+      'sections.reviews-teaser': SectionsReviewsTeaser;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.services-teaser': SectionsServicesTeaser;
       'sections.success-cases-teaser': SectionsSuccessCasesTeaser;

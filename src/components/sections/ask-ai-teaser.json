@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_ask_ai_teasers",
+  "info": {
+    "displayName": "AskAiTeaser",
+    "icon": "magic"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "שאלו בינה מלאכותית"
+    },
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": "בדקו מה מספרים על קרין אמסלם"
+    },
+    "intro": {
+      "type": "text",
+      "default": "פתחו כלי בינה מלאכותית עם שאלה קצרה על המקצועיות, השירות והליווי האישי של המשרד."
+    },
+    "prompt": {
+      "type": "text",
+      "default": "ספר לי למה עורכת הדין קרין אמסלם נחשבת טובה בתחומה, בדגש על מקצועיות, שירות, זמינות וליווי אישי."
+    },
+    "disclaimer": {
+      "type": "text",
+      "default": "התשובות הן מידע ראשוני בלבד ואינן מחליפות ייעוץ משפטי. אין להזין פרטים אישיים או מסמכים רגישים."
+    },
+    "enabledTools": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "chatgpt",
+        "claude",
+        "perplexity",
+        "gemini",
+        "copilot",
+        "grok"
+      ],
+      "default": "all"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "split",
+        "compact"
+      ],
+      "default": "split"
+    }
+  },
+  "config": {}
+}

@@ -1,22 +1,26 @@
 {
-  "collectionName": "components_sections_success_cases_teasers",
+  "collectionName": "components_sections_press_teasers",
   "info": {
-    "displayName": "successCasesTeaser",
-    "icon": "apps"
+    "displayName": "PressTeaser",
+    "icon": "newspaper"
   },
   "options": {},
   "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "Press"
+    },
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "פרסומים אחרונים"
     },
     "intro": {
       "type": "text"
     },
-    "eyebrow": {
-      "type": "string"
-    },
     "archiveLinkLabel": {
-      "type": "string"
+      "type": "string",
+      "default": "לכל הפרסומים"
     },
     "limit": {
       "type": "integer",
@@ -28,7 +32,8 @@
       "type": "enumeration",
       "enum": [
         "latest",
-        "manual"
+        "manual",
+        "featured"
       ],
       "default": "latest"
     },
@@ -41,10 +46,10 @@
       ],
       "default": "grid"
     },
-    "successCases": {
+    "pressMentions": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::success-case.success-case"
+      "target": "api::press-mention.press-mention"
     }
   },
   "config": {}

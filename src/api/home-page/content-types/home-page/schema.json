@@ -45,7 +45,12 @@
         "sections.blog",
         "sections.banner",
         "sections.services-teaser",
-        "sections.success-cases-teaser"
+        "sections.success-cases-teaser",
+        "sections.posts-teaser",
+        "sections.reviews-teaser",
+        "sections.ask-ai-teaser",
+        "sections.press-teaser",
+        "sections.contact-section"
       ]
     },
     "heroImage": {
