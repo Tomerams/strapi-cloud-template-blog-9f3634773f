@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "legal_signature_requests",
+  "info": {
+    "singularName": "legal-signature-request",
+    "pluralName": "legal-signature-requests",
+    "displayName": "Legal Signature Request"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "requestTitle": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "power_of_attorney",
+        "fee_agreement"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "default": "draft",
+      "enum": [
+        "draft",
+        "sent",
+        "opened",
+        "signed",
+        "lawyer_review",
+        "completed",
+        "rejected",
+        "expired",
+        "revoked"
+      ]
+    },
+    "signatureLevel": {
+      "type": "enumeration",
+      "default": "otp",
+      "enum": [
+        "simple",
+        "otp",
+        "identity_verification",
+        "lawyer_verified",
+        "qualified_provider",
+        "blocked"
+      ]
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "clientEmail": {
+      "type": "email",
+      "required": true
+    },
+    "clientPhone": {
+      "type": "string"
+    },
+    "fieldValues": {
+      "type": "json"
+    },
+    "templateSnapshot": {
+      "type": "json"
+    },
+    "renderedBody": {
+      "type": "richtext",
+      "required": true
+    },
+    "unsignedDocumentHash": {
+      "type": "string"
+    },
+    "signedDocumentHash": {
+      "type": "string"
+    },
+    "tokenHash": {
+      "type": "string"
+    },
+    "signatureUrl": {
+      "type": "text"
+    },
+    "signatureDataUrl": {
+      "type": "text"
+    },
+    "signedDocumentHtml": {
+      "type": "richtext"
+    },
+    "acceptanceText": {
+      "type": "text"
+    },
+    "evidence": {
+      "type": "json"
+    },
+    "expiresAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "sentAt": {
+      "type": "datetime"
+    },
+    "openedAt": {
+      "type": "datetime"
+    },
+    "signedAt": {
+      "type": "datetime"
+    },
+    "template": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::legal-document-template.legal-document-template",
+      "inversedBy": "signatureRequests"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client"
+    }
+  }
+}

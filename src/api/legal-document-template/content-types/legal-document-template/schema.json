@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "legal_document_templates",
+  "info": {
+    "singularName": "legal-document-template",
+    "pluralName": "legal-document-templates",
+    "displayName": "Legal Document Template"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "power_of_attorney",
+        "fee_agreement"
+      ]
+    },
+    "riskLevel": {
+      "type": "enumeration",
+      "default": "medium",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "blocked"
+      ]
+    },
+    "signatureLevel": {
+      "type": "enumeration",
+      "default": "otp",
+      "enum": [
+        "simple",
+        "otp",
+        "identity_verification",
+        "lawyer_verified",
+        "qualified_provider",
+        "blocked"
+      ]
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "requiredFields": {
+      "type": "json"
+    },
+    "legalNotes": {
+      "type": "text"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "signatureRequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::legal-signature-request.legal-signature-request",
+      "mappedBy": "template"
+    }
+  }
+}
