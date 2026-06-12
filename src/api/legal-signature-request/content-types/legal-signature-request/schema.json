@@ -64,8 +64,23 @@
     "fieldValues": {
       "type": "json"
     },
+    "clientSnapshot": {
+      "type": "json"
+    },
     "templateSnapshot": {
       "type": "json"
+    },
+    "clientConsentText": {
+      "type": "text"
+    },
+    "emailSubjectSnapshot": {
+      "type": "string"
+    },
+    "emailBodySnapshot": {
+      "type": "richtext"
+    },
+    "smsBodySnapshot": {
+      "type": "text"
     },
     "renderedBody": {
       "type": "richtext",

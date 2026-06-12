@@ -1219,9 +1219,12 @@ export interface ApiLegalDocumentTemplateLegalDocumentTemplate
       ['power_of_attorney', 'fee_agreement']
     > &
       Schema.Attribute.Required;
+    clientConsentText: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    emailBody: Schema.Attribute.RichText;
+    emailSubject: Schema.Attribute.String;
     isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     legalNotes: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1252,10 +1255,12 @@ export interface ApiLegalDocumentTemplateLegalDocumentTemplate
       'api::legal-signature-request.legal-signature-request'
     >;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    smsBody: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    version: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
   };
 }
 
@@ -1277,12 +1282,16 @@ export interface ApiLegalSignatureRequestLegalSignatureRequest
     > &
       Schema.Attribute.Required;
     client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    clientConsentText: Schema.Attribute.Text;
     clientEmail: Schema.Attribute.Email & Schema.Attribute.Required;
     clientName: Schema.Attribute.String & Schema.Attribute.Required;
     clientPhone: Schema.Attribute.String;
+    clientSnapshot: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    emailBodySnapshot: Schema.Attribute.RichText;
+    emailSubjectSnapshot: Schema.Attribute.String;
     evidence: Schema.Attribute.JSON;
     expiresAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
     fieldValues: Schema.Attribute.JSON;
@@ -1313,6 +1322,7 @@ export interface ApiLegalSignatureRequestLegalSignatureRequest
     signedAt: Schema.Attribute.DateTime;
     signedDocumentHash: Schema.Attribute.String;
     signedDocumentHtml: Schema.Attribute.RichText;
+    smsBodySnapshot: Schema.Attribute.Text;
     status: Schema.Attribute.Enumeration<
       [
         'draft',

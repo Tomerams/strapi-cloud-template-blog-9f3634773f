@@ -57,6 +57,22 @@
     "requiredFields": {
       "type": "json"
     },
+    "clientConsentText": {
+      "type": "text"
+    },
+    "emailSubject": {
+      "type": "string"
+    },
+    "emailBody": {
+      "type": "richtext"
+    },
+    "smsBody": {
+      "type": "text"
+    },
+    "version": {
+      "type": "integer",
+      "default": 1
+    },
     "legalNotes": {
       "type": "text"
     },
