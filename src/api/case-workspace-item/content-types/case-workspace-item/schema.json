@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_workspace_items",
+  "info": {
+    "singularName": "case-workspace-item",
+    "pluralName": "case-workspace-items",
+    "displayName": "Case Workspace Item"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "itemType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "document",
+        "task",
+        "note",
+        "report",
+        "scenario",
+        "checklist_item",
+        "fee_agreement",
+        "power_of_attorney",
+        "custom"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "clientVisible": {
+      "type": "boolean",
+      "default": false
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "data": {
+      "type": "json"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::case-workspace.case-workspace",
+      "inversedBy": "items"
+    }
+  }
+}

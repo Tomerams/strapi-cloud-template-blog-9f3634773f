@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_workspace_events",
+  "info": {
+    "singularName": "case-workspace-event",
+    "pluralName": "case-workspace-events",
+    "displayName": "Case Workspace Event"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "actorName": {
+      "type": "string"
+    },
+    "actorEmail": {
+      "type": "email"
+    },
+    "message": {
+      "type": "text"
+    },
+    "beforeValue": {
+      "type": "json"
+    },
+    "afterValue": {
+      "type": "json"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::case-workspace.case-workspace",
+      "inversedBy": "events"
+    }
+  }
+}

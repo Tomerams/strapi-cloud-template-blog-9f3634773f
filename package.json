@@ -9,6 +9,7 @@
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "seed:legal-signing": "node ./scripts/seed-legal-signing-templates.js",
+    "seed:case-workspaces": "node ./scripts/seed-case-workspace-templates.js",
     "start": "strapi start",
     "strapi": "strapi"
   },

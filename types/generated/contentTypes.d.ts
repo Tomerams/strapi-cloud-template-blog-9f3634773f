@@ -1457,6 +1457,212 @@ export interface ApiLocationsPageLocationsPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCase WorkspaceEventCase WorkspaceEvent extends Struct.CollectionTypeSchema {
+  collectionName: 'case_workspace_events';
+  info: {
+    displayName: 'Case Workspace Event';
+    pluralName: 'case-workspace-events';
+    singularName: 'case-workspace-event';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    actorEmail: Schema.Attribute.Email;
+    actorName: Schema.Attribute.String;
+    afterValue: Schema.Attribute.JSON;
+    beforeValue: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    eventType: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace-event.case-workspace-event'
+    > &
+      Schema.Attribute.Private;
+    matter: Schema.Attribute.Relation<'manyToOne', 'api::case-workspace.case-workspace'>;
+    message: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCase WorkspaceItemCase WorkspaceItem extends Struct.CollectionTypeSchema {
+  collectionName: 'case_workspace_items';
+  info: {
+    displayName: 'Case Workspace Item';
+    pluralName: 'case-workspace-items';
+    singularName: 'case-workspace-item';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    clientVisible: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.JSON;
+    dueDate: Schema.Attribute.Date;
+    files: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    itemType: Schema.Attribute.Enumeration<
+      [
+        'document',
+        'task',
+        'note',
+        'report',
+        'scenario',
+        'checklist_item',
+        'fee_agreement',
+        'power_of_attorney',
+        'custom',
+      ]
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace-item.case-workspace-item'
+    > &
+      Schema.Attribute.Private;
+    matter: Schema.Attribute.Relation<'manyToOne', 'api::case-workspace.case-workspace'>;
+    owner: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    required: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    status: Schema.Attribute.String;
+    summary: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCase WorkspaceTemplateCase WorkspaceTemplate
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'case_workspace_templates';
+  info: {
+    displayName: 'Case Workspace Template';
+    pluralName: 'case-workspace-templates';
+    singularName: 'case-workspace-template';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    defaultApprovalStatus: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'draft'>;
+    defaultRiskLevel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'medium'>;
+    defaultStatus: Schema.Attribute.String & Schema.Attribute.DefaultTo<'new'>;
+    description: Schema.Attribute.Text;
+    fieldSchema: Schema.Attribute.JSON;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    itemTemplates: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace-template.case-workspace-template'
+    > &
+      Schema.Attribute.Private;
+    case_workspaces: Schema.Attribute.Relation<'oneToMany', 'api::case-workspace.case-workspace'>;
+    workspaceType: Schema.Attribute.Enumeration<
+      [
+        'sale_apartment',
+        'purchase_apartment',
+        'sale_moshav_estate',
+        'purchase_moshav_estate',
+        'land',
+        'commercial',
+        'inheritance',
+        'gift',
+        'combination',
+        'dissolution',
+        'rmi_tender',
+        'general',
+      ]
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.JSON;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    version: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
+    workflowSteps: Schema.Attribute.JSON;
+  };
+}
+
+export interface ApiCase WorkspaceCase Workspace extends Struct.CollectionTypeSchema {
+  collectionName: 'case_workspaces';
+  info: {
+    displayName: 'Case Workspace';
+    pluralName: 'case_workspaces';
+    singularName: 'matter';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    approvalStatus: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'draft'>;
+    assignedLawyer: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    caseNumber: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    clientSnapshot: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deadline: Schema.Attribute.Date;
+    events: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace-event.case-workspace-event'
+    >;
+    fieldValues: Schema.Attribute.JSON;
+    items: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace-item.case-workspace-item'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-workspace.case-workspace'
+    > &
+      Schema.Attribute.Private;
+    workspaceType: Schema.Attribute.String & Schema.Attribute.Required;
+    openedAt: Schema.Attribute.Date;
+    publishedAt: Schema.Attribute.DateTime;
+    riskLevel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'medium'>;
+    status: Schema.Attribute.String & Schema.Attribute.DefaultTo<'new'>;
+    template: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::case-workspace-template.case-workspace-template'
+    >;
+    templateSnapshot: Schema.Attribute.JSON;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -2490,7 +2696,7 @@ export interface ApiSuccessCaseSuccessCase extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    whyItMatters: Schema.Attribute.String;
+    whyItCase Workspaces: Schema.Attribute.String;
   };
 }
 
@@ -3261,6 +3467,10 @@ declare module '@strapi/strapi' {
       'api::legal-signature-request.legal-signature-request': ApiLegalSignatureRequestLegalSignatureRequest;
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;
+      'api::case-workspace-event.case-workspace-event': ApiCase WorkspaceEventCase WorkspaceEvent;
+      'api::case-workspace-item.case-workspace-item': ApiCase WorkspaceItemCase WorkspaceItem;
+      'api::case-workspace-template.case-workspace-template': ApiCase WorkspaceTemplateCase WorkspaceTemplate;
+      'api::case-workspace.case-workspace': ApiCase WorkspaceCase Workspace;
       'api::post.post': ApiPostPost;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
       'api::practice-areas-page.practice-areas-page': ApiPracticeAreasPagePracticeAreasPage;

@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_workspaces",
+  "info": {
+    "singularName": "case-workspace",
+    "pluralName": "case-workspaces",
+    "displayName": "Case Workspace"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "caseNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "workspaceType": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "default": "new"
+    },
+    "approvalStatus": {
+      "type": "string",
+      "default": "draft"
+    },
+    "riskLevel": {
+      "type": "string",
+      "default": "medium"
+    },
+    "openedAt": {
+      "type": "date"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "fieldValues": {
+      "type": "json"
+    },
+    "clientSnapshot": {
+      "type": "json"
+    },
+    "templateSnapshot": {
+      "type": "json"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client"
+    },
+    "assignedLawyer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "template": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::case-workspace-template.case-workspace-template",
+      "inversedBy": "workspaces"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-workspace-item.case-workspace-item",
+      "mappedBy": "workspace"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-workspace-event.case-workspace-event",
+      "mappedBy": "workspace"
+    }
+  }
+}

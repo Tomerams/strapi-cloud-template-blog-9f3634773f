@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_workspace_templates",
+  "info": {
+    "singularName": "case-workspace-template",
+    "pluralName": "case-workspace-templates",
+    "displayName": "Case Workspace Template"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "workspaceType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "sale_apartment",
+        "purchase_apartment",
+        "sale_moshav_estate",
+        "purchase_moshav_estate",
+        "land",
+        "commercial",
+        "inheritance",
+        "gift",
+        "combination",
+        "dissolution",
+        "rmi_tender",
+        "general"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "defaultStatus": {
+      "type": "string",
+      "default": "new"
+    },
+    "defaultApprovalStatus": {
+      "type": "string",
+      "default": "draft"
+    },
+    "defaultRiskLevel": {
+      "type": "string",
+      "default": "medium"
+    },
+    "fieldSchema": {
+      "type": "json"
+    },
+    "sections": {
+      "type": "json"
+    },
+    "itemTemplates": {
+      "type": "json"
+    },
+    "workflowSteps": {
+      "type": "json"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "version": {
+      "type": "integer",
+      "default": 1
+    },
+    "workspaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-workspace.case-workspace",
+      "mappedBy": "template"
+    }
+  }
+}
