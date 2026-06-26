@@ -808,6 +808,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    address: Schema.Attribute.String;
     client_documents: Schema.Attribute.Relation<
       'oneToMany',
       'api::client-document.client-document'
@@ -817,6 +818,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
+    idNumber: Schema.Attribute.String;
     leads: Schema.Attribute.Relation<'oneToMany', 'api::lead.lead'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3045,6 +3047,9 @@ export interface PluginUsersPermissionsUser
     pbxDirectNumber: Schema.Attribute.String;
     pbxEnabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     pbxExtension: Schema.Attribute.UID & Schema.Attribute.Unique;
+    pbxSipDomain: Schema.Attribute.String;
+    pbxSipUri: Schema.Attribute.String;
+    pbxSipUsername: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;

@@ -73,6 +73,15 @@
     "pbxDirectNumber": {
       "type": "string"
     },
+    "pbxSipUsername": {
+      "type": "string"
+    },
+    "pbxSipDomain": {
+      "type": "string"
+    },
+    "pbxSipUri": {
+      "type": "string"
+    },
     "role": {
       "type": "relation",
       "relation": "manyToOne",

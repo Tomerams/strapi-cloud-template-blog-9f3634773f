@@ -20,6 +20,12 @@
     "phone": {
       "type": "string"
     },
+    "idNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
     "morningId": {
       "type": "string"
     },
