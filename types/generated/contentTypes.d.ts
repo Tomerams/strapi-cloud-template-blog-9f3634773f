@@ -2263,12 +2263,14 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     googleBusinessUrl: Schema.Attribute.String;
     googleReviewUrl: Schema.Attribute.String;
     instagramUrl: Schema.Attribute.String;
+    latitude: Schema.Attribute.Decimal;
     linkedinUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::site-setting.site-setting'
     >;
+    longitude: Schema.Attribute.Decimal;
     officeAddress: Schema.Attribute.String;
     officialName: Schema.Attribute.String;
     phone: Schema.Attribute.String;

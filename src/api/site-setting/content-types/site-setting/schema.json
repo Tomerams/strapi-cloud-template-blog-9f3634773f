@@ -30,6 +30,12 @@
     "officeAddress": {
       "type": "string"
     },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
     "whatsapp": {
       "type": "string"
     },
