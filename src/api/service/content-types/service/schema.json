@@ -39,7 +39,8 @@
         }
       },
       "components": [
-        "dynamic-zone.rich-content"
+        "dynamic-zone.rich-content",
+        "dynamic-zone.client-fit"
       ]
     },
     "image": {

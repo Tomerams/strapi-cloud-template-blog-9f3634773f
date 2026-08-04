@@ -1,5 +1,47 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface DynamicZoneClientFit extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_client_fits';
+  info: {
+    description: '\u05D4\u05D2\u05D3\u05E8\u05EA \u05E1\u05D5\u05D2\u05D9 \u05D4\u05DC\u05E7\u05D5\u05D7\u05D5\u05EA \u05D5\u05D4\u05DE\u05E7\u05E8\u05D9\u05DD \u05E9\u05D4\u05E9\u05D9\u05E8\u05D5\u05EA \u05DE\u05EA\u05D0\u05D9\u05DD \u05DC\u05D4\u05DD';
+    displayName: 'Client Fit';
+    icon: 'user';
+  };
+  attributes: {
+    broadReviewText: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u05DB\u05E9\u05D9\u05E9 \u05DB\u05DE\u05D4 \u05D1\u05E2\u05DC\u05D9 \u05E2\u05E0\u05D9\u05D9\u05DF, \u05D9\u05D5\u05EA\u05E8 \u05DE\u05E8\u05E9\u05D5\u05EA \u05D0\u05D7\u05EA, \u05DE\u05E1\u05DE\u05DB\u05D9\u05DD \u05E9\u05DC\u05D0 \u05EA\u05D5\u05D0\u05DE\u05D9\u05DD \u05D0\u05D5 \u05DE\u05D5\u05E2\u05D3 \u05D7\u05EA\u05D9\u05DE\u05D4 \u05D5\u05EA\u05E9\u05DC\u05D5\u05DD \u05E7\u05E8\u05D5\u05D1.'>;
+    broadReviewTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05DE\u05EA\u05D9 \u05D7\u05E9\u05D5\u05D1 \u05DC\u05E2\u05E6\u05D5\u05E8 \u05DC\u05D1\u05D3\u05D9\u05E7\u05D4 \u05E8\u05D7\u05D1\u05D4 \u05D9\u05D5\u05EA\u05E8?'>;
+    ctaLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05D1\u05D3\u05E7\u05D5 \u05D0\u05D9\u05DA \u05E0\u05DB\u05D5\u05DF \u05DC\u05D4\u05EA\u05E7\u05D3\u05DD \u05D1\u05DE\u05E7\u05E8\u05D4 \u05E9\u05DC\u05DB\u05DD'>;
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05DC\u05DE\u05D9 \u05D4\u05DC\u05D9\u05D5\u05D5\u05D9 \u05DE\u05EA\u05D0\u05D9\u05DD'>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u05DB\u05E9\u05D4\u05D4\u05D7\u05DC\u05D8\u05D4 \u05D3\u05D5\u05E8\u05E9\u05EA \u05D9\u05D5\u05EA\u05E8 \u05DE\u05EA\u05E9\u05D5\u05D1\u05D4 \u05DB\u05DC\u05DC\u05D9\u05EA'>;
+    intro: Schema.Attribute.Text & Schema.Attribute.Required;
+    profiles: Schema.Attribute.Component<'dynamic-zone.client-profile', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+  };
+}
+
+export interface DynamicZoneClientProfile extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_client_profiles';
+  info: {
+    displayName: 'Client Profile';
+    icon: 'user';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_rich_contents';
   info: {
@@ -445,6 +487,8 @@ export interface UtilitiesServices extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'dynamic-zone.client-fit': DynamicZoneClientFit;
+      'dynamic-zone.client-profile': DynamicZoneClientProfile;
       'dynamic-zone.rich-content': DynamicZoneRichContent;
       'landing-pages.card-item': LandingPagesCardItem;
       'landing-pages.step-item': LandingPagesStepItem;

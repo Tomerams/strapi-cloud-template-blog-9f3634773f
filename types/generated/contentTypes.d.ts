@@ -2153,7 +2153,9 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'api::practice-area.practice-area'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
+    sections: Schema.Attribute.DynamicZone<
+      ['dynamic-zone.rich-content', 'dynamic-zone.client-fit']
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

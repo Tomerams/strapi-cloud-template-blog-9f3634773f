@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_dynamic_zone_client_profiles",
+  "info": {
+    "displayName": "Client Profile",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
