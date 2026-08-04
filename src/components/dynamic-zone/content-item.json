@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dynamic_zone_content_items",
+  "info": {
+    "displayName": "Content Item",
+    "description": "פריט תוכן קצר לתרחיש או לרשימת בדיקה",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

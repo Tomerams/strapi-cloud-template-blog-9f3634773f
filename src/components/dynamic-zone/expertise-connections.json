@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_dynamic_zone_expertise_connections",
+  "info": {
+    "displayName": "Expertise Connections",
+    "description": "מפה קצרה של התחומים והגורמים שמתחברים לסוגיה",
+    "icon": "relation"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "heading": { "type": "string", "required": true },
+    "intro": { "type": "text" },
+    "nodes": {
+      "type": "component",
+      "component": "dynamic-zone.expertise-node",
+      "repeatable": true,
+      "required": true,
+      "min": 2
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["network", "compact"],
+      "default": "network"
+    }
+  },
+  "config": {}
+}

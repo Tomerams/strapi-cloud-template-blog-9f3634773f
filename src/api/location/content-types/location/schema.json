@@ -31,7 +31,12 @@
         }
       },
       "components": [
-        "dynamic-zone.rich-content"
+        "dynamic-zone.rich-content",
+        "dynamic-zone.context-panel",
+        "dynamic-zone.scenario-grid",
+        "dynamic-zone.checklist",
+        "dynamic-zone.expertise-connections",
+        "dynamic-zone.related-services"
       ]
     },
     "seo": {

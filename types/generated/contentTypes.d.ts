@@ -1487,7 +1487,16 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'dynamic-zone.rich-content',
+        'dynamic-zone.context-panel',
+        'dynamic-zone.scenario-grid',
+        'dynamic-zone.checklist',
+        'dynamic-zone.expertise-connections',
+        'dynamic-zone.related-services',
+      ]
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1690,7 +1699,16 @@ export interface ApiPracticeAreaPracticeArea
       }>;
     posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'>;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'dynamic-zone.rich-content',
+        'dynamic-zone.context-panel',
+        'dynamic-zone.scenario-grid',
+        'dynamic-zone.checklist',
+        'dynamic-zone.expertise-connections',
+        'dynamic-zone.related-services',
+      ]
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2010,7 +2028,16 @@ export interface ApiSectorSector extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.DynamicZone<['dynamic-zone.rich-content']> &
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'dynamic-zone.rich-content',
+        'dynamic-zone.context-panel',
+        'dynamic-zone.scenario-grid',
+        'dynamic-zone.checklist',
+        'dynamic-zone.expertise-connections',
+        'dynamic-zone.related-services',
+      ]
+    > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -2154,7 +2181,15 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
-      ['dynamic-zone.rich-content', 'dynamic-zone.client-fit']
+      [
+        'dynamic-zone.rich-content',
+        'dynamic-zone.client-fit',
+        'dynamic-zone.context-panel',
+        'dynamic-zone.scenario-grid',
+        'dynamic-zone.checklist',
+        'dynamic-zone.expertise-connections',
+        'dynamic-zone.related-services',
+      ]
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

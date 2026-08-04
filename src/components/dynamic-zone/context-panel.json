@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_dynamic_zone_context_panels",
+  "info": {
+    "displayName": "Context Panel",
+    "description": "הקשר מקומי או מקצועי שמסביר מדוע הנושא דורש הסתכלות רחבה",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "text"
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "highlight": {
+      "type": "text"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["soft", "dark", "centered"],
+      "default": "soft"
+    }
+  },
+  "config": {}
+}

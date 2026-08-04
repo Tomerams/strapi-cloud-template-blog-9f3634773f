@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_dynamic_zone_checklists",
+  "info": {
+    "displayName": "Practical Checklist",
+    "description": "מה בודקים או מכינים לפני שמתקדמים",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "heading": { "type": "string", "required": true },
+    "intro": { "type": "text" },
+    "items": {
+      "type": "component",
+      "component": "dynamic-zone.content-item",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    },
+    "noteTitle": { "type": "string" },
+    "noteText": { "type": "text" },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["light", "accent"],
+      "default": "light"
+    }
+  },
+  "config": {}
+}

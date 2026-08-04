@@ -1,5 +1,31 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface DynamicZoneChecklist extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_checklists';
+  info: {
+    description: '\u05DE\u05D4 \u05D1\u05D5\u05D3\u05E7\u05D9\u05DD \u05D0\u05D5 \u05DE\u05DB\u05D9\u05E0\u05D9\u05DD \u05DC\u05E4\u05E0\u05D9 \u05E9\u05DE\u05EA\u05E7\u05D3\u05DE\u05D9\u05DD';
+    displayName: 'Practical Checklist';
+    icon: 'check';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    items: Schema.Attribute.Component<'dynamic-zone.content-item', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    noteText: Schema.Attribute.Text;
+    noteTitle: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['light', 'accent']> &
+      Schema.Attribute.DefaultTo<'light'>;
+  };
+}
+
 export interface DynamicZoneClientFit extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_client_fits';
   info: {
@@ -42,6 +68,96 @@ export interface DynamicZoneClientProfile extends Struct.ComponentSchema {
   };
 }
 
+export interface DynamicZoneContentItem extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_content_items';
+  info: {
+    description: '\u05E4\u05E8\u05D9\u05D8 \u05EA\u05D5\u05DB\u05DF \u05E7\u05E6\u05E8 \u05DC\u05EA\u05E8\u05D7\u05D9\u05E9 \u05D0\u05D5 \u05DC\u05E8\u05E9\u05D9\u05DE\u05EA \u05D1\u05D3\u05D9\u05E7\u05D4';
+    displayName: 'Content Item';
+    icon: 'bulletList';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DynamicZoneContextPanel extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_context_panels';
+  info: {
+    description: '\u05D4\u05E7\u05E9\u05E8 \u05DE\u05E7\u05D5\u05DE\u05D9 \u05D0\u05D5 \u05DE\u05E7\u05E6\u05D5\u05E2\u05D9 \u05E9\u05DE\u05E1\u05D1\u05D9\u05E8 \u05DE\u05D3\u05D5\u05E2 \u05D4\u05E0\u05D5\u05E9\u05D0 \u05D3\u05D5\u05E8\u05E9 \u05D4\u05E1\u05EA\u05DB\u05DC\u05D5\u05EA \u05E8\u05D7\u05D1\u05D4';
+    displayName: 'Context Panel';
+    icon: 'information';
+  };
+  attributes: {
+    body: Schema.Attribute.Text & Schema.Attribute.Required;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    highlight: Schema.Attribute.Text;
+    intro: Schema.Attribute.Text;
+    variant: Schema.Attribute.Enumeration<['soft', 'dark', 'centered']> &
+      Schema.Attribute.DefaultTo<'soft'>;
+  };
+}
+
+export interface DynamicZoneExpertiseConnections
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_expertise_connections';
+  info: {
+    description: '\u05DE\u05E4\u05D4 \u05E7\u05E6\u05E8\u05D4 \u05E9\u05DC \u05D4\u05EA\u05D7\u05D5\u05DE\u05D9\u05DD \u05D5\u05D4\u05D2\u05D5\u05E8\u05DE\u05D9\u05DD \u05E9\u05DE\u05EA\u05D7\u05D1\u05E8\u05D9\u05DD \u05DC\u05E1\u05D5\u05D2\u05D9\u05D4';
+    displayName: 'Expertise Connections';
+    icon: 'relation';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['network', 'compact']> &
+      Schema.Attribute.DefaultTo<'network'>;
+    nodes: Schema.Attribute.Component<'dynamic-zone.expertise-node', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 2;
+        },
+        number
+      >;
+  };
+}
+
+export interface DynamicZoneExpertiseNode extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_expertise_nodes';
+  info: {
+    description: '\u05E6\u05D5\u05DE\u05EA \u05D1\u05DE\u05E4\u05EA \u05E7\u05E9\u05E8\u05D9 \u05D4\u05DE\u05D5\u05DE\u05D7\u05D9\u05D5\u05EA';
+    displayName: 'Expertise Node';
+    icon: 'connector';
+  };
+  attributes: {
+    connectsTo: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface DynamicZoneRelatedServices extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_related_services';
+  info: {
+    description: '\u05D1\u05D7\u05D9\u05E8\u05D4 \u05D9\u05D3\u05E0\u05D9\u05EA \u05E9\u05DC \u05E9\u05D9\u05E8\u05D5\u05EA\u05D9\u05DD \u05E7\u05E9\u05D5\u05E8\u05D9\u05DD \u05DE\u05EA\u05D5\u05DA Strapi';
+    displayName: 'Related Services';
+    icon: 'link';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    layout: Schema.Attribute.Enumeration<['grid', 'list']> &
+      Schema.Attribute.DefaultTo<'grid'>;
+    linkLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u05DC\u05E2\u05DE\u05D5\u05D3 \u05D4\u05E9\u05D9\u05E8\u05D5\u05EA'>;
+    services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
+  };
+}
+
 export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_rich_contents';
   info: {
@@ -50,6 +166,32 @@ export interface DynamicZoneRichContent extends Struct.ComponentSchema {
   };
   attributes: {
     richContent: Schema.Attribute.Blocks;
+  };
+}
+
+export interface DynamicZoneScenarioGrid extends Struct.ComponentSchema {
+  collectionName: 'components_dynamic_zone_scenario_grids';
+  info: {
+    description: '\u05DE\u05E6\u05D1\u05D9\u05DD \u05E9\u05DB\u05D9\u05D7\u05D9\u05DD \u05E9\u05D1\u05D4\u05DD \u05D4\u05DC\u05E7\u05D5\u05D7 \u05E2\u05E9\u05D5\u05D9 \u05DC\u05D6\u05D4\u05D5\u05EA \u05D0\u05EA \u05E2\u05E6\u05DE\u05D5';
+    displayName: 'Scenario Grid';
+    icon: 'grid';
+  };
+  attributes: {
+    background: Schema.Attribute.Enumeration<['white', 'soft']> &
+      Schema.Attribute.DefaultTo<'white'>;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Text;
+    items: Schema.Attribute.Component<'dynamic-zone.content-item', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    layout: Schema.Attribute.Enumeration<['grid', 'timeline', 'split']> &
+      Schema.Attribute.DefaultTo<'grid'>;
   };
 }
 
@@ -487,9 +629,16 @@ export interface UtilitiesServices extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'dynamic-zone.checklist': DynamicZoneChecklist;
       'dynamic-zone.client-fit': DynamicZoneClientFit;
       'dynamic-zone.client-profile': DynamicZoneClientProfile;
+      'dynamic-zone.content-item': DynamicZoneContentItem;
+      'dynamic-zone.context-panel': DynamicZoneContextPanel;
+      'dynamic-zone.expertise-connections': DynamicZoneExpertiseConnections;
+      'dynamic-zone.expertise-node': DynamicZoneExpertiseNode;
+      'dynamic-zone.related-services': DynamicZoneRelatedServices;
       'dynamic-zone.rich-content': DynamicZoneRichContent;
+      'dynamic-zone.scenario-grid': DynamicZoneScenarioGrid;
       'landing-pages.card-item': LandingPagesCardItem;
       'landing-pages.step-item': LandingPagesStepItem;
       'landing-pages.text-item': LandingPagesTextItem;

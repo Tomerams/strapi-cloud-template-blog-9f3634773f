@@ -40,7 +40,12 @@
       },
       "components": [
         "dynamic-zone.rich-content",
-        "dynamic-zone.client-fit"
+        "dynamic-zone.client-fit",
+        "dynamic-zone.context-panel",
+        "dynamic-zone.scenario-grid",
+        "dynamic-zone.checklist",
+        "dynamic-zone.expertise-connections",
+        "dynamic-zone.related-services"
       ]
     },
     "image": {

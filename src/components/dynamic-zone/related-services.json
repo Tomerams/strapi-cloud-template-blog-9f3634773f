@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_dynamic_zone_related_services",
+  "info": {
+    "displayName": "Related Services",
+    "description": "בחירה ידנית של שירותים קשורים מתוך Strapi",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "heading": { "type": "string", "required": true },
+    "intro": { "type": "text" },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["grid", "list"],
+      "default": "grid"
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "לעמוד השירות"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dynamic_zone_expertise_nodes",
+  "info": {
+    "displayName": "Expertise Node",
+    "description": "צומת במפת קשרי המומחיות",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "connectsTo": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_dynamic_zone_scenario_grids",
+  "info": {
+    "displayName": "Scenario Grid",
+    "description": "מצבים שכיחים שבהם הלקוח עשוי לזהות את עצמו",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "heading": { "type": "string", "required": true },
+    "intro": { "type": "text" },
+    "items": {
+      "type": "component",
+      "component": "dynamic-zone.content-item",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": ["grid", "timeline", "split"],
+      "default": "grid"
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": ["white", "soft"],
+      "default": "white"
+    }
+  },
+  "config": {}
+}
