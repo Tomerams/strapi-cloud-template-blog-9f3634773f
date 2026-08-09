@@ -113,6 +113,22 @@
         "videos",
         "audios"
       ]
+    },
+    "youtubeUrl": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "videoTitle": {
+      "type": "string",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "videoDescription": {
+      "type": "text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "videoUploadDate": {
+      "type": "date",
+      "pluginOptions": { "i18n": { "localized": true } }
     }
   }
 }
