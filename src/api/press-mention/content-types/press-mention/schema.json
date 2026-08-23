@@ -54,6 +54,7 @@
     },
     "image": {
       "type": "media",
+      "pluginOptions": { "i18n": { "localized": false } },
       "multiple": false,
       "required": false,
       "allowedTypes": [
@@ -72,6 +73,7 @@
     },
     "sourceLogo": {
       "type": "media",
+      "pluginOptions": { "i18n": { "localized": false } },
       "multiple": false,
       "required": false,
       "allowedTypes": [
@@ -116,6 +118,7 @@
     },
     "ogImage": {
       "type": "media",
+      "pluginOptions": { "i18n": { "localized": false } },
       "multiple": false,
       "required": false,
       "allowedTypes": [
