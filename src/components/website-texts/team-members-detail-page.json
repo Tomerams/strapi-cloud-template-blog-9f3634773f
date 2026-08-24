@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_team_members_detail_page_0ef7a7",
+  "info": {
+    "displayName": "Team Members Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "ourTeam": {
+      "type": "text",
+      "required": false
+    },
+    "articlesBy": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

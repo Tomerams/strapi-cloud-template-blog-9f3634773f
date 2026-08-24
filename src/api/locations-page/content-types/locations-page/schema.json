@@ -55,6 +55,26 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "locationsPageTexts": {
+      "type": "component",
+      "component": "website-texts.locations-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "locationsDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.locations-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

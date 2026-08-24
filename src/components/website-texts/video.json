@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_video_848784",
+  "info": {
+    "displayName": "Video",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "playTitle": {
+      "type": "text",
+      "required": false
+    },
+    "youtubeConsent": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

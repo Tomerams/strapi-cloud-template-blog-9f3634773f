@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_web_mcp_contact_tool_af5952",
+  "info": {
+    "displayName": "Web Mcp Contact Tool",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "submissionError": {
+      "type": "text",
+      "required": false
+    },
+    "submissionSuccess": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

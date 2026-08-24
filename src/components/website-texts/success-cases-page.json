@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_website_texts_success_cases_page_e8e827",
+  "info": {
+    "displayName": "Success Cases Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "successStoriesKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "exploreSelectedKALawsSuccessStoriesAndTheLegal": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "successStoriesWillAppearHereOnceTheyArePublished": {
+      "type": "text",
+      "required": false
+    },
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

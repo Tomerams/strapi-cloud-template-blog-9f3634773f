@@ -7,17 +7,14 @@
   "options": {},
   "attributes": {
     "eyebrow": {
-      "type": "string",
-      "default": "צור קשר"
+      "type": "string"
     },
     "heading": {
       "type": "string",
-      "required": true,
-      "default": "לתיאום שיחת ייעוץ"
+      "required": true
     },
     "intro": {
-      "type": "text",
-      "default": "השאירו פרטים ונחזור אליכם בהקדם עם הכוונה ראשונית."
+      "type": "text"
     },
     "formId": {
       "type": "string",
@@ -39,6 +36,9 @@
     "showWhatsappCta": {
       "type": "boolean",
       "default": true
+    },
+    "loadingAriaLabel": {
+      "type": "string"
     }
   },
   "config": {}

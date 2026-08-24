@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_government_page_hero_translation_46543c",
+  "info": {
+    "displayName": "Government Submission Hero Translation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "titleAccent": {
+      "type": "text",
+      "required": false
+    },
+    "lead": {
+      "type": "text",
+      "required": false
+    },
+    "note": {
+      "type": "text",
+      "required": false
+    },
+    "imageUrl": {
+      "type": "text",
+      "required": false
+    },
+    "imageAlt": {
+      "type": "text",
+      "required": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "government-page.hero-translation-stats-item",
+      "repeatable": true
+    },
+    "disclaimer": {
+      "type": "text",
+      "required": false
+    },
+    "form": {
+      "type": "component",
+      "component": "government-page.hero-translation-form",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

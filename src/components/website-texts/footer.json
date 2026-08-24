@@ -1,0 +1,71 @@
+{
+  "collectionName": "components_website_texts_footer_1f9dff",
+  "info": {
+    "displayName": "Footer",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "reviewUsOnGoogle": {
+      "type": "text",
+      "required": false
+    },
+    "boutiqueLegalCounselForRealEstateTransactionsAndLitigation": {
+      "type": "text",
+      "required": false
+    },
+    "officeContactDetails": {
+      "type": "text",
+      "required": false
+    },
+    "karinAmsalemLawFirm": {
+      "type": "text",
+      "required": false
+    },
+    "openOfficeLocationInMaps": {
+      "type": "text",
+      "required": false
+    },
+    "call": {
+      "type": "text",
+      "required": false
+    },
+    "sendAWhatsAppMessageTo": {
+      "type": "text",
+      "required": false
+    },
+    "email": {
+      "type": "text",
+      "required": false
+    },
+    "footerLinks": {
+      "type": "text",
+      "required": false
+    },
+    "consultationPages": {
+      "type": "text",
+      "required": false
+    },
+    "consultation": {
+      "type": "text",
+      "required": false
+    },
+    "privacyPolicy": {
+      "type": "text",
+      "required": false
+    },
+    "accessibilityStatement": {
+      "type": "text",
+      "required": false
+    },
+    "termsAndConditions": {
+      "type": "text",
+      "required": false
+    },
+    "socialMedia": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

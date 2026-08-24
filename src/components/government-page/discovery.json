@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_government_page_discovery_dfe7e9",
+  "info": {
+    "displayName": "Government Submission Discovery",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "component",
+      "component": "government-page.discovery-translation",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

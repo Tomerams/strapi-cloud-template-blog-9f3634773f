@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_government_page_hero_translation_form_valida_d13030",
+  "info": {
+    "displayName": "Government Submission Hero Translation Form Validation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "nameRequired": {
+      "type": "text",
+      "required": false
+    },
+    "phoneRequired": {
+      "type": "text",
+      "required": false
+    },
+    "phoneInvalid": {
+      "type": "text",
+      "required": false
+    },
+    "agentSuccess": {
+      "type": "text",
+      "required": false
+    },
+    "submissionError": {
+      "type": "text",
+      "required": false
+    },
+    "agentSubmissionError": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

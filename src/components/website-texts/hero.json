@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_website_texts_hero_e7fe62",
+  "info": {
+    "displayName": "Hero",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "kALawsLogo": {
+      "type": "text",
+      "required": false
+    },
+    "successIsNeverAccidental": {
+      "type": "text",
+      "required": false
+    },
+    "weAreHereToAdvocateForYou": {
+      "type": "text",
+      "required": false
+    },
+    "keyBenefits": {
+      "type": "text",
+      "required": false
+    },
+    "focusedInitialConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "responseWithin24Hours": {
+      "type": "text",
+      "required": false
+    },
+    "completeDiscretion": {
+      "type": "text",
+      "required": false
+    },
+    "exploreOurPracticeAreas": {
+      "type": "text",
+      "required": false
+    },
+    "exploreOurPracticeAreas2": {
+      "type": "text",
+      "required": false
+    },
+    "contactUs": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

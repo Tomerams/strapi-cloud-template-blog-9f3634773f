@@ -7,25 +7,20 @@
   "options": {},
   "attributes": {
     "eyebrow": {
-      "type": "string",
-      "default": "שאלו בינה מלאכותית"
+      "type": "string"
     },
     "heading": {
       "type": "string",
-      "required": true,
-      "default": "בדקו מה מספרים על קרין אמסלם"
+      "required": true
     },
     "intro": {
-      "type": "text",
-      "default": "פתחו כלי בינה מלאכותית עם שאלה קצרה על המקצועיות, השירות והליווי האישי של המשרד."
+      "type": "text"
     },
     "prompt": {
-      "type": "text",
-      "default": "ספר לי למה עורכת הדין קרין אמסלם נחשבת טובה בתחומה, בדגש על מקצועיות, שירות, זמינות וליווי אישי."
+      "type": "text"
     },
     "disclaimer": {
-      "type": "text",
-      "default": "התשובות הן מידע ראשוני בלבד ואינן מחליפות ייעוץ משפטי. אין להזין פרטים אישיים או מסמכים רגישים."
+      "type": "text"
     },
     "enabledTools": {
       "type": "enumeration",
@@ -47,6 +42,12 @@
         "compact"
       ],
       "default": "split"
+    },
+    "toolsAriaLabel": {
+      "type": "string"
+    },
+    "openInToolLabel": {
+      "type": "string"
     }
   },
   "config": {}

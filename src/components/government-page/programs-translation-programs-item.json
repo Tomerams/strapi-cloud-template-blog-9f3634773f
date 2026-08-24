@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_government_page_programs_translation_program_532c4f",
+  "info": {
+    "displayName": "Government Submission Programs Translation Programs Item",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "programKey": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "badge": {
+      "type": "text",
+      "required": false
+    },
+    "bestFor": {
+      "type": "text",
+      "required": false
+    },
+    "durationMonths": {
+      "type": "text",
+      "required": false
+    },
+    "commitment": {
+      "type": "text",
+      "required": false
+    },
+    "note": {
+      "type": "text",
+      "required": false
+    },
+    "ctaText": {
+      "type": "text",
+      "required": false
+    },
+    "includes": {
+      "type": "component",
+      "component": "government-page.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

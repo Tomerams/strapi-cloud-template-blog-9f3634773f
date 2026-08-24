@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_website_texts_success_case_page_client_d68c3a",
+  "info": {
+    "displayName": "Success Case Page Client",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "relatedLinks": {
+      "type": "text",
+      "required": false
+    },
+    "practiceAreas": {
+      "type": "text",
+      "required": false
+    },
+    "relatedServices": {
+      "type": "text",
+      "required": false
+    },
+    "editorialNote": {
+      "type": "text",
+      "required": false
+    },
+    "challenge": {
+      "type": "text",
+      "required": false
+    },
+    "legalStrategy": {
+      "type": "text",
+      "required": false
+    },
+    "outcome": {
+      "type": "text",
+      "required": false
+    },
+    "whyItMatters": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

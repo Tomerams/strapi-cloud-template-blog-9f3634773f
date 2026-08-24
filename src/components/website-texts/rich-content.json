@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_rich_content_687b08",
+  "info": {
+    "displayName": "Rich Content",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "onThisPage": {
+      "type": "text",
+      "required": false
+    },
+    "pageNavigationLabel": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

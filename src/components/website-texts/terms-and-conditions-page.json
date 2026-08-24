@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_terms_and_conditions_page_264565",
+  "info": {
+    "displayName": "Terms And Conditions Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

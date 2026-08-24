@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_website_texts_press_mentions_media_types_e63c2d",
+  "info": {
+    "displayName": "Press Mentions Media Types",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "text",
+      "required": false
+    },
+    "interview": {
+      "type": "text",
+      "required": false
+    },
+    "tv": {
+      "type": "text",
+      "required": false
+    },
+    "radio": {
+      "type": "text",
+      "required": false
+    },
+    "podcast": {
+      "type": "text",
+      "required": false
+    },
+    "opinion": {
+      "type": "text",
+      "required": false
+    },
+    "panel": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

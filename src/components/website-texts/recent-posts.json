@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_website_texts_recent_posts_951931",
+  "info": {
+    "displayName": "Recent Posts",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "recentArticles": {
+      "type": "text",
+      "required": false
+    },
+    "viewAllArticles": {
+      "type": "text",
+      "required": false
+    },
+    "noArticlesToDisplayYet": {
+      "type": "text",
+      "required": false
+    },
+    "minRead": {
+      "type": "text",
+      "required": false
+    },
+    "read": {
+      "type": "text",
+      "required": false
+    },
+    "readMore": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

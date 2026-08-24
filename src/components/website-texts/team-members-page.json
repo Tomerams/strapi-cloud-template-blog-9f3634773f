@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_website_texts_team_members_page_1964ec",
+  "info": {
+    "displayName": "Team Members Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "ourTeamKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "meetTheKALawsTeamAndLearnAboutTheir": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "ourTeam": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

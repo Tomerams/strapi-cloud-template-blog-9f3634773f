@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_website_texts_google_reviews_mini_f20da4",
+  "info": {
+    "displayName": "Google Reviews Mini",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "clientReviewsOnGoogle": {
+      "type": "text",
+      "required": false
+    },
+    "clientReviewsOnGoogle2": {
+      "type": "text",
+      "required": false
+    },
+    "reviews": {
+      "type": "text",
+      "required": false
+    },
+    "viewAllGoogleReviews": {
+      "type": "text",
+      "required": false
+    },
+    "viewAllGoogleReviews2": {
+      "type": "text",
+      "required": false
+    },
+    "verifiedReviewer": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

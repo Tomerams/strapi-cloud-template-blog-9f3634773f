@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_team_members_hero_ba9f2a",
+  "info": {
+    "displayName": "Team Members Hero",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "callName": {
+      "type": "text",
+      "required": false
+    },
+    "emailName": {
+      "type": "text",
+      "required": false
+    },
+    "defaultImageAlt": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

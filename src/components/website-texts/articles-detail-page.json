@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_website_texts_articles_detail_page_f0be16",
+  "info": {
+    "displayName": "Articles Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "minRead": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "articles": {
+      "type": "text",
+      "required": false
+    },
+    "writtenBy": {
+      "type": "text",
+      "required": false
+    },
+    "relatedLegalServices": {
+      "type": "text",
+      "required": false
+    },
+    "fromInsightToAction": {
+      "type": "text",
+      "required": false
+    },
+    "haveAnInitialDirectionNowApplyItToYour": {
+      "type": "text",
+      "required": false
+    },
+    "anArticleProvidesAFrameworkASoundDecisionRequires": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouTo": {
+      "type": "text",
+      "required": false
+    },
+    "leadPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

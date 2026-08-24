@@ -1,0 +1,95 @@
+{
+  "collectionName": "components_website_texts_header_296e3b",
+  "info": {
+    "displayName": "Header",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "closeNavigationMenu": {
+      "type": "text",
+      "required": false
+    },
+    "openNavigationMenu": {
+      "type": "text",
+      "required": false
+    },
+    "mainNavigation": {
+      "type": "text",
+      "required": false
+    },
+    "text": {
+      "type": "text",
+      "required": false
+    },
+    "dashboard": {
+      "type": "text",
+      "required": false
+    },
+    "signOut": {
+      "type": "text",
+      "required": false
+    },
+    "login": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "mobileNavigation": {
+      "type": "text",
+      "required": false
+    },
+    "contactUs": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "about": {
+      "type": "text",
+      "required": false
+    },
+    "practiceAreas": {
+      "type": "text",
+      "required": false
+    },
+    "sectors": {
+      "type": "text",
+      "required": false
+    },
+    "team": {
+      "type": "text",
+      "required": false
+    },
+    "services": {
+      "type": "text",
+      "required": false
+    },
+    "successCases": {
+      "type": "text",
+      "required": false
+    },
+    "press": {
+      "type": "text",
+      "required": false
+    },
+    "articles": {
+      "type": "text",
+      "required": false
+    },
+    "bookConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "languageName": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

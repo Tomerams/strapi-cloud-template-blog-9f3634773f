@@ -55,6 +55,46 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "teamMembersPageTexts": {
+      "type": "component",
+      "component": "website-texts.team-members-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "teamMembersDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.team-members-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "teamMembersHeroTexts": {
+      "type": "component",
+      "component": "website-texts.team-members-hero",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ourTeamTexts": {
+      "type": "component",
+      "component": "website-texts.our-team",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

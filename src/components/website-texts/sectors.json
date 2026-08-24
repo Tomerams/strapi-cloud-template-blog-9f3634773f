@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_sectors_7da00c",
+  "info": {
+    "displayName": "Sectors",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "sector": {
+      "type": "text",
+      "required": false
+    },
+    "viewFullDetails": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_government_page_obstacles_translation_ed253a",
+  "info": {
+    "displayName": "Government Submission Obstacles Translation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "items": {
+      "type": "component",
+      "component": "government-page.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

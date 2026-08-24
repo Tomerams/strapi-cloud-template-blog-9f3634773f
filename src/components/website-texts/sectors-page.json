@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_website_texts_sectors_page_926749",
+  "info": {
+    "displayName": "Sectors Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "industrySectorsKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "exploreTheSectorsServedByKALawsAndHow": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "sectors": {
+      "type": "text",
+      "required": false
+    },
+    "legalCounselDiffersFromOneIndustryToAnotherExplore": {
+      "type": "text",
+      "required": false
+    },
+    "whichSectorDoYouOperateIn": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

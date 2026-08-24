@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_government_page_cta_translation_033358",
+  "info": {
+    "displayName": "Government Submission Cta Translation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "buttonText": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

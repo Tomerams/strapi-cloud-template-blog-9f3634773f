@@ -1,0 +1,123 @@
+{
+  "collectionName": "components_website_texts_contact_us_form_288a9d",
+  "info": {
+    "displayName": "Contact Us Form",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "websiteInquiry": {
+      "type": "text",
+      "required": false
+    },
+    "contactUs": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouShortly": {
+      "type": "text",
+      "required": false
+    },
+    "sentWeWillContactYouShortly": {
+      "type": "text",
+      "required": false
+    },
+    "anErrorOccurredPleaseTryAgain": {
+      "type": "text",
+      "required": false
+    },
+    "helloIWouldLikeMoreInformation": {
+      "type": "text",
+      "required": false
+    },
+    "fullNameIsRequired": {
+      "type": "text",
+      "required": false
+    },
+    "phoneIsRequired": {
+      "type": "text",
+      "required": false
+    },
+    "invalidPhoneNumber": {
+      "type": "text",
+      "required": false
+    },
+    "invalidEmailAddress": {
+      "type": "text",
+      "required": false
+    },
+    "theContactRequestWasSubmittedSuccessfully": {
+      "type": "text",
+      "required": false
+    },
+    "theContactRequestCouldNotBeSubmitted": {
+      "type": "text",
+      "required": false
+    },
+    "sending": {
+      "type": "text",
+      "required": false
+    },
+    "sent": {
+      "type": "text",
+      "required": false
+    },
+    "send": {
+      "type": "text",
+      "required": false
+    },
+    "sentSuccessfully": {
+      "type": "text",
+      "required": false
+    },
+    "weLlGetBackToYouShortlyYouCan": {
+      "type": "text",
+      "required": false
+    },
+    "fullName": {
+      "type": "text",
+      "required": false
+    },
+    "phone": {
+      "type": "text",
+      "required": false
+    },
+    "phoneIsRequired2": {
+      "type": "text",
+      "required": false
+    },
+    "email": {
+      "type": "text",
+      "required": false
+    },
+    "optional": {
+      "type": "text",
+      "required": false
+    },
+    "message": {
+      "type": "text",
+      "required": false
+    },
+    "writeToUs": {
+      "type": "text",
+      "required": false
+    },
+    "weUseYourDetailsOnlyToRespondWeNever": {
+      "type": "text",
+      "required": false
+    },
+    "call": {
+      "type": "text",
+      "required": false
+    },
+    "sentWeLlBeInTouch": {
+      "type": "text",
+      "required": false
+    },
+    "sendFailed": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

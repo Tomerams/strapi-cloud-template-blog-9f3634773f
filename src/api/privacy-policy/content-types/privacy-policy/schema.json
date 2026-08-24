@@ -43,6 +43,16 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "privacyPolicyPageTexts": {
+      "type": "component",
+      "component": "website-texts.privacy-policy-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

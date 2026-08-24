@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_website_texts_cookie_consent_bf6b26",
+  "info": {
+    "displayName": "Cookie Consent",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "dialogLabel": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "detailsPrefix": {
+      "type": "text",
+      "required": false
+    },
+    "privacyPolicy": {
+      "type": "text",
+      "required": false
+    },
+    "linksJoiner": {
+      "type": "text",
+      "required": false
+    },
+    "termsAndConditions": {
+      "type": "text",
+      "required": false
+    },
+    "accept": {
+      "type": "text",
+      "required": false
+    },
+    "reject": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_website_texts_consult_page_aabe7e",
+  "info": {
+    "displayName": "Consult Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "consultationGuides": {
+      "type": "text",
+      "required": false
+    },
+    "focusedConsultationGuidesByPracticeAreaAndServiceHelping": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "consultationGuides2": {
+      "type": "text",
+      "required": false
+    },
+    "awaitingPracticeAreaAssignment": {
+      "type": "text",
+      "required": false
+    },
+    "viewPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "viewGuide": {
+      "type": "text",
+      "required": false
+    },
+    "viewMainPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "fallbackMetaTitle": {
+      "type": "text",
+      "required": false
+    },
+    "fallbackMetaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "unassignedPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "hubEyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

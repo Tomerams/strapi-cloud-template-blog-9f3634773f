@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_app_modal_8d68e4",
+  "info": {
+    "displayName": "App Modal",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "close": {
+      "type": "text",
+      "required": false
+    },
+    "defaultTitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

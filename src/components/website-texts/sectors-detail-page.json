@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_website_texts_sectors_detail_page_a649fd",
+  "info": {
+    "displayName": "Sectors Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "sectors": {
+      "type": "text",
+      "required": false
+    },
+    "understandTheRisksAgreementsAndLegalDecisionsThatCharacterize": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "focusedBusinessConversation": {
+      "type": "text",
+      "required": false
+    },
+    "wantToReviewADecisionBeforeMovingForward": {
+      "type": "text",
+      "required": false
+    },
+    "tellUsWhatIsAtStakeWeWillUnderstand": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouTo": {
+      "type": "text",
+      "required": false
+    },
+    "moreSectors": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "leadPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

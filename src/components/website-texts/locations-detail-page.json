@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_website_texts_locations_detail_page_33e012",
+  "info": {
+    "displayName": "Locations Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "locations": {
+      "type": "text",
+      "required": false
+    },
+    "initialConversation": {
+      "type": "text",
+      "required": false
+    },
+    "haveATransactionDisputeOrDocumentToReview": {
+      "type": "text",
+      "required": false
+    },
+    "tellUsBrieflyWhatIsAtStakeAndWhere": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouTo": {
+      "type": "text",
+      "required": false
+    },
+    "leadPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

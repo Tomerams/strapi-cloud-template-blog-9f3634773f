@@ -48,6 +48,26 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "aboutPageClientTexts": {
+      "type": "component",
+      "component": "website-texts.about-page-client",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "aboutPageTexts": {
+      "type": "component",
+      "component": "website-texts.about-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

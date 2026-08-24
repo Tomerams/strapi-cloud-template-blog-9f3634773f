@@ -17,21 +17,77 @@
   "attributes": {
     "title": {
       "type": "string",
-      "pluginOptions": { "i18n": { "localized": true } }
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "intro": {
       "type": "string",
-      "pluginOptions": { "i18n": { "localized": true } }
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "disclaimer": {
       "type": "string",
-      "pluginOptions": { "i18n": { "localized": true } }
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "seo": {
       "type": "component",
-      "pluginOptions": { "i18n": { "localized": true } },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "successCasesPageTexts": {
+      "type": "component",
+      "component": "website-texts.success-cases-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "successCasesDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.success-cases-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "successCasesSectionTexts": {
+      "type": "component",
+      "component": "website-texts.success-cases-section",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "successCasePageClientTexts": {
+      "type": "component",
+      "component": "website-texts.success-case-page-client",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

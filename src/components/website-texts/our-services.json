@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_website_texts_our_services_f36aad",
+  "info": {
+    "displayName": "Our Services",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "additionalServices": {
+      "type": "text",
+      "required": false
+    },
+    "defaultTitle": {
+      "type": "text",
+      "required": false
+    },
+    "emptyState": {
+      "type": "text",
+      "required": false
+    },
+    "legalService": {
+      "type": "text",
+      "required": false
+    },
+    "loadMore": {
+      "type": "text",
+      "required": false
+    },
+    "loading": {
+      "type": "text",
+      "required": false
+    },
+    "matchingServices": {
+      "type": "text",
+      "required": false
+    },
+    "noMatchingService": {
+      "type": "text",
+      "required": false
+    },
+    "readMore": {
+      "type": "text",
+      "required": false
+    },
+    "searchLabel": {
+      "type": "text",
+      "required": false
+    },
+    "searchPlaceholder": {
+      "type": "text",
+      "required": false
+    },
+    "showAll": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

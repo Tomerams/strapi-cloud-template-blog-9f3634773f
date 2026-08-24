@@ -2,7 +2,7 @@
   "collectionName": "components_dynamic_zone_expertise_connections",
   "info": {
     "displayName": "Expertise Connections",
-    "description": "מפה קצרה של התחומים והגורמים שמתחברים לסוגיה",
+    "description": "A concise map of the fields and parties connected to the matter",
     "icon": "relation"
   },
   "options": {},
@@ -21,6 +21,12 @@
       "type": "enumeration",
       "enum": ["network", "compact"],
       "default": "network"
+    },
+    "connectionLabel": {
+      "type": "string"
+    },
+    "linkLabel": {
+      "type": "string"
     }
   },
   "config": {}

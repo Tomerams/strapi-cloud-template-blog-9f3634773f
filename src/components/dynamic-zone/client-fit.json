@@ -2,19 +2,17 @@
   "collectionName": "components_dynamic_zone_client_fits",
   "info": {
     "displayName": "Client Fit",
-    "description": "הגדרת סוגי הלקוחות והמקרים שהשירות מתאים להם",
+    "description": "Defines the client profiles and matters suited to this service",
     "icon": "user"
   },
   "options": {},
   "attributes": {
     "eyebrow": {
-      "type": "string",
-      "default": "למי הליווי מתאים"
+      "type": "string"
     },
     "heading": {
       "type": "string",
-      "required": true,
-      "default": "כשההחלטה דורשת יותר מתשובה כללית"
+      "required": true
     },
     "intro": {
       "type": "text",
@@ -28,16 +26,19 @@
       "min": 1
     },
     "broadReviewTitle": {
-      "type": "string",
-      "default": "מתי חשוב לעצור לבדיקה רחבה יותר?"
+      "type": "string"
     },
     "broadReviewText": {
-      "type": "text",
-      "default": "כשיש כמה בעלי עניין, יותר מרשות אחת, מסמכים שלא תואמים או מועד חתימה ותשלום קרוב."
+      "type": "text"
     },
     "ctaLabel": {
-      "type": "string",
-      "default": "בדקו איך נכון להתקדם במקרה שלכם"
+      "type": "string"
+    },
+    "cardLabel": {
+      "type": "string"
+    },
+    "modalTitle": {
+      "type": "string"
     }
   },
   "config": {}

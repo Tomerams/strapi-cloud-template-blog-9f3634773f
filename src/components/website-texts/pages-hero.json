@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_pages_hero_f4d66e",
+  "info": {
+    "displayName": "Pages Hero",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "defaultEyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

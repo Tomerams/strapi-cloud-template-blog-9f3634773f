@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_government_page_hero_ffa011",
+  "info": {
+    "displayName": "Government Submission Hero",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "component",
+      "component": "government-page.hero-translation",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

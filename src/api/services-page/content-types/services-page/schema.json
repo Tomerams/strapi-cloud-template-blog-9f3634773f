@@ -55,6 +55,46 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "servicesPageTexts": {
+      "type": "component",
+      "component": "website-texts.services-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "servicesDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.services-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ourServicesTexts": {
+      "type": "component",
+      "component": "website-texts.our-services",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "relatedServiceContentTexts": {
+      "type": "component",
+      "component": "website-texts.related-service-content",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_scroll_component_81c15e",
+  "info": {
+    "displayName": "Scroll Component",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "scrollBackward": {
+      "type": "text",
+      "required": false
+    },
+    "scrollForward": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

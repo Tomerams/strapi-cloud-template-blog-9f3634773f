@@ -1,0 +1,188 @@
+{
+  "kind": "singleType",
+  "collectionName": "government_submission_pages",
+  "info": {
+    "singularName": "government-submission-page",
+    "pluralName": "government-submission-pages",
+    "displayName": "Government Submission Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "government-page.hero",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "challenges": {
+      "type": "component",
+      "component": "government-page.challenges",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "solutionStrip": {
+      "type": "component",
+      "component": "government-page.solution-strip",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "method": {
+      "type": "component",
+      "component": "government-page.method",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "caseStudy": {
+      "type": "component",
+      "component": "government-page.case-study",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "comparison": {
+      "type": "component",
+      "component": "government-page.comparison",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "obstacles": {
+      "type": "component",
+      "component": "government-page.obstacles",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "suitability": {
+      "type": "component",
+      "component": "government-page.suitability",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "assurance": {
+      "type": "component",
+      "component": "government-page.assurance",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "programs": {
+      "type": "component",
+      "component": "government-page.programs",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "discovery": {
+      "type": "component",
+      "component": "government-page.discovery",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "government-page.testimonials",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "faq": {
+      "type": "component",
+      "component": "government-page.faq",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "cta": {
+      "type": "component",
+      "component": "government-page.cta",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footerForm": {
+      "type": "component",
+      "component": "government-page.footer-form",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "modalTitle": {
+      "type": "text",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "metadata": {
+      "type": "component",
+      "component": "government-page.metadata",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

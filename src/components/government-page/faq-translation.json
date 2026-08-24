@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_government_page_faq_translation_c1a7f0",
+  "info": {
+    "displayName": "Government Submission Faq Translation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "items": {
+      "type": "component",
+      "component": "government-page.faq-translation-items-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

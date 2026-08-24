@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_government_page_footer_form_c335db",
+  "info": {
+    "displayName": "Government Submission Footer Form",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "component",
+      "component": "government-page.footer-form-translation",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

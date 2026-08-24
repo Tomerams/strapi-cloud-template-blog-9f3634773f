@@ -8,6 +8,48 @@
   "attributes": {
     "heading": {
       "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "additionalServicesLabel": {
+      "type": "string"
+    },
+    "practiceAreaLabel": {
+      "type": "string"
+    },
+    "servicesLabel": {
+      "type": "string"
+    },
+    "moreOnPracticePageLabel": {
+      "type": "string"
+    },
+    "focusedByLegalNeedLabel": {
+      "type": "string"
+    },
+    "viewPracticeAreaLabel": {
+      "type": "string"
+    },
+    "groupWithMoreDescription": {
+      "type": "text"
+    },
+    "groupQuickAccessDescription": {
+      "type": "text"
+    },
+    "serviceBadgeLabel": {
+      "type": "string"
+    },
+    "practiceBadgeLabel": {
+      "type": "string"
+    },
+    "viewServiceLabel": {
+      "type": "string"
+    },
+    "viewAllServicesLabel": {
+      "type": "string"
     }
   },
   "config": {}

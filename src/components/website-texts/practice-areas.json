@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_practice_areas_bf3993",
+  "info": {
+    "displayName": "Practice Areas",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "practiceArea": {
+      "type": "text",
+      "required": false
+    },
+    "cardDescription": {
+      "type": "text",
+      "required": false
+    },
+    "viewPracticeArea": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

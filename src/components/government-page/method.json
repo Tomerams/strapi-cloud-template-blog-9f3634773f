@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_government_page_method_99dac0",
+  "info": {
+    "displayName": "Government Submission Method",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "translation": {
+      "type": "component",
+      "component": "government-page.method-translation",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

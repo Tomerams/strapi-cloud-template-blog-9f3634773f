@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_website_texts_articles_grid_0e8c3f",
+  "info": {
+    "displayName": "Articles Grid",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "fallbackInitial": {
+      "type": "text",
+      "required": false
+    },
+    "minutesRead": {
+      "type": "text",
+      "required": false
+    },
+    "readArticle": {
+      "type": "text",
+      "required": false
+    },
+    "readMore": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

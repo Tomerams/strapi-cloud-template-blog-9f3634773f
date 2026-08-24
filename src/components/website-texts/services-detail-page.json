@@ -1,0 +1,85 @@
+{
+  "collectionName": "components_website_texts_services_detail_page_270cf8",
+  "info": {
+    "displayName": "Services Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "ourServices": {
+      "type": "text",
+      "required": false
+    },
+    "keyQuestionsToClarifyDocumentsToPrepareAndThe": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "beforeYouBegin": {
+      "type": "text",
+      "required": false
+    },
+    "aBriefIntroductionToOurFirm": {
+      "type": "text",
+      "required": false
+    },
+    "aShortIntroductionToOurProcessHowTheInitial": {
+      "type": "text",
+      "required": false
+    },
+    "introductionToTheFirm": {
+      "type": "text",
+      "required": false
+    },
+    "focusedConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "wantToUnderstandTheRightNextStep": {
+      "type": "text",
+      "required": false
+    },
+    "tellUsBrieflyWhatIsAtStakeWeWill": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouTo": {
+      "type": "text",
+      "required": false
+    },
+    "exploreMoreServices": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "leadPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "mainPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "practiceHubDescription": {
+      "type": "text",
+      "required": false
+    },
+    "viewPracticeArea": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -40,6 +40,66 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "articlesDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.articles-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articlesPageTexts": {
+      "type": "component",
+      "component": "website-texts.articles-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articlesGridTexts": {
+      "type": "component",
+      "component": "website-texts.articles-grid",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articlesHeroTexts": {
+      "type": "component",
+      "component": "website-texts.articles-hero",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "articleAuthorBadgeTexts": {
+      "type": "component",
+      "component": "website-texts.article-author-badge",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "recentPostsTexts": {
+      "type": "component",
+      "component": "website-texts.recent-posts",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_accessibility_page_5479d6",
+  "info": {
+    "displayName": "Accessibility Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

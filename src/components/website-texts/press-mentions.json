@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_website_texts_press_mentions_387077",
+  "info": {
+    "displayName": "Press Mentions",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "latestCoverage": {
+      "type": "text",
+      "required": false
+    },
+    "press": {
+      "type": "text",
+      "required": false
+    },
+    "viewAllCoverage": {
+      "type": "text",
+      "required": false
+    },
+    "mediaSource": {
+      "type": "text",
+      "required": false
+    },
+    "readCoverage": {
+      "type": "text",
+      "required": false
+    },
+    "mediaTypes": {
+      "type": "component",
+      "component": "website-texts.press-mentions-media-types",
+      "repeatable": false
+    },
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

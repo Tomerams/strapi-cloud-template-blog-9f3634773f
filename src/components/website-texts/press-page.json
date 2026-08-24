@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_website_texts_press_page_b0fde5",
+  "info": {
+    "displayName": "Press Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "pressKarinAmsalemAttorney": {
+      "type": "text",
+      "required": false
+    },
+    "mediaCoverageInterviewsAndProfessionalPublicationsFeaturingAttorneyKarin": {
+      "type": "text",
+      "required": false
+    },
+    "press": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

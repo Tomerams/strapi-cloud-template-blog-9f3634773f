@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_government_page_challenges_translation_items_b9f5d8",
+  "info": {
+    "displayName": "Government Submission Challenges Translation Items Item",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

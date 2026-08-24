@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_about_page_8a25ed",
+  "info": {
+    "displayName": "About Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "fallbackMetaTitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

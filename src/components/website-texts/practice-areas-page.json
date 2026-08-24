@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_website_texts_practice_areas_page_cb7fc6",
+  "info": {
+    "displayName": "Practice Areas Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "practiceAreasKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "exploreKALawsPracticeAreasIncludingRealEstateInheritance": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "practiceAreas": {
+      "type": "text",
+      "required": false
+    },
+    "theFirmSCorePracticeAreasAndHowThey": {
+      "type": "text",
+      "required": false
+    },
+    "whichPracticeAreaDoYouNeed": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

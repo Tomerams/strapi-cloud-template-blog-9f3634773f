@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_our_team_043c59",
+  "info": {
+    "displayName": "Our Team",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "viewProfile": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

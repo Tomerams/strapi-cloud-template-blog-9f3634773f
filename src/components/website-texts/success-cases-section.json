@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_website_texts_success_cases_section_a8dbcf",
+  "info": {
+    "displayName": "Success Cases Section",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "defaultTitle": {
+      "type": "text",
+      "required": false
+    },
+    "defaultArchiveLabel": {
+      "type": "text",
+      "required": false
+    },
+    "labels": {
+      "type": "component",
+      "component": "website-texts.success-cases-section-labels",
+      "repeatable": false
+    },
+    "defaultEyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

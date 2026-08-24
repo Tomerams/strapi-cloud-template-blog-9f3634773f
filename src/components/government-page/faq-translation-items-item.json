@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_government_page_faq_translation_items_item_cbab1a",
+  "info": {
+    "displayName": "Government Submission Faq Translation Items Item",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": false
+    },
+    "answer": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

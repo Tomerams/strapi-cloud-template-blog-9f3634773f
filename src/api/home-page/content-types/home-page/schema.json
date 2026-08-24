@@ -92,6 +92,26 @@
         "videos",
         "audios"
       ]
+    },
+    "heroTexts": {
+      "type": "component",
+      "component": "website-texts.hero",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "homePageTexts": {
+      "type": "component",
+      "component": "website-texts.home-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

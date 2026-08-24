@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_government_page_method_translation_8d4605",
+  "info": {
+    "displayName": "Government Submission Method Translation",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "bullets": {
+      "type": "component",
+      "component": "government-page.text-item",
+      "repeatable": true
+    },
+    "steps": {
+      "type": "component",
+      "component": "government-page.method-translation-steps-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

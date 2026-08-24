@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_privacy_policy_page_05c07e",
+  "info": {
+    "displayName": "Privacy Policy Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

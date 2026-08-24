@@ -1,0 +1,112 @@
+{
+  "collectionName": "components_website_texts_landing_page_bd71c1",
+  "info": {
+    "displayName": "Landing Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "benefit": {
+      "type": "text",
+      "required": false
+    },
+    "trustLabels": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "personalConversation": {
+      "type": "text",
+      "required": false
+    },
+    "promptResponse": {
+      "type": "text",
+      "required": false
+    },
+    "leaveDetails": {
+      "type": "text",
+      "required": false
+    },
+    "googleReviewMeta": {
+      "type": "text",
+      "required": false
+    },
+    "personalGuidance": {
+      "type": "text",
+      "required": false
+    },
+    "heroFormCue": {
+      "type": "text",
+      "required": false
+    },
+    "formTitle": {
+      "type": "text",
+      "required": false
+    },
+    "formSubtitle": {
+      "type": "text",
+      "required": false
+    },
+    "visualEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "visualTitle": {
+      "type": "text",
+      "required": false
+    },
+    "visualDescription": {
+      "type": "text",
+      "required": false
+    },
+    "galleryLabel": {
+      "type": "text",
+      "required": false
+    },
+    "galleryImageAlt": {
+      "type": "text",
+      "required": false
+    },
+    "videoEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "videoTitle": {
+      "type": "text",
+      "required": false
+    },
+    "videoDescription": {
+      "type": "text",
+      "required": false
+    },
+    "videoAriaLabel": {
+      "type": "text",
+      "required": false
+    },
+    "defaultTeamRole": {
+      "type": "text",
+      "required": false
+    },
+    "faqEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "faqTitle": {
+      "type": "text",
+      "required": false
+    },
+    "bottomEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "bottomFormSubtitle": {
+      "type": "text",
+      "required": false
+    },
+    "defaultTeamName": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

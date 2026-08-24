@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_website_texts_global_contact_cta_763962",
+  "info": {
+    "displayName": "Global Contact Cta",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "bookConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "quickContact": {
+      "type": "text",
+      "required": false
+    },
+    "phone": {
+      "type": "text",
+      "required": false
+    },
+    "contactUs": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -41,6 +41,26 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "pressPageTexts": {
+      "type": "component",
+      "component": "website-texts.press-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "pressMentionsTexts": {
+      "type": "component",
+      "component": "website-texts.press-mentions",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

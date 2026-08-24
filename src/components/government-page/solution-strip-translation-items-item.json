@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_government_page_solution_strip_translation_i_f39c2f",
+  "info": {
+    "displayName": "Government Submission Solution Strip Translation Items Item",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

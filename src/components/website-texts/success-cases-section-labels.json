@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_website_texts_success_cases_section_labels_7db1ad",
+  "info": {
+    "displayName": "Success Cases Section Labels",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "challenge": {
+      "type": "text",
+      "required": false
+    },
+    "legalMove": {
+      "type": "text",
+      "required": false
+    },
+    "result": {
+      "type": "text",
+      "required": false
+    },
+    "whyItMatters": {
+      "type": "text",
+      "required": false
+    },
+    "readCase": {
+      "type": "text",
+      "required": false
+    },
+    "readFullCase": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_website_texts_google_reviews_section_3d7b38",
+  "info": {
+    "displayName": "Google Reviews Section",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "clientReviewsOnGoogle": {
+      "type": "text",
+      "required": false
+    },
+    "viewAllGoogleReviews": {
+      "type": "text",
+      "required": false
+    },
+    "googleReviews": {
+      "type": "text",
+      "required": false
+    },
+    "reviews": {
+      "type": "text",
+      "required": false
+    },
+    "placeName": {
+      "type": "text",
+      "required": false
+    },
+    "ratingOutOfFive": {
+      "type": "text",
+      "required": false
+    },
+    "verifiedReviewer": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

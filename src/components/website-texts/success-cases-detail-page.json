@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_success_cases_detail_page_a69744",
+  "info": {
+    "displayName": "Success Cases Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "successStoryNotFoundKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "fallbackMetaTitle": {
+      "type": "text",
+      "required": false
+    },
+    "fallbackMetaDescription": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

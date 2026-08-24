@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_articles_hero_cabd23",
+  "info": {
+    "displayName": "Articles Hero",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -48,6 +48,36 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "consultPageTexts": {
+      "type": "component",
+      "component": "website-texts.consult-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "consultDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.consult-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "landingPageTexts": {
+      "type": "component",
+      "component": "website-texts.landing-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

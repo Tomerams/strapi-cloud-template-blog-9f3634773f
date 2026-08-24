@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_related_service_content_239ec2",
+  "info": {
+    "displayName": "Related Service Content",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "practiceArea": {
+      "type": "text",
+      "required": false
+    },
+    "relatedArticles": {
+      "type": "text",
+      "required": false
+    },
+    "relatedPractices": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

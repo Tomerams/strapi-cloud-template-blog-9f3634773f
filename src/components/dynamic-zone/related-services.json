@@ -2,7 +2,7 @@
   "collectionName": "components_dynamic_zone_related_services",
   "info": {
     "displayName": "Related Services",
-    "description": "בחירה ידנית של שירותים קשורים מתוך Strapi",
+    "description": "Manual selection of related services from Strapi",
     "icon": "link"
   },
   "options": {},
@@ -21,8 +21,7 @@
       "default": "grid"
     },
     "linkLabel": {
-      "type": "string",
-      "default": "לעמוד השירות"
+      "type": "string"
     }
   },
   "config": {}

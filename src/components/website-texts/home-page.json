@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_home_page_a24d0c",
+  "info": {
+    "displayName": "Home Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "videoDescription": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,91 @@
+{
+  "collectionName": "components_website_texts_about_page_client_a65046",
+  "info": {
+    "displayName": "About Page Client",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "aboutTheFirm": {
+      "type": "text",
+      "required": false
+    },
+    "officeLocation": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "theTeamLeadingYourMatter": {
+      "type": "text",
+      "required": false
+    },
+    "areasOfFocus": {
+      "type": "text",
+      "required": false
+    },
+    "agriculturalEstatesMoshavCommunitiesAndRealEstate": {
+      "type": "text",
+      "required": false
+    },
+    "corePracticeAreas": {
+      "type": "text",
+      "required": false
+    },
+    "viewPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "selectedServices": {
+      "type": "text",
+      "required": false
+    },
+    "viewService": {
+      "type": "text",
+      "required": false
+    },
+    "ourOffice": {
+      "type": "text",
+      "required": false
+    },
+    "officeLocationMap": {
+      "type": "text",
+      "required": false
+    },
+    "openInGoogleMaps": {
+      "type": "text",
+      "required": false
+    },
+    "contactUs": {
+      "type": "text",
+      "required": false
+    },
+    "weWillBeGladToContactYou": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouWith": {
+      "type": "text",
+      "required": false
+    },
+    "relevantLinks": {
+      "type": "text",
+      "required": false
+    },
+    "locations": {
+      "type": "text",
+      "required": false
+    },
+    "viewFullProfile": {
+      "type": "text",
+      "required": false
+    },
+    "focusDescription": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

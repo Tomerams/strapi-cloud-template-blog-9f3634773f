@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_website_texts_login_2db25b",
+  "info": {
+    "displayName": "Login",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "linkSent": {
+      "type": "text",
+      "required": false
+    },
+    "sendError": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "email": {
+      "type": "text",
+      "required": false
+    },
+    "sending": {
+      "type": "text",
+      "required": false
+    },
+    "sendLink": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

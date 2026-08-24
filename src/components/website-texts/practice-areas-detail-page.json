@@ -1,0 +1,93 @@
+{
+  "collectionName": "components_website_texts_practice_areas_detail_page_833a48",
+  "info": {
+    "displayName": "Practice Areas Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "aBriefIntroductionToThisPracticeArea": {
+      "type": "text",
+      "required": false
+    },
+    "aShortOverviewOfTheCommonQuestionsWhenTo": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "practiceAreas": {
+      "type": "text",
+      "required": false
+    },
+    "aClearOverviewOfTheKeyQuestionsRisksAnd": {
+      "type": "text",
+      "required": false
+    },
+    "bookAConsultation": {
+      "type": "text",
+      "required": false
+    },
+    "beforeYouBegin": {
+      "type": "text",
+      "required": false
+    },
+    "meetTheFirm": {
+      "type": "text",
+      "required": false
+    },
+    "aBriefIntroductionToOurFirm": {
+      "type": "text",
+      "required": false
+    },
+    "aShortIntroductionToOurApproachAndHowThe": {
+      "type": "text",
+      "required": false
+    },
+    "practiceAreaIntroduction": {
+      "type": "text",
+      "required": false
+    },
+    "introductionToTheFirm": {
+      "type": "text",
+      "required": false
+    },
+    "focusedInitialConversation": {
+      "type": "text",
+      "required": false
+    },
+    "notSureWhichLegalPathFitsYourCase": {
+      "type": "text",
+      "required": false
+    },
+    "inTheFirstConversationWeWillUnderstandWhatHappened": {
+      "type": "text",
+      "required": false
+    },
+    "leaveYourDetailsAndWeWillContactYouTo": {
+      "type": "text",
+      "required": false
+    },
+    "relatedServices": {
+      "type": "text",
+      "required": false
+    },
+    "morePracticeAreas": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "leadPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

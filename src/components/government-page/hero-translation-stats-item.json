@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_government_page_hero_translation_stats_item_e75968",
+  "info": {
+    "displayName": "Government Submission Hero Translation Stats Item",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "text",
+      "required": false
+    },
+    "label": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

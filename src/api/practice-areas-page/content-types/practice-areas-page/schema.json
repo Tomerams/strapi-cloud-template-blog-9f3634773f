@@ -55,6 +55,36 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "practiceAreasPageTexts": {
+      "type": "component",
+      "component": "website-texts.practice-areas-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "practiceAreasDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.practice-areas-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "practiceAreasTexts": {
+      "type": "component",
+      "component": "website-texts.practice-areas",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

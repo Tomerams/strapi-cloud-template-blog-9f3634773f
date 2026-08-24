@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_article_author_badge_68f918",
+  "info": {
+    "displayName": "Article Author Badge",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "by": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

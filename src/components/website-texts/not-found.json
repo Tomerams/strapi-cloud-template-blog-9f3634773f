@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_website_texts_not_found_b82321",
+  "info": {
+    "displayName": "Not Found",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "articles": {
+      "type": "text",
+      "required": false
+    },
+    "about": {
+      "type": "text",
+      "required": false
+    },
+    "oldLinkTip": {
+      "type": "text",
+      "required": false
+    },
+    "urlTip": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

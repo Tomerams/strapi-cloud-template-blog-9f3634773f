@@ -56,6 +56,196 @@
     },
     "googleReviewUrl": {
       "type": "string"
+    },
+    "contactUsFormTexts": {
+      "type": "component",
+      "component": "website-texts.contact-us-form",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "appModalTexts": {
+      "type": "component",
+      "component": "website-texts.app-modal",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "cookieConsentTexts": {
+      "type": "component",
+      "component": "website-texts.cookie-consent",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "footerTexts": {
+      "type": "component",
+      "component": "website-texts.footer",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "globalContactCtaTexts": {
+      "type": "component",
+      "component": "website-texts.global-contact-cta",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "googleReviewsMiniTexts": {
+      "type": "component",
+      "component": "website-texts.google-reviews-mini",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "googleReviewsSectionTexts": {
+      "type": "component",
+      "component": "website-texts.google-reviews-section",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "headerTexts": {
+      "type": "component",
+      "component": "website-texts.header",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "notFoundTexts": {
+      "type": "component",
+      "component": "website-texts.not-found",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "loginTexts": {
+      "type": "component",
+      "component": "website-texts.login",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "signatureTexts": {
+      "type": "component",
+      "component": "website-texts.signature",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "structuredDataTexts": {
+      "type": "component",
+      "component": "website-texts.structured-data",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "videoTexts": {
+      "type": "component",
+      "component": "website-texts.video",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "webMcpContactToolTexts": {
+      "type": "component",
+      "component": "website-texts.web-mcp-contact-tool",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "pageIntroVideoTexts": {
+      "type": "component",
+      "component": "website-texts.page-intro-video",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "pageLeadSectionTexts": {
+      "type": "component",
+      "component": "website-texts.page-lead-section",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "pagesHeroTexts": {
+      "type": "component",
+      "component": "website-texts.pages-hero",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "richContentTexts": {
+      "type": "component",
+      "component": "website-texts.rich-content",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "scrollComponentTexts": {
+      "type": "component",
+      "component": "website-texts.scroll-component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

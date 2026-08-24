@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_website_texts_structured_data_98fd63",
+  "info": {
+    "displayName": "Structured Data",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "legalServiceDescription": {
+      "type": "text",
+      "required": false
+    },
+    "israel": {
+      "type": "text",
+      "required": false
+    },
+    "northDistrict": {
+      "type": "text",
+      "required": false
+    },
+    "attorneyAtLaw": {
+      "type": "text",
+      "required": false
+    },
+    "knowsAbout": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "aboutTopics": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "aboutKarinAmsalem": {
+      "type": "text",
+      "required": false
+    },
+    "articles": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

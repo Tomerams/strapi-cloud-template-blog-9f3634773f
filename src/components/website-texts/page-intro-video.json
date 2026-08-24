@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_website_texts_page_intro_video_75a137",
+  "info": {
+    "displayName": "Page Intro Video",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "defaultAriaLabel": {
+      "type": "text",
+      "required": false
+    },
+    "defaultEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "defaultTitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

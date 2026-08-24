@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_website_texts_page_lead_section_623d9c",
+  "info": {
+    "displayName": "Page Lead Section",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "defaultPoints": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    },
+    "defaultEyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "defaultFormTitle": {
+      "type": "text",
+      "required": false
+    },
+    "defaultFormSubtitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

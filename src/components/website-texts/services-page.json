@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_website_texts_services_page_328db9",
+  "info": {
+    "displayName": "Services Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "legalServicesKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "exploreKALawsLegalServicesInRealEstateTransactions": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "ourServices": {
+      "type": "text",
+      "required": false
+    },
+    "chooseTheTopicThatBestDescribesYourTransactionDispute": {
+      "type": "text",
+      "required": false
+    },
+    "selectTheRelevantLegalIssue": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

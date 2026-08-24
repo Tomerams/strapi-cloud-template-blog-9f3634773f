@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_government_page_hero_translation_form_06815e",
+  "info": {
+    "displayName": "Government Submission Hero Translation Form",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "formId": {
+      "type": "text",
+      "required": false
+    },
+    "namePlaceholder": {
+      "type": "text",
+      "required": false
+    },
+    "phonePlaceholder": {
+      "type": "text",
+      "required": false
+    },
+    "submitLabel": {
+      "type": "text",
+      "required": false
+    },
+    "successIcon": {
+      "type": "text",
+      "required": false
+    },
+    "successTitle": {
+      "type": "text",
+      "required": false
+    },
+    "successMessage": {
+      "type": "text",
+      "required": false
+    },
+    "validation": {
+      "type": "component",
+      "component": "government-page.hero-translation-form-validation",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

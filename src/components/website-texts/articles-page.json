@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_website_texts_articles_page_12906b",
+  "info": {
+    "displayName": "Articles Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "articles": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

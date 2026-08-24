@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_website_texts_locations_page_151f55",
+  "info": {
+    "displayName": "Locations Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "serviceAreasKALaws": {
+      "type": "text",
+      "required": false
+    },
+    "exploreTheAreasServedByKALawsAndThe": {
+      "type": "text",
+      "required": false
+    },
+    "home": {
+      "type": "text",
+      "required": false
+    },
+    "serviceAreas": {
+      "type": "text",
+      "required": false
+    },
+    "localKnowledgeOfPropertyRightsAuthoritiesAndPlanningConsiderations": {
+      "type": "text",
+      "required": false
+    },
+    "selectAnAreaOrTypeOfCounsel": {
+      "type": "text",
+      "required": false
+    },
+    "viewServiceArea": {
+      "type": "text",
+      "required": false
+    },
+    "heroHighlights": {
+      "type": "component",
+      "component": "website-texts.text-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

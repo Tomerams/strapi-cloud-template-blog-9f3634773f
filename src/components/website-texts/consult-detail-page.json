@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_website_texts_consult_detail_page_eebe5c",
+  "info": {
+    "displayName": "Consult Detail Page",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "fallbackTitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}

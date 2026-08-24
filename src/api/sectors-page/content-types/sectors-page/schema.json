@@ -55,6 +55,36 @@
       },
       "component": "seo.seo",
       "repeatable": false
+    },
+    "sectorsPageTexts": {
+      "type": "component",
+      "component": "website-texts.sectors-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sectorsDetailPageTexts": {
+      "type": "component",
+      "component": "website-texts.sectors-detail-page",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sectorsTexts": {
+      "type": "component",
+      "component": "website-texts.sectors",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
