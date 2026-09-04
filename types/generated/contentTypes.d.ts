@@ -961,6 +961,10 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     morningId: Schema.Attribute.String;
     notes: Schema.Attribute.Text;
     phone: Schema.Attribute.String;
+    phones: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::phone-contact.phone-contact'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1915,6 +1919,66 @@ export interface ApiLocationsPageLocationsPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPhoneContactPhoneContact
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'phone_contacts';
+  info: {
+    description: 'Canonical phone numbers linked optionally to clients';
+    displayName: 'Phone Contact';
+    pluralName: 'phone-contacts';
+    singularName: 'phone-contact';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    firstSeenAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    incomingCallsCount: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    isPrimary: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.Enumeration<['MOBILE', 'HOME', 'OFFICE', 'OTHER']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'MOBILE'>;
+    lastSeenAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::phone-contact.phone-contact'
+    > &
+      Schema.Attribute.Private;
+    note: Schema.Attribute.Text;
+    number: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    rawNumber: Schema.Attribute.String;
+    source: Schema.Attribute.Enumeration<
+      ['MANUAL', 'INBOUND_CALL', 'IMPORT', 'CLIENT_CREATION']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'MANUAL'>;
+    status: Schema.Attribute.Enumeration<['ACTIVE', 'ARCHIVED', 'BLOCKED']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ACTIVE'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -2797,7 +2861,12 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    brandName: Schema.Attribute.String;
+    brandName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     contactUsFormTexts: Schema.Attribute.Component<
       'website-texts.contact-us-form',
       false
@@ -2887,7 +2956,12 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
         };
       }>;
     officeAddress: Schema.Attribute.String;
-    officialName: Schema.Attribute.String;
+    officialName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pageIntroVideoTexts: Schema.Attribute.Component<
       'website-texts.page-intro-video',
       false
@@ -3955,6 +4029,7 @@ declare module '@strapi/strapi' {
       'api::legal-signature-request.legal-signature-request': ApiLegalSignatureRequestLegalSignatureRequest;
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;
+      'api::phone-contact.phone-contact': ApiPhoneContactPhoneContact;
       'api::post.post': ApiPostPost;
       'api::practice-area.practice-area': ApiPracticeAreaPracticeArea;
       'api::practice-areas-page.practice-areas-page': ApiPracticeAreasPagePracticeAreasPage;

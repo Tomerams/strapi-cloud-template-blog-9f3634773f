@@ -43,6 +43,12 @@
       "relation": "oneToMany",
       "target": "api::client-document.client-document",
       "mappedBy": "client"
+    },
+    "phones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::phone-contact.phone-contact",
+      "mappedBy": "client"
     }
   }
 }

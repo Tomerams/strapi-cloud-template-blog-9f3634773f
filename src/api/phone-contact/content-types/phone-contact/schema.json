@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phone_contacts",
+  "info": {
+    "singularName": "phone-contact",
+    "pluralName": "phone-contacts",
+    "displayName": "Phone Contact",
+    "description": "Canonical phone numbers linked optionally to clients"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "rawNumber": {
+      "type": "string"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "phones"
+    },
+    "label": {
+      "type": "enumeration",
+      "enum": ["MOBILE", "HOME", "OFFICE", "OTHER"],
+      "required": true,
+      "default": "MOBILE"
+    },
+    "isPrimary": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["ACTIVE", "ARCHIVED", "BLOCKED"],
+      "required": true,
+      "default": "ACTIVE"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": ["MANUAL", "INBOUND_CALL", "IMPORT", "CLIENT_CREATION"],
+      "required": true,
+      "default": "MANUAL"
+    },
+    "firstSeenAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "lastSeenAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "incomingCallsCount": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "note": {
+      "type": "text"
+    }
+  }
+}
