@@ -20,6 +20,12 @@
       "configurable": false,
       "required": true
     },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
     "email": {
       "type": "email",
       "minLength": 6,
