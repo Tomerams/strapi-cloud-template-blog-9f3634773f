@@ -49,6 +49,12 @@
       "relation": "oneToMany",
       "target": "api::phone-contact.phone-contact",
       "mappedBy": "client"
+    },
+    "officeCases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case.office-case",
+      "mappedBy": "client"
     }
   }
 }

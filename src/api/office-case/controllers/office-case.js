@@ -2,4 +2,4 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::case-workspace.case-workspace');
+module.exports = createCoreController('api::office-case.office-case');

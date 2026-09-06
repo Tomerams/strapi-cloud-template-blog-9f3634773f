@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_cases",
+  "info": {
+    "singularName": "office-case",
+    "pluralName": "office-cases",
+    "displayName": "Office Case",
+    "description": "General office cases managed from the KA admin"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "caseNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "officeCases",
+      "required": true
+    },
+    "assignedLawyer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "field": {
+      "type": "enumeration",
+      "required": true,
+      "default": "litigation",
+      "enum": [
+        "litigation",
+        "real_estate",
+        "inheritance",
+        "contracts",
+        "business",
+        "other"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "intake",
+      "enum": [
+        "intake",
+        "documents",
+        "drafting",
+        "review",
+        "ready",
+        "filed"
+      ]
+    },
+    "notes": {
+      "type": "text"
+    },
+    "packageStatus": {
+      "type": "enumeration",
+      "default": "draft",
+      "enum": [
+        "draft",
+        "missing_data",
+        "review",
+        "ready"
+      ]
+    },
+    "statementTitle": {
+      "type": "string",
+      "default": "כתב תביעה"
+    },
+    "court": {
+      "type": "string"
+    },
+    "plaintiff": {
+      "type": "text"
+    },
+    "defendant": {
+      "type": "text"
+    },
+    "claimValue": {
+      "type": "string"
+    },
+    "causes": {
+      "type": "text"
+    },
+    "facts": {
+      "type": "richtext"
+    },
+    "remedies": {
+      "type": "text"
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case-document.office-case-document",
+      "mappedBy": "officeCase"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "openedAt": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

@@ -2,4 +2,4 @@
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::case-workspace.case-workspace');
+module.exports = createCoreService('api::office-case.office-case');

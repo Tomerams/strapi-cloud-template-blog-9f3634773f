@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_case_documents",
+  "info": {
+    "singularName": "office-case-document",
+    "pluralName": "office-case-documents",
+    "displayName": "Office Case Document",
+    "description": "Pleadings, annexes and other files linked to an office case"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "officeCase": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case.office-case",
+      "inversedBy": "documents",
+      "required": true
+    },
+    "documentType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "statement",
+        "annex",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "versionLabel": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "default": "draft",
+      "enum": [
+        "draft",
+        "review",
+        "approved",
+        "final"
+      ]
+    },
+    "isMain": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "text"
+    },
+    "uploadedAt": {
+      "type": "date"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
