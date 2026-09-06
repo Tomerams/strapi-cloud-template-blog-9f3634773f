@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_case_payments",
+  "info": {
+    "singularName": "office-case-payment",
+    "pluralName": "office-case-payments",
+    "displayName": "Office Case Payment",
+    "description": "Fee and expense payment schedule for legal matters"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "officeCase": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case.office-case",
+      "inversedBy": "payments",
+      "required": true
+    },
+    "title": { "type": "string", "required": true },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "default": "installment",
+      "enum": ["installment", "retainer", "hourly", "success_fee", "expense"]
+    },
+    "amount": { "type": "decimal", "required": true, "min": 0 },
+    "currency": {
+      "type": "enumeration",
+      "required": true,
+      "default": "ILS",
+      "enum": ["ILS", "USD", "EUR", "GBP"]
+    },
+    "dueDate": { "type": "date", "required": true },
+    "status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "planned",
+      "enum": ["planned", "invoiced", "paid", "overdue", "cancelled"]
+    },
+    "paidAt": { "type": "date" },
+    "invoiceNumber": { "type": "string" },
+    "notes": { "type": "text" }
+  }
+}

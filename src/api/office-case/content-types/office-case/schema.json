@@ -143,6 +143,18 @@
       "target": "api::office-case-task.office-case-task",
       "mappedBy": "officeCase"
     },
+    "feeAgreements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case-fee-agreement.office-case-fee-agreement",
+      "mappedBy": "officeCase"
+    },
+    "payments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case-payment.office-case-payment",
+      "mappedBy": "officeCase"
+    },
     "files": {
       "type": "media",
       "multiple": true,

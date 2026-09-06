@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_case_fee_agreements",
+  "info": {
+    "singularName": "office-case-fee-agreement",
+    "pluralName": "office-case-fee-agreements",
+    "displayName": "Office Case Fee Agreement",
+    "description": "Versioned fee agreements linked to legal matters"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "officeCase": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case.office-case",
+      "inversedBy": "feeAgreements",
+      "required": true
+    },
+    "title": { "type": "string", "required": true },
+    "versionLabel": { "type": "string", "default": "v1" },
+    "status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "draft",
+      "enum": ["draft", "sent", "signed", "superseded", "cancelled"]
+    },
+    "signedAt": { "type": "date" },
+    "notes": { "type": "text" },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["files", "images"]
+    }
+  }
+}

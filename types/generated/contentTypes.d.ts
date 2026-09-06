@@ -1754,6 +1754,51 @@ export interface ApiOfficeCaseDocumentOfficeCaseDocument
   };
 }
 
+export interface ApiOfficeCaseFeeAgreementOfficeCaseFeeAgreement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_case_fee_agreements';
+  info: {
+    description: 'Versioned fee agreements linked to legal matters';
+    displayName: 'Office Case Fee Agreement';
+    pluralName: 'office-case-fee-agreements';
+    singularName: 'office-case-fee-agreement';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    file: Schema.Attribute.Media<'files' | 'images'> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-fee-agreement.office-case-fee-agreement'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.Text;
+    officeCase: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case.office-case'
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    signedAt: Schema.Attribute.Date;
+    status: Schema.Attribute.Enumeration<
+      ['draft', 'sent', 'signed', 'superseded', 'cancelled']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'draft'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    versionLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'v1'>;
+  };
+}
+
 export interface ApiOfficeCaseNoteOfficeCaseNote
   extends Struct.CollectionTypeSchema {
   collectionName: 'office_case_notes';
@@ -1795,6 +1840,66 @@ export interface ApiOfficeCaseNoteOfficeCaseNote
     visibility: Schema.Attribute.Enumeration<['internal', 'client']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'internal'>;
+  };
+}
+
+export interface ApiOfficeCasePaymentOfficeCasePayment
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_case_payments';
+  info: {
+    description: 'Fee and expense payment schedule for legal matters';
+    displayName: 'Office Case Payment';
+    pluralName: 'office-case-payments';
+    singularName: 'office-case-payment';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    amount: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    category: Schema.Attribute.Enumeration<
+      ['installment', 'retainer', 'hourly', 'success_fee', 'expense']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'installment'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currency: Schema.Attribute.Enumeration<['ILS', 'USD', 'EUR', 'GBP']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ILS'>;
+    dueDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    invoiceNumber: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-payment.office-case-payment'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.Text;
+    officeCase: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case.office-case'
+    > &
+      Schema.Attribute.Required;
+    paidAt: Schema.Attribute.Date;
+    publishedAt: Schema.Attribute.DateTime;
+    status: Schema.Attribute.Enumeration<
+      ['planned', 'invoiced', 'paid', 'overdue', 'cancelled']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'planned'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1940,6 +2045,10 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'api::office-case-document.office-case-document'
     >;
     facts: Schema.Attribute.RichText;
+    feeAgreements: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-fee-agreement.office-case-fee-agreement'
+    >;
     field: Schema.Attribute.Enumeration<
       [
         'litigation',
@@ -1971,6 +2080,10 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       ['draft', 'missing_data', 'review', 'ready']
     > &
       Schema.Attribute.DefaultTo<'draft'>;
+    payments: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-payment.office-case-payment'
+    >;
     plaintiff: Schema.Attribute.Text;
     priority: Schema.Attribute.Enumeration<
       ['low', 'normal', 'high', 'urgent']
@@ -4124,7 +4237,9 @@ declare module '@strapi/strapi' {
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;
       'api::office-case-document.office-case-document': ApiOfficeCaseDocumentOfficeCaseDocument;
+      'api::office-case-fee-agreement.office-case-fee-agreement': ApiOfficeCaseFeeAgreementOfficeCaseFeeAgreement;
       'api::office-case-note.office-case-note': ApiOfficeCaseNoteOfficeCaseNote;
+      'api::office-case-payment.office-case-payment': ApiOfficeCasePaymentOfficeCasePayment;
       'api::office-case-task.office-case-task': ApiOfficeCaseTaskOfficeCaseTask;
       'api::office-case-type.office-case-type': ApiOfficeCaseTypeOfficeCaseType;
       'api::office-case.office-case': ApiOfficeCaseOfficeCase;
