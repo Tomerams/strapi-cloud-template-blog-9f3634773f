@@ -1777,7 +1777,6 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
     claimValue: Schema.Attribute.String;
     client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'> &
       Schema.Attribute.Required;
-    clientName: Schema.Attribute.String & Schema.Attribute.Required;
     court: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
