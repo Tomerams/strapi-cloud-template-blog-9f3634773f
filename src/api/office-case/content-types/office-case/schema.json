@@ -17,10 +17,6 @@
       "required": true,
       "unique": true
     },
-    "clientName": {
-      "type": "string",
-      "required": true
-    },
     "client": {
       "type": "relation",
       "relation": "manyToOne",
