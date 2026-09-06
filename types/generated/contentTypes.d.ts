@@ -1423,154 +1423,6 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiLegalDocumentTemplateLegalDocumentTemplate
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'legal_document_templates';
-  info: {
-    displayName: 'Legal Document Template';
-    pluralName: 'legal-document-templates';
-    singularName: 'legal-document-template';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    body: Schema.Attribute.RichText & Schema.Attribute.Required;
-    category: Schema.Attribute.Enumeration<
-      ['power_of_attorney', 'fee_agreement']
-    > &
-      Schema.Attribute.Required;
-    clientConsentText: Schema.Attribute.Text;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    emailBody: Schema.Attribute.RichText;
-    emailSubject: Schema.Attribute.String;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    legalNotes: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::legal-document-template.legal-document-template'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    requiredFields: Schema.Attribute.JSON;
-    riskLevel: Schema.Attribute.Enumeration<
-      ['low', 'medium', 'high', 'blocked']
-    > &
-      Schema.Attribute.DefaultTo<'medium'>;
-    signatureLevel: Schema.Attribute.Enumeration<
-      [
-        'simple',
-        'otp',
-        'identity_verification',
-        'lawyer_verified',
-        'qualified_provider',
-        'blocked',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'otp'>;
-    signatureRequests: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::legal-signature-request.legal-signature-request'
-    >;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    smsBody: Schema.Attribute.Text;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    version: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
-  };
-}
-
-export interface ApiLegalSignatureRequestLegalSignatureRequest
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'legal_signature_requests';
-  info: {
-    displayName: 'Legal Signature Request';
-    pluralName: 'legal-signature-requests';
-    singularName: 'legal-signature-request';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    acceptanceText: Schema.Attribute.Text;
-    category: Schema.Attribute.Enumeration<
-      ['power_of_attorney', 'fee_agreement']
-    > &
-      Schema.Attribute.Required;
-    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'>;
-    clientConsentText: Schema.Attribute.Text;
-    clientEmail: Schema.Attribute.Email & Schema.Attribute.Required;
-    clientName: Schema.Attribute.String & Schema.Attribute.Required;
-    clientPhone: Schema.Attribute.String;
-    clientSnapshot: Schema.Attribute.JSON;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    emailBodySnapshot: Schema.Attribute.RichText;
-    emailSubjectSnapshot: Schema.Attribute.String;
-    evidence: Schema.Attribute.JSON;
-    expiresAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
-    fieldValues: Schema.Attribute.JSON;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::legal-signature-request.legal-signature-request'
-    > &
-      Schema.Attribute.Private;
-    openedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    renderedBody: Schema.Attribute.RichText & Schema.Attribute.Required;
-    requestTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    sentAt: Schema.Attribute.DateTime;
-    signatureDataUrl: Schema.Attribute.Text;
-    signatureLevel: Schema.Attribute.Enumeration<
-      [
-        'simple',
-        'otp',
-        'identity_verification',
-        'lawyer_verified',
-        'qualified_provider',
-        'blocked',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'otp'>;
-    signatureUrl: Schema.Attribute.Text;
-    signedAt: Schema.Attribute.DateTime;
-    signedDocumentHash: Schema.Attribute.String;
-    signedDocumentHtml: Schema.Attribute.RichText;
-    smsBodySnapshot: Schema.Attribute.Text;
-    status: Schema.Attribute.Enumeration<
-      [
-        'draft',
-        'sent',
-        'opened',
-        'signed',
-        'lawyer_review',
-        'completed',
-        'rejected',
-        'expired',
-        'revoked',
-      ]
-    > &
-      Schema.Attribute.DefaultTo<'draft'>;
-    template: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::legal-document-template.legal-document-template'
-    >;
-    templateSnapshot: Schema.Attribute.JSON;
-    tokenHash: Schema.Attribute.String;
-    unsignedDocumentHash: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
@@ -2049,6 +1901,14 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::office-case-fee-agreement.office-case-fee-agreement'
     >;
+    feePercentage: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 100;
+          min: 0;
+        },
+        number
+      >;
     field: Schema.Attribute.Enumeration<
       [
         'litigation',
@@ -2090,6 +1950,11 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'normal'>;
+    propertyAddress: Schema.Attribute.String;
+    propertyBlock: Schema.Attribute.String;
+    propertyParcel: Schema.Attribute.String;
+    propertySubparcel: Schema.Attribute.String;
+    propertyType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     remedies: Schema.Attribute.Text;
     statementTitle: Schema.Attribute.String &
@@ -2122,6 +1987,13 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'plugin::users-permissions.user'
     >;
     title: Schema.Attribute.String;
+    transactionValue: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3218,15 +3090,6 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    signatureTexts: Schema.Attribute.Component<
-      'website-texts.signature',
-      false
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     structuredDataTexts: Schema.Attribute.Component<
       'website-texts.structured-data',
       false
@@ -4232,8 +4095,6 @@ declare module '@strapi/strapi' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::lead.lead': ApiLeadLead;
-      'api::legal-document-template.legal-document-template': ApiLegalDocumentTemplateLegalDocumentTemplate;
-      'api::legal-signature-request.legal-signature-request': ApiLegalSignatureRequestLegalSignatureRequest;
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;
       'api::office-case-document.office-case-document': ApiOfficeCaseDocumentOfficeCaseDocument;

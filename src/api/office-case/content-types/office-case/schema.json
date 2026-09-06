@@ -125,6 +125,30 @@
     "remedies": {
       "type": "text"
     },
+    "propertyAddress": {
+      "type": "string"
+    },
+    "propertyType": {
+      "type": "string"
+    },
+    "propertyBlock": {
+      "type": "string"
+    },
+    "propertyParcel": {
+      "type": "string"
+    },
+    "propertySubparcel": {
+      "type": "string"
+    },
+    "transactionValue": {
+      "type": "decimal",
+      "min": 0
+    },
+    "feePercentage": {
+      "type": "decimal",
+      "min": 0,
+      "max": 100
+    },
     "documents": {
       "type": "relation",
       "relation": "oneToMany",

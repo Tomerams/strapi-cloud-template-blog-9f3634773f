@@ -167,16 +167,6 @@
         }
       }
     },
-    "signatureTexts": {
-      "type": "component",
-      "component": "website-texts.signature",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "structuredDataTexts": {
       "type": "component",
       "component": "website-texts.structured-data",

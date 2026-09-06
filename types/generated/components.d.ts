@@ -2125,52 +2125,6 @@ export interface WebsiteTextsServicesPage extends Struct.ComponentSchema {
   };
 }
 
-export interface WebsiteTextsSignature extends Struct.ComponentSchema {
-  collectionName: 'components_website_texts_signature_7c6ca5';
-  info: {
-    displayName: 'Signature';
-    icon: 'write';
-  };
-  attributes: {
-    clear: Schema.Attribute.Text;
-    defaultAcceptanceText: Schema.Attribute.Text;
-    document: Schema.Attribute.Text;
-    documentToSign: Schema.Attribute.Text;
-    electronicConsent: Schema.Attribute.Text;
-    failed: Schema.Attribute.Text;
-    loading: Schema.Attribute.Text;
-    readConsent: Schema.Attribute.Text;
-    received: Schema.Attribute.Text;
-    receivedDescription: Schema.Attribute.Text;
-    sentSuccess: Schema.Attribute.Text;
-    signAndSend: Schema.Attribute.Text;
-    signature: Schema.Attribute.Text;
-    statuses: Schema.Attribute.Component<
-      'website-texts.signature-statuses',
-      false
-    >;
-    unavailable: Schema.Attribute.Text;
-    validationError: Schema.Attribute.Text;
-    verificationAndSignature: Schema.Attribute.Text;
-    verificationCode: Schema.Attribute.Text;
-  };
-}
-
-export interface WebsiteTextsSignatureStatuses extends Struct.ComponentSchema {
-  collectionName: 'components_website_texts_signature_statuses_11a0ea';
-  info: {
-    displayName: 'Signature Statuses';
-    icon: 'write';
-  };
-  attributes: {
-    completed: Schema.Attribute.Text;
-    lawyer_review: Schema.Attribute.Text;
-    opened: Schema.Attribute.Text;
-    sent: Schema.Attribute.Text;
-    signed: Schema.Attribute.Text;
-  };
-}
-
 export interface WebsiteTextsStructuredData extends Struct.ComponentSchema {
   collectionName: 'components_website_texts_structured_data_98fd63';
   info: {
@@ -2488,8 +2442,6 @@ declare module '@strapi/strapi' {
       'website-texts.sectors-page': WebsiteTextsSectorsPage;
       'website-texts.services-detail-page': WebsiteTextsServicesDetailPage;
       'website-texts.services-page': WebsiteTextsServicesPage;
-      'website-texts.signature': WebsiteTextsSignature;
-      'website-texts.signature-statuses': WebsiteTextsSignatureStatuses;
       'website-texts.structured-data': WebsiteTextsStructuredData;
       'website-texts.success-case-page-client': WebsiteTextsSuccessCasePageClient;
       'website-texts.success-cases-detail-page': WebsiteTextsSuccessCasesDetailPage;
