@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_case_tasks",
+  "info": {
+    "singularName": "office-case-task",
+    "pluralName": "office-case-tasks",
+    "displayName": "Office Case Task",
+    "description": "Owned and dated work items for a legal matter"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "officeCase": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case.office-case",
+      "inversedBy": "tasks",
+      "required": true
+    },
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "status": {
+      "type": "enumeration",
+      "required": true,
+      "default": "todo",
+      "enum": ["todo", "in_progress", "waiting", "done", "cancelled"]
+    },
+    "priority": {
+      "type": "enumeration",
+      "required": true,
+      "default": "normal",
+      "enum": ["low", "normal", "high", "urgent"]
+    },
+    "dueDate": { "type": "date" },
+    "assignedTo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "createdByMember": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "required": true
+    },
+    "completedAt": { "type": "datetime" }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "office_case_types",
+  "info": {
+    "singularName": "office-case-type",
+    "pluralName": "office-case-types",
+    "displayName": "Office Case Type",
+    "description": "Configurable legal matter types and enabled capabilities"
+  },
+  "options": { "draftAndPublish": false },
+  "pluginOptions": {},
+  "attributes": {
+    "code": { "type": "uid", "targetField": "name", "required": true },
+    "name": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "practiceArea": { "type": "string" },
+    "supportsPleadings": { "type": "boolean", "default": false },
+    "isActive": { "type": "boolean", "default": true },
+    "sortOrder": { "type": "integer", "default": 100 },
+    "officeCases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case.office-case",
+      "mappedBy": "matterType"
+    }
+  }
+}

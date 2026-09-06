@@ -17,6 +17,9 @@
       "required": true,
       "unique": true
     },
+    "title": {
+      "type": "string"
+    },
     "client": {
       "type": "relation",
       "relation": "manyToOne",
@@ -28,6 +31,17 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "teamMembers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "matterType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case-type.office-case-type",
+      "inversedBy": "officeCases"
     },
     "field": {
       "type": "enumeration",
@@ -48,15 +62,33 @@
       "default": "intake",
       "enum": [
         "intake",
+        "conflict_check",
+        "active",
+        "waiting",
         "documents",
         "drafting",
         "review",
         "ready",
-        "filed"
+        "filed",
+        "on_hold",
+        "closed",
+        "archived"
       ]
     },
-    "notes": {
+    "description": {
       "type": "text"
+    },
+    "priority": {
+      "type": "enumeration",
+      "required": true,
+      "default": "normal",
+      "enum": ["low", "normal", "high", "urgent"]
+    },
+    "confidentiality": {
+      "type": "enumeration",
+      "required": true,
+      "default": "standard",
+      "enum": ["standard", "confidential", "highly_confidential"]
     },
     "packageStatus": {
       "type": "enumeration",
@@ -99,6 +131,18 @@
       "target": "api::office-case-document.office-case-document",
       "mappedBy": "officeCase"
     },
+    "caseNotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case-note.office-case-note",
+      "mappedBy": "officeCase"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::office-case-task.office-case-task",
+      "mappedBy": "officeCase"
+    },
     "files": {
       "type": "media",
       "multiple": true,
@@ -112,6 +156,12 @@
     "openedAt": {
       "type": "date",
       "required": true
+    },
+    "targetDate": {
+      "type": "date"
+    },
+    "closedAt": {
+      "type": "date"
     }
   }
 }

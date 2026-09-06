@@ -1754,6 +1754,148 @@ export interface ApiOfficeCaseDocumentOfficeCaseDocument
   };
 }
 
+export interface ApiOfficeCaseNoteOfficeCaseNote
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_case_notes';
+  info: {
+    description: 'Authored, timestamped notes in a legal matter';
+    displayName: 'Office Case Note';
+    pluralName: 'office-case-notes';
+    singularName: 'office-case-note';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    author: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    > &
+      Schema.Attribute.Required;
+    body: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isPinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-note.office-case-note'
+    > &
+      Schema.Attribute.Private;
+    officeCase: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case.office-case'
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    visibility: Schema.Attribute.Enumeration<['internal', 'client']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'internal'>;
+  };
+}
+
+export interface ApiOfficeCaseTaskOfficeCaseTask
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_case_tasks';
+  info: {
+    description: 'Owned and dated work items for a legal matter';
+    displayName: 'Office Case Task';
+    pluralName: 'office-case-tasks';
+    singularName: 'office-case-task';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    assignedTo: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    completedAt: Schema.Attribute.DateTime;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    createdByMember: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    > &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    dueDate: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-task.office-case-task'
+    > &
+      Schema.Attribute.Private;
+    officeCase: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case.office-case'
+    > &
+      Schema.Attribute.Required;
+    priority: Schema.Attribute.Enumeration<
+      ['low', 'normal', 'high', 'urgent']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'normal'>;
+    publishedAt: Schema.Attribute.DateTime;
+    status: Schema.Attribute.Enumeration<
+      ['todo', 'in_progress', 'waiting', 'done', 'cancelled']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'todo'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOfficeCaseTypeOfficeCaseType
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'office_case_types';
+  info: {
+    description: 'Configurable legal matter types and enabled capabilities';
+    displayName: 'Office Case Type';
+    pluralName: 'office-case-types';
+    singularName: 'office-case-type';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    code: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-type.office-case-type'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    officeCases: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case.office-case'
+    >;
+    practiceArea: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    sortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<100>;
+    supportsPleadings: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
   collectionName: 'office_cases';
   info: {
@@ -1770,6 +1912,10 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'manyToOne',
       'plugin::users-permissions.user'
     >;
+    caseNotes: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-note.office-case-note'
+    >;
     caseNumber: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -1777,11 +1923,18 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
     claimValue: Schema.Attribute.String;
     client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'> &
       Schema.Attribute.Required;
+    closedAt: Schema.Attribute.Date;
+    confidentiality: Schema.Attribute.Enumeration<
+      ['standard', 'confidential', 'highly_confidential']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'standard'>;
     court: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     defendant: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
     documents: Schema.Attribute.Relation<
       'oneToMany',
       'api::office-case-document.office-case-document'
@@ -1809,22 +1962,53 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'api::office-case.office-case'
     > &
       Schema.Attribute.Private;
-    notes: Schema.Attribute.Text;
+    matterType: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case-type.office-case-type'
+    >;
     openedAt: Schema.Attribute.Date & Schema.Attribute.Required;
     packageStatus: Schema.Attribute.Enumeration<
       ['draft', 'missing_data', 'review', 'ready']
     > &
       Schema.Attribute.DefaultTo<'draft'>;
     plaintiff: Schema.Attribute.Text;
+    priority: Schema.Attribute.Enumeration<
+      ['low', 'normal', 'high', 'urgent']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'normal'>;
     publishedAt: Schema.Attribute.DateTime;
     remedies: Schema.Attribute.Text;
     statementTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'\u05DB\u05EA\u05D1 \u05EA\u05D1\u05D9\u05E2\u05D4'>;
     status: Schema.Attribute.Enumeration<
-      ['intake', 'documents', 'drafting', 'review', 'ready', 'filed']
+      [
+        'intake',
+        'conflict_check',
+        'active',
+        'waiting',
+        'documents',
+        'drafting',
+        'review',
+        'ready',
+        'filed',
+        'on_hold',
+        'closed',
+        'archived',
+      ]
     > &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'intake'>;
+    targetDate: Schema.Attribute.Date;
+    tasks: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::office-case-task.office-case-task'
+    >;
+    teamMembers: Schema.Attribute.Relation<
+      'manyToMany',
+      'plugin::users-permissions.user'
+    >;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3938,6 +4122,9 @@ declare module '@strapi/strapi' {
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;
       'api::office-case-document.office-case-document': ApiOfficeCaseDocumentOfficeCaseDocument;
+      'api::office-case-note.office-case-note': ApiOfficeCaseNoteOfficeCaseNote;
+      'api::office-case-task.office-case-task': ApiOfficeCaseTaskOfficeCaseTask;
+      'api::office-case-type.office-case-type': ApiOfficeCaseTypeOfficeCaseType;
       'api::office-case.office-case': ApiOfficeCaseOfficeCase;
       'api::phone-contact.phone-contact': ApiPhoneContactPhoneContact;
       'api::post.post': ApiPostPost;

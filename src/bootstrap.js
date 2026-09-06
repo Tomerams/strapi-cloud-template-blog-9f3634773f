@@ -268,7 +268,35 @@ async function main() {
   process.exit(0);
 }
 
+const officeCaseTypes = [
+  { code: 'civil-litigation', name: 'ליטיגציה אזרחית', practiceArea: 'ליטיגציה', supportsPleadings: true, sortOrder: 10 },
+  { code: 'commercial-litigation', name: 'ליטיגציה מסחרית', practiceArea: 'מסחרי', supportsPleadings: true, sortOrder: 20 },
+  { code: 'real-estate-transaction', name: 'עסקת מקרקעין', practiceArea: 'מקרקעין', supportsPleadings: false, sortOrder: 30 },
+  { code: 'real-estate-dispute', name: 'סכסוך מקרקעין', practiceArea: 'מקרקעין', supportsPleadings: true, sortOrder: 40 },
+  { code: 'contract-drafting', name: 'עריכת חוזה', practiceArea: 'חוזים', supportsPleadings: false, sortOrder: 50 },
+  { code: 'legal-opinion', name: 'חוות דעת משפטית', practiceArea: 'ייעוץ', supportsPleadings: false, sortOrder: 60 },
+  { code: 'ongoing-counsel', name: 'ייעוץ משפטי שוטף', practiceArea: 'ייעוץ', supportsPleadings: false, sortOrder: 70 },
+  { code: 'corporate', name: 'תאגידים ומסחרי', practiceArea: 'תאגידים', supportsPleadings: false, sortOrder: 80 },
+  { code: 'labor', name: 'דיני עבודה', practiceArea: 'דיני עבודה', supportsPleadings: true, sortOrder: 90 },
+  { code: 'inheritance', name: 'ירושה וצוואות', practiceArea: 'ירושה', supportsPleadings: true, sortOrder: 100 },
+  { code: 'regulatory', name: 'רגולציה ורישוי', practiceArea: 'רגולציה', supportsPleadings: false, sortOrder: 110 },
+  { code: 'other', name: 'עניין משפטי אחר', practiceArea: 'כללי', supportsPleadings: false, sortOrder: 999 },
+];
+
+async function ensureOfficeCaseTypes() {
+  const repository = strapi.documents('api::office-case-type.office-case-type');
+  const existing = await repository.findMany({ fields: ['code'], limit: 100 });
+  const existingCodes = new Set(existing.map((item) => item.code));
+
+  for (const item of officeCaseTypes) {
+    if (!existingCodes.has(item.code)) {
+      await repository.create({ data: { ...item, isActive: true } });
+    }
+  }
+}
+
 
 module.exports = async () => {
   await seedExampleApp();
+  await ensureOfficeCaseTypes();
 };
