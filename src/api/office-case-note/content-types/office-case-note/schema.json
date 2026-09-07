@@ -7,7 +7,9 @@
     "displayName": "Office Case Note",
     "description": "Authored, timestamped notes in a legal matter"
   },
-  "options": { "draftAndPublish": false },
+  "options": {
+    "draftAndPublish": false
+  },
   "pluginOptions": {},
   "attributes": {
     "officeCase": {
@@ -23,13 +25,27 @@
       "target": "plugin::users-permissions.user",
       "required": true
     },
-    "body": { "type": "text", "required": true },
+    "body": {
+      "type": "text",
+      "required": true
+    },
     "visibility": {
       "type": "enumeration",
       "required": true,
       "default": "internal",
-      "enum": ["internal", "client"]
+      "enum": [
+        "internal",
+        "client"
+      ]
     },
-    "isPinned": { "type": "boolean", "default": false }
+    "isPinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::office-case-task.office-case-task"
+    }
   }
 }
