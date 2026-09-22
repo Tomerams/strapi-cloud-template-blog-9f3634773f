@@ -82,13 +82,22 @@
       "type": "enumeration",
       "required": true,
       "default": "normal",
-      "enum": ["low", "normal", "high", "urgent"]
+      "enum": [
+        "low",
+        "normal",
+        "high",
+        "urgent"
+      ]
     },
     "confidentiality": {
       "type": "enumeration",
       "required": true,
       "default": "standard",
-      "enum": ["standard", "confidential", "highly_confidential"]
+      "enum": [
+        "standard",
+        "confidential",
+        "highly_confidential"
+      ]
     },
     "packageStatus": {
       "type": "enumeration",
@@ -198,6 +207,11 @@
     },
     "closedAt": {
       "type": "date"
+    },
+    "additionalContacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "office.case-contact"
     }
   }
 }

@@ -1910,6 +1910,7 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    additionalContacts: Schema.Attribute.Component<'office.case-contact', true>;
     assignedLawyer: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.user'

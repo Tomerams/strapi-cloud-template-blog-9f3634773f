@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_office_case_contacts",
+  "info": {
+    "displayName": "Case contact"
+  },
+  "attributes": {
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "maxLength": 100
+    }
+  }
+}

@@ -915,6 +915,21 @@ export interface LandingPagesTextItem extends Struct.ComponentSchema {
   };
 }
 
+export interface OfficeCaseContact extends Struct.ComponentSchema {
+  collectionName: 'components_office_case_contacts';
+  info: {
+    displayName: 'Case contact';
+  };
+  attributes: {
+    client: Schema.Attribute.Relation<'manyToOne', 'api::client.client'> &
+      Schema.Attribute.Required;
+    role: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+  };
+}
+
 export interface SectionsAskAiTeaser extends Struct.ComponentSchema {
   collectionName: 'components_sections_ask_ai_teasers';
   info: {
@@ -2375,6 +2390,7 @@ declare module '@strapi/strapi' {
       'landing-pages.card-item': LandingPagesCardItem;
       'landing-pages.step-item': LandingPagesStepItem;
       'landing-pages.text-item': LandingPagesTextItem;
+      'office.case-contact': OfficeCaseContact;
       'sections.ask-ai-teaser': SectionsAskAiTeaser;
       'sections.banner': SectionsBanner;
       'sections.blog': SectionsBlog;
