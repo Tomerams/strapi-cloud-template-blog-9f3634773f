@@ -1683,9 +1683,12 @@ export interface ApiOfficeCaseNoteOfficeCaseNote
     officeCase: Schema.Attribute.Relation<
       'manyToOne',
       'api::office-case.office-case'
-    > &
-      Schema.Attribute.Required;
+    >;
     publishedAt: Schema.Attribute.DateTime;
+    task: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::office-case-task.office-case-task'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1783,6 +1786,7 @@ export interface ApiOfficeCaseTaskOfficeCaseTask
       Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     dueDate: Schema.Attribute.Date;
+    lead: Schema.Attribute.Relation<'manyToOne', 'api::lead.lead'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1792,8 +1796,7 @@ export interface ApiOfficeCaseTaskOfficeCaseTask
     officeCase: Schema.Attribute.Relation<
       'manyToOne',
       'api::office-case.office-case'
-    > &
-      Schema.Attribute.Required;
+    >;
     priority: Schema.Attribute.Enumeration<
       ['low', 'normal', 'high', 'urgent']
     > &

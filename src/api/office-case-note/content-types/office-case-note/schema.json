@@ -16,8 +16,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::office-case.office-case",
-      "inversedBy": "caseNotes",
-      "required": true
+      "inversedBy": "caseNotes"
     },
     "author": {
       "type": "relation",
