@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_notes",
+  "info": {
+    "singularName": "lead-note",
+    "pluralName": "lead-notes",
+    "displayName": "Lead Note"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "lead": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lead.lead",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "authorEmail": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

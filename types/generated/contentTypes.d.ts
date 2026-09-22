@@ -1383,6 +1383,37 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLeadNoteLeadNote extends Struct.CollectionTypeSchema {
+  collectionName: 'lead_notes';
+  info: {
+    displayName: 'Lead Note';
+    pluralName: 'lead-notes';
+    singularName: 'lead-note';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    authorEmail: Schema.Attribute.Email & Schema.Attribute.Required;
+    body: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    lead: Schema.Attribute.Relation<'manyToOne', 'api::lead.lead'> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lead-note.lead-note'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLeadLead extends Struct.CollectionTypeSchema {
   collectionName: 'leads';
   info: {
@@ -1413,6 +1444,8 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     message: Schema.Attribute.Text;
     metaJson: Schema.Attribute.JSON;
+    nextAction: Schema.Attribute.Text;
+    nextContactDate: Schema.Attribute.Date;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     source: Schema.Attribute.String;
@@ -4097,6 +4130,7 @@ declare module '@strapi/strapi' {
       'api::government-submission-page.government-submission-page': ApiGovernmentSubmissionPageGovernmentSubmissionPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::lead-note.lead-note': ApiLeadNoteLeadNote;
       'api::lead.lead': ApiLeadLead;
       'api::location.location': ApiLocationLocation;
       'api::locations-page.locations-page': ApiLocationsPageLocationsPage;

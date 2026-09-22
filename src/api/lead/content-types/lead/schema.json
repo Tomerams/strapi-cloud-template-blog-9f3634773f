@@ -11,6 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "nextContactDate": { "type": "date" },
+    "nextAction": { "type": "text" },
     "fullName": {
       "type": "string"
     },
