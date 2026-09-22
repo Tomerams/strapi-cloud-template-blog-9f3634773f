@@ -7,9 +7,21 @@
     "displayName": "Office Case Task",
     "description": "Owned and dated work items for a legal matter"
   },
-  "options": { "draftAndPublish": false },
+  "options": {
+    "draftAndPublish": false
+  },
   "pluginOptions": {},
   "attributes": {
+    "creationKey": {
+      "type": "string",
+      "unique": true,
+      "column": {
+        "unique": true
+      }
+    },
+    "creationPayloadHash": {
+      "type": "string"
+    },
     "officeCase": {
       "type": "relation",
       "relation": "manyToOne",
@@ -21,21 +33,39 @@
       "relation": "manyToOne",
       "target": "api::lead.lead"
     },
-    "title": { "type": "string", "required": true },
-    "description": { "type": "text" },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
     "status": {
       "type": "enumeration",
       "required": true,
       "default": "todo",
-      "enum": ["todo", "in_progress", "waiting", "done", "cancelled"]
+      "enum": [
+        "todo",
+        "in_progress",
+        "waiting",
+        "done",
+        "cancelled"
+      ]
     },
     "priority": {
       "type": "enumeration",
       "required": true,
       "default": "normal",
-      "enum": ["low", "normal", "high", "urgent"]
+      "enum": [
+        "low",
+        "normal",
+        "high",
+        "urgent"
+      ]
     },
-    "dueDate": { "type": "date" },
+    "dueDate": {
+      "type": "date"
+    },
     "assignedTo": {
       "type": "relation",
       "relation": "manyToOne",
@@ -47,6 +77,8 @@
       "target": "plugin::users-permissions.user",
       "required": true
     },
-    "completedAt": { "type": "datetime" }
+    "completedAt": {
+      "type": "datetime"
+    }
   }
 }

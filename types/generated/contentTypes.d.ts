@@ -1824,6 +1824,8 @@ export interface ApiOfficeCaseTaskOfficeCaseTask
       'plugin::users-permissions.user'
     > &
       Schema.Attribute.Required;
+    creationKey: Schema.Attribute.String & Schema.Attribute.Unique;
+    creationPayloadHash: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     dueDate: Schema.Attribute.Date;
     lead: Schema.Attribute.Relation<'manyToOne', 'api::lead.lead'>;
