@@ -1452,7 +1452,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     sourceCategory: Schema.Attribute.Enumeration<
       ['internet', 'whatsapp', 'referral', 'phone', 'broker', 'other']
     >;
-    sourceDetail: Schema.Attribute.String &
+    sourceDetail: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 500;
       }>;
