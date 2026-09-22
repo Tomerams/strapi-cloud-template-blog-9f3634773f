@@ -2331,7 +2331,7 @@ export interface WebsiteTextsWebMcpContactTool extends Struct.ComponentSchema {
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'dynamic-zone.checklist': DynamicZoneChecklist;
       'dynamic-zone.client-fit': DynamicZoneClientFit;
