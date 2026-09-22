@@ -25,6 +25,8 @@
     "message": {
       "type": "text"
     },
+    "sourceCategory": { "type": "enumeration", "enum": ["internet", "whatsapp", "referral", "phone", "broker", "other"] },
+    "sourceDetail": { "type": "string", "maxLength": 500 },
     "source": {
       "type": "string"
     },

@@ -1449,6 +1449,13 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     source: Schema.Attribute.String;
+    sourceCategory: Schema.Attribute.Enumeration<
+      ['internet', 'whatsapp', 'referral', 'phone', 'broker', 'other']
+    >;
+    sourceDetail: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
