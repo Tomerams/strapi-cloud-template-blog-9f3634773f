@@ -89,6 +89,34 @@
     "languageName": {
       "type": "text",
       "required": false
+    },
+    "brandName": {
+      "type": "text",
+      "required": false
+    },
+    "brandSubtitle": {
+      "type": "text",
+      "required": false
+    },
+    "chooseLanguage": {
+      "type": "text",
+      "required": false
+    },
+    "siteLanguage": {
+      "type": "text",
+      "required": false
+    },
+    "hebrewLanguage": {
+      "type": "text",
+      "required": false
+    },
+    "englishLanguage": {
+      "type": "text",
+      "required": false
+    },
+    "skipToContent": {
+      "type": "text",
+      "required": false
     }
   },
   "config": {}

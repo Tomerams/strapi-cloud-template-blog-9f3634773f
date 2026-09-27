@@ -45,6 +45,46 @@
     "contactUs": {
       "type": "text",
       "required": false
+    },
+    "eyebrow": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": false
+    },
+    "titleAccent": {
+      "type": "text",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "firm": {
+      "type": "text",
+      "required": false
+    },
+    "name": {
+      "type": "text",
+      "required": false
+    },
+    "role": {
+      "type": "text",
+      "required": false
+    },
+    "watch": {
+      "type": "text",
+      "required": false
+    },
+    "consultation": {
+      "type": "text",
+      "required": false
+    },
+    "about": {
+      "type": "text",
+      "required": false
     }
   },
   "config": {}
