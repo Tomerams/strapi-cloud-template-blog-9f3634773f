@@ -1639,9 +1639,14 @@ export interface WebsiteTextsHeader extends Struct.ComponentSchema {
     articles: Schema.Attribute.Text;
     bookAConsultation: Schema.Attribute.Text;
     bookConsultation: Schema.Attribute.Text;
+    brandName: Schema.Attribute.Text;
+    brandSubtitle: Schema.Attribute.Text;
+    chooseLanguage: Schema.Attribute.Text;
     closeNavigationMenu: Schema.Attribute.Text;
     contactUs: Schema.Attribute.Text;
     dashboard: Schema.Attribute.Text;
+    englishLanguage: Schema.Attribute.Text;
+    hebrewLanguage: Schema.Attribute.Text;
     home: Schema.Attribute.Text;
     languageName: Schema.Attribute.Text;
     login: Schema.Attribute.Text;
@@ -1653,6 +1658,8 @@ export interface WebsiteTextsHeader extends Struct.ComponentSchema {
     sectors: Schema.Attribute.Text;
     services: Schema.Attribute.Text;
     signOut: Schema.Attribute.Text;
+    siteLanguage: Schema.Attribute.Text;
+    skipToContent: Schema.Attribute.Text;
     successCases: Schema.Attribute.Text;
     team: Schema.Attribute.Text;
     text: Schema.Attribute.Text;
@@ -1666,15 +1673,25 @@ export interface WebsiteTextsHero extends Struct.ComponentSchema {
     icon: 'write';
   };
   attributes: {
+    about: Schema.Attribute.Text;
     completeDiscretion: Schema.Attribute.Text;
+    consultation: Schema.Attribute.Text;
     contactUs: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
     exploreOurPracticeAreas: Schema.Attribute.Text;
     exploreOurPracticeAreas2: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.Text;
+    firm: Schema.Attribute.Text;
     focusedInitialConsultation: Schema.Attribute.Text;
     kALawsLogo: Schema.Attribute.Text;
     keyBenefits: Schema.Attribute.Text;
+    name: Schema.Attribute.Text;
     responseWithin24Hours: Schema.Attribute.Text;
+    role: Schema.Attribute.Text;
     successIsNeverAccidental: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
+    titleAccent: Schema.Attribute.Text;
+    watch: Schema.Attribute.Text;
     weAreHereToAdvocateForYou: Schema.Attribute.Text;
   };
 }
