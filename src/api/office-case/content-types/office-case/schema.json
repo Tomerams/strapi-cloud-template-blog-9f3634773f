@@ -212,6 +212,21 @@
       "type": "component",
       "repeatable": true,
       "component": "office.case-contact"
+    },
+    "primaryService": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service"
+    },
+    "additionalServices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service"
+    },
+    "practiceAreas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice-area.practice-area"
     }
   }
 }

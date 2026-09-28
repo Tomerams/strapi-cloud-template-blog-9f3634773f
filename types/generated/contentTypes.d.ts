@@ -1923,6 +1923,10 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
   };
   attributes: {
     additionalContacts: Schema.Attribute.Component<'office.case-contact', true>;
+    additionalServices: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::service.service'
+    >;
     assignedLawyer: Schema.Attribute.Relation<
       'manyToOne',
       'plugin::users-permissions.user'
@@ -2003,6 +2007,14 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
       'api::office-case-payment.office-case-payment'
     >;
     plaintiff: Schema.Attribute.Text;
+    practiceAreas: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
+    >;
+    primaryService: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::service.service'
+    >;
     priority: Schema.Attribute.Enumeration<
       ['low', 'normal', 'high', 'urgent']
     > &
@@ -2209,6 +2221,15 @@ export interface ApiPracticeAreaPracticeArea
     };
   };
   attributes: {
+    adminName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2822,6 +2843,15 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    adminName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -154,6 +154,15 @@
           "localized": false
         }
       }
+    },
+    "adminName": {
+      "type": "string",
+      "maxLength": 160,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
