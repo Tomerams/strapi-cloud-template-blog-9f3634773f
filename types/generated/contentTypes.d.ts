@@ -1453,7 +1453,16 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     source: Schema.Attribute.String;
     sourceCategory: Schema.Attribute.Enumeration<
-      ['internet', 'whatsapp', 'referral', 'phone', 'broker', 'other']
+      [
+        'internet',
+        'instagram',
+        'facebook',
+        'whatsapp',
+        'referral',
+        'phone',
+        'broker',
+        'other',
+      ]
     >;
     sourceDetail: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
