@@ -113,6 +113,15 @@
         "videos",
         "audios"
       ]
+    },
+    "iconName": {
+      "type": "string",
+      "maxLength": 64,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
