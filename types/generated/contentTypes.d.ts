@@ -2027,6 +2027,10 @@ export interface ApiOfficeCaseOfficeCase extends Struct.CollectionTypeSchema {
     propertyType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     remedies: Schema.Attribute.Text;
+    representedSide: Schema.Attribute.Enumeration<
+      ['unspecified', 'seller', 'buyer', 'other']
+    > &
+      Schema.Attribute.DefaultTo<'unspecified'>;
     statementTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'\u05DB\u05EA\u05D1 \u05EA\u05D1\u05D9\u05E2\u05D4'>;
     status: Schema.Attribute.Enumeration<

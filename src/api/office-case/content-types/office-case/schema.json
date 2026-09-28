@@ -227,6 +227,16 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::practice-area.practice-area"
+    },
+    "representedSide": {
+      "type": "enumeration",
+      "enum": [
+        "unspecified",
+        "seller",
+        "buyer",
+        "other"
+      ],
+      "default": "unspecified"
     }
   }
 }
