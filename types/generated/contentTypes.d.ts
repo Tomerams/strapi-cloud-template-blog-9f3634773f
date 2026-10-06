@@ -2287,7 +2287,6 @@ export interface ApiPracticeAreaPracticeArea
         'dynamic-zone.scenario-grid',
         'dynamic-zone.checklist',
         'dynamic-zone.expertise-connections',
-        'dynamic-zone.related-services',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -3033,6 +3032,115 @@ export interface ApiServicesPageServicesPage extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShortVideoShortVideo extends Struct.CollectionTypeSchema {
+  collectionName: 'short_videos';
+  info: {
+    description: 'YouTube Shorts assigned to relevant pages';
+    displayName: 'Short videos';
+    pluralName: 'short-videos';
+    singularName: 'short-video';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
+    enabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::short-video.short-video'
+    >;
+    locations: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::location.location'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    poster: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    posts: Schema.Attribute.Relation<'manyToMany', 'api::post.post'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    practice_areas: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::practice-area.practice-area'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    sectors: Schema.Attribute.Relation<'manyToMany', 'api::sector.sector'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    youtubeUrl: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -4235,6 +4343,7 @@ declare module '@strapi/strapi' {
       'api::sectors-page.sectors-page': ApiSectorsPageSectorsPage;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
+      'api::short-video.short-video': ApiShortVideoShortVideo;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'api::success-case.success-case': ApiSuccessCaseSuccessCase;
       'api::success-cases-page.success-cases-page': ApiSuccessCasesPageSuccessCasesPage;
