@@ -50,7 +50,8 @@
         "sections.reviews-teaser",
         "sections.ask-ai-teaser",
         "sections.press-teaser",
-        "sections.contact-section"
+        "sections.contact-section",
+        "sections.short-videos"
       ]
     },
     "heroImage": {

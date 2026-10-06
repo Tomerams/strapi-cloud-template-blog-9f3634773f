@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_short_videos",
+  "info": {
+    "displayName": "Short videos carousel",
+    "description": "Personal video introduction with editable copy and consultation action",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "eyebrow": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "heading": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "intro": {
+      "type": "text",
+      "maxLength": 500
+    },
+    "showCta": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaLabel": {
+      "type": "string",
+      "maxLength": 120
+    }
+  },
+  "config": {}
+}

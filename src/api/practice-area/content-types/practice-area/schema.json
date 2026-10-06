@@ -50,7 +50,8 @@
         "dynamic-zone.context-panel",
         "dynamic-zone.scenario-grid",
         "dynamic-zone.checklist",
-        "dynamic-zone.expertise-connections"
+        "dynamic-zone.expertise-connections",
+        "dynamic-zone.related-services"
       ]
     },
     "friendlyUrl": {

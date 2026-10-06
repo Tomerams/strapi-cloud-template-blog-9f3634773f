@@ -1071,6 +1071,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         'sections.ask-ai-teaser',
         'sections.press-teaser',
         'sections.contact-section',
+        'sections.short-videos',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -2287,6 +2288,7 @@ export interface ApiPracticeAreaPracticeArea
         'dynamic-zone.scenario-grid',
         'dynamic-zone.checklist',
         'dynamic-zone.expertise-connections',
+        'dynamic-zone.related-services',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

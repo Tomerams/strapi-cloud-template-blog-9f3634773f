@@ -1152,6 +1152,35 @@ export interface SectionsServicesTeaser extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsShortVideos extends Struct.ComponentSchema {
+  collectionName: 'components_sections_short_videos';
+  info: {
+    description: 'Personal video introduction with editable copy and consultation action';
+    displayName: 'Short videos carousel';
+    icon: 'play';
+  };
+  attributes: {
+    ctaLabel: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 120;
+      }>;
+    enabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    intro: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
+    showCta: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
 export interface SectionsSuccessCasesTeaser extends Struct.ComponentSchema {
   collectionName: 'components_sections_success_cases_teasers';
   info: {
@@ -2418,6 +2447,7 @@ declare module '@strapi/strapi' {
       'sections.reviews-teaser': SectionsReviewsTeaser;
       'sections.sectors-grid': SectionsSectorsGrid;
       'sections.services-teaser': SectionsServicesTeaser;
+      'sections.short-videos': SectionsShortVideos;
       'sections.success-cases-teaser': SectionsSuccessCasesTeaser;
       'sections.team-teaser': SectionsTeamTeaser;
       'seo.canonical-and-alternates': SeoCanonicalAndAlternates;
