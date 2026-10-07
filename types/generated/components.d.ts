@@ -192,41 +192,6 @@ export interface DynamicZoneScenarioGrid extends Struct.ComponentSchema {
   };
 }
 
-export interface LandingPagesCardItem extends Struct.ComponentSchema {
-  collectionName: 'components_landing_pages_card_items';
-  info: {
-    displayName: 'Card Item';
-    icon: 'apps';
-  };
-  attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
-export interface LandingPagesStepItem extends Struct.ComponentSchema {
-  collectionName: 'components_landing_pages_step_items';
-  info: {
-    displayName: 'Step Item';
-    icon: 'walk';
-  };
-  attributes: {
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
-export interface LandingPagesTextItem extends Struct.ComponentSchema {
-  collectionName: 'components_landing_pages_text_items';
-  info: {
-    displayName: 'Text Item';
-    icon: 'bulletList';
-  };
-  attributes: {
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-  };
-}
-
 export interface OfficeCaseContact extends Struct.ComponentSchema {
   collectionName: 'components_office_case_contacts';
   info: {
@@ -807,39 +772,6 @@ export interface WebsiteTextsArticlesPage extends Struct.ComponentSchema {
   };
 }
 
-export interface WebsiteTextsConsultDetailPage extends Struct.ComponentSchema {
-  collectionName: 'components_website_texts_consult_detail_page_eebe5c';
-  info: {
-    displayName: 'Consult Detail Page';
-    icon: 'write';
-  };
-  attributes: {
-    fallbackTitle: Schema.Attribute.Text;
-  };
-}
-
-export interface WebsiteTextsConsultPage extends Struct.ComponentSchema {
-  collectionName: 'components_website_texts_consult_page_aabe7e';
-  info: {
-    displayName: 'Consult Page';
-    icon: 'write';
-  };
-  attributes: {
-    awaitingPracticeAreaAssignment: Schema.Attribute.Text;
-    consultationGuides: Schema.Attribute.Text;
-    consultationGuides2: Schema.Attribute.Text;
-    fallbackMetaDescription: Schema.Attribute.Text;
-    fallbackMetaTitle: Schema.Attribute.Text;
-    focusedConsultationGuidesByPracticeAreaAndServiceHelping: Schema.Attribute.Text;
-    home: Schema.Attribute.Text;
-    hubEyebrow: Schema.Attribute.Text;
-    unassignedPracticeArea: Schema.Attribute.Text;
-    viewGuide: Schema.Attribute.Text;
-    viewMainPracticeArea: Schema.Attribute.Text;
-    viewPracticeArea: Schema.Attribute.Text;
-  };
-}
-
 export interface WebsiteTextsContactUsForm extends Struct.ComponentSchema {
   collectionName: 'components_website_texts_contact_us_form_288a9d';
   info: {
@@ -906,8 +838,6 @@ export interface WebsiteTextsFooter extends Struct.ComponentSchema {
     accessibilityStatement: Schema.Attribute.Text;
     boutiqueLegalCounselForRealEstateTransactionsAndLitigation: Schema.Attribute.Text;
     call: Schema.Attribute.Text;
-    consultation: Schema.Attribute.Text;
-    consultationPages: Schema.Attribute.Text;
     email: Schema.Attribute.Text;
     footerLinks: Schema.Attribute.Text;
     karinAmsalemLawFirm: Schema.Attribute.Text;
@@ -1045,41 +975,6 @@ export interface WebsiteTextsHomePage extends Struct.ComponentSchema {
   };
   attributes: {
     videoDescription: Schema.Attribute.Text;
-  };
-}
-
-export interface WebsiteTextsLandingPage extends Struct.ComponentSchema {
-  collectionName: 'components_website_texts_landing_page_bd71c1';
-  info: {
-    displayName: 'Landing Page';
-    icon: 'write';
-  };
-  attributes: {
-    benefit: Schema.Attribute.Text;
-    bottomEyebrow: Schema.Attribute.Text;
-    bottomFormSubtitle: Schema.Attribute.Text;
-    defaultTeamName: Schema.Attribute.Text;
-    defaultTeamRole: Schema.Attribute.Text;
-    faqEyebrow: Schema.Attribute.Text;
-    faqTitle: Schema.Attribute.Text;
-    formSubtitle: Schema.Attribute.Text;
-    formTitle: Schema.Attribute.Text;
-    galleryImageAlt: Schema.Attribute.Text;
-    galleryLabel: Schema.Attribute.Text;
-    googleReviewMeta: Schema.Attribute.Text;
-    heroFormCue: Schema.Attribute.Text;
-    leaveDetails: Schema.Attribute.Text;
-    personalConversation: Schema.Attribute.Text;
-    personalGuidance: Schema.Attribute.Text;
-    promptResponse: Schema.Attribute.Text;
-    trustLabels: Schema.Attribute.Component<'website-texts.text-item', true>;
-    videoAriaLabel: Schema.Attribute.Text;
-    videoDescription: Schema.Attribute.Text;
-    videoEyebrow: Schema.Attribute.Text;
-    videoTitle: Schema.Attribute.Text;
-    visualDescription: Schema.Attribute.Text;
-    visualEyebrow: Schema.Attribute.Text;
-    visualTitle: Schema.Attribute.Text;
   };
 }
 
@@ -1701,9 +1596,6 @@ declare module '@strapi/strapi' {
       'dynamic-zone.related-services': DynamicZoneRelatedServices;
       'dynamic-zone.rich-content': DynamicZoneRichContent;
       'dynamic-zone.scenario-grid': DynamicZoneScenarioGrid;
-      'landing-pages.card-item': LandingPagesCardItem;
-      'landing-pages.step-item': LandingPagesStepItem;
-      'landing-pages.text-item': LandingPagesTextItem;
       'office.case-contact': OfficeCaseContact;
       'sections.ask-ai-teaser': SectionsAskAiTeaser;
       'sections.banner': SectionsBanner;
@@ -1736,8 +1628,6 @@ declare module '@strapi/strapi' {
       'website-texts.articles-grid': WebsiteTextsArticlesGrid;
       'website-texts.articles-hero': WebsiteTextsArticlesHero;
       'website-texts.articles-page': WebsiteTextsArticlesPage;
-      'website-texts.consult-detail-page': WebsiteTextsConsultDetailPage;
-      'website-texts.consult-page': WebsiteTextsConsultPage;
       'website-texts.contact-us-form': WebsiteTextsContactUsForm;
       'website-texts.cookie-consent': WebsiteTextsCookieConsent;
       'website-texts.footer': WebsiteTextsFooter;
@@ -1747,7 +1637,6 @@ declare module '@strapi/strapi' {
       'website-texts.header': WebsiteTextsHeader;
       'website-texts.hero': WebsiteTextsHero;
       'website-texts.home-page': WebsiteTextsHomePage;
-      'website-texts.landing-page': WebsiteTextsLandingPage;
       'website-texts.locations-detail-page': WebsiteTextsLocationsDetailPage;
       'website-texts.locations-page': WebsiteTextsLocationsPage;
       'website-texts.login': WebsiteTextsLogin;

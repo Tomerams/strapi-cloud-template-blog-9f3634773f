@@ -42,14 +42,6 @@
       "type": "text",
       "required": false
     },
-    "consultationPages": {
-      "type": "text",
-      "required": false
-    },
-    "consultation": {
-      "type": "text",
-      "required": false
-    },
     "privacyPolicy": {
       "type": "text",
       "required": false
